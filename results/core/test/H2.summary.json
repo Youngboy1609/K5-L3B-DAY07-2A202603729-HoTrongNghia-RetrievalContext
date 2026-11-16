@@ -1,0 +1,31 @@
+{
+  "suite": "core",
+  "split": "test",
+  "config": "H2",
+  "run_id": "6169ac7b28104dacbf3f776d209d00e6",
+  "n": 8,
+  "status": "complete",
+  "pending_query_ids": [],
+  "errors": 2,
+  "cost_usd": 0.002342426,
+  "latency_ms_median": 10763.270700000021,
+  "retrieval": {
+    "answerable_n": 6,
+    "hit_at_1": {
+      "n": 5,
+      "N": 6,
+      "rate": 0.8333333333333334
+    },
+    "evidence_hit_at_3": {
+      "n": 6,
+      "N": 6,
+      "rate": 1.0
+    },
+    "context_evidence_rate": {
+      "n": 6,
+      "N": 6,
+      "rate": 1.0
+    }
+  },
+  "trace_path": "results\\core\\test\\H2.jsonl"
+}

@@ -9,3 +9,17 @@ __pycache__/
 # Local datasets and generated output; share permitted artifacts deliberately
 starter/data/
 starter/results/
+
+# Local plans, caches and historical runner output
+.lab-local/
+LAB_PLAN.local.md
+*.local.md
+day6/starter/results/
+
+# Bonus corpus text/regions are rebuilt from the attributed local PDF because some
+# embedded figures may carry third-party rights; keep the page-level coverage audit.
+data/bonus/index/*.jsonl
+!data/bonus/index/page_inventory.jsonl
+
+# Temporary visual inspection output
+scratch/

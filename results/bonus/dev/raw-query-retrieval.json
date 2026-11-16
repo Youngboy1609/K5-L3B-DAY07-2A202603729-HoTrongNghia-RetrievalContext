@@ -1,0 +1,4659 @@
+{
+  "suite": "bonus",
+  "split": "dev",
+  "query_mode": "original_without_rewrite",
+  "top_k": 20,
+  "cutoff_for_comparison": 3,
+  "api_cost_usd": 0,
+  "context_note": "No model context is assembled here; context coverage is reported separately for the agent runs.",
+  "configs": {
+    "D0": {
+      "retrieval_id_exact": {
+        "answerable_n": 20,
+        "hit_at_1": {
+          "n": 5,
+          "N": 20,
+          "rate": 0.25
+        },
+        "evidence_hit_at_3": {
+          "n": 7,
+          "N": 20,
+          "rate": 0.35
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 20,
+          "rate": 0.0
+        }
+      },
+      "retrieval_source_quote": {
+        "version": "source_quote_v1",
+        "answerable_n": 20,
+        "hit_at_1": {
+          "n": 5,
+          "N": 20,
+          "rate": 0.25
+        },
+        "evidence_hit_at_3": {
+          "n": 7,
+          "N": 20,
+          "rate": 0.35
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 20,
+          "rate": 0.0
+        },
+        "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+      },
+      "traces": [
+        {
+          "query_id": "bonus-dev-table-01",
+          "query": "In Table O.1, what share of the global population is in the lower-middle-income group?",
+          "filters": {},
+          "embedding_ms": 66.16920000033133,
+          "retrieval_ms": 36.653600000136066,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p066-text-00-part-02",
+                "wdr-p063-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p063-table-01",
+                "wdr-p035-text-00-part-02",
+                "wdr-p018-text-00",
+                "wdr-p036-text-01",
+                "wdr-p096-caption-02",
+                "wdr-p035-text-00-part-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p068-caption-01",
+                "wdr-p102-caption-02",
+                "wdr-p063-text-00-part-02",
+                "wdr-p074-text-00-part-02",
+                "wdr-p065-text-00-part-01",
+                "wdr-p263-caption-01",
+                "wdr-p264-caption-01",
+                "wdr-p087-text-01",
+                "wdr-p066-text-01",
+                "wdr-p198-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p066-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 66,
+              "score": 0.706444060393596
+            },
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.6633982069552227
+            },
+            {
+              "id": "wdr-p035-caption-01",
+              "source": "World Development Report 2024",
+              "page": 35,
+              "score": 0.6601157150337612
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-02",
+          "query": "What share of global GDP is attributed to upper-middle-income economies in Table O.1?",
+          "filters": {},
+          "embedding_ms": 64.94709999969928,
+          "retrieval_ms": 17.16900000064925,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p035-caption-01",
+                "wdr-p036-text-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p087-text-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p264-caption-01",
+                "wdr-p066-text-00-part-02",
+                "wdr-p035-text-00-part-01",
+                "wdr-p067-text-00-part-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p066-text-01",
+                "wdr-p035-text-00-part-02",
+                "wdr-p036-text-00-part-01",
+                "wdr-p068-caption-01",
+                "wdr-p198-caption-01",
+                "wdr-p066-text-00-part-01",
+                "wdr-p067-text-00-part-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.7102171913324736
+            },
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.6952929718961091
+            },
+            {
+              "id": "wdr-p095-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 95,
+              "score": 0.6914786041812805
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-03",
+          "query": "According to Table O.1, what share of global CO2 emissions comes from low-income economies?",
+          "filters": {},
+          "embedding_ms": 64.74100000014005,
+          "retrieval_ms": 38.78709999935381,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-table-01",
+                "wdr-p036-table-01",
+                "wdr-p036-text-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p063-text-00-part-01",
+                "wdr-p266-text-00-part-01",
+                "wdr-p264-text-01",
+                "wdr-p180-caption-01",
+                "wdr-p107-text-00-part-02",
+                "wdr-p036-text-00-part-02",
+                "wdr-p015-text-00",
+                "wdr-p174-text-01-part-02",
+                "wdr-p062-text-00-part-02",
+                "wdr-p066-text-00-part-02",
+                "wdr-p264-text-00-part-02",
+                "wdr-p178-text-01",
+                "wdr-p018-text-00",
+                "wdr-p180-text-00-part-01",
+                "wdr-p260-text-00-part-01",
+                "wdr-p173-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.714653421487636
+            },
+            {
+              "id": "wdr-p036-table-01",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.7072069683095498
+            },
+            {
+              "id": "wdr-p036-text-01",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.7071041327131848
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-04",
+          "query": "In Table O.2, is innovation a higher or lower priority for lower-middle-income countries?",
+          "filters": {},
+          "embedding_ms": 68.66960000024847,
+          "retrieval_ms": 17.544299999826762,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p039-table-01",
+                "wdr-p037-table-01",
+                "wdr-p059-text-00-part-01",
+                "wdr-p086-text-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p033-text-00-part-01",
+                "wdr-p086-table-01",
+                "wdr-p028-text-01",
+                "wdr-p039-text-00",
+                "wdr-p059-table-01-part-01",
+                "wdr-p276-text-00-part-01",
+                "wdr-p007-text-00",
+                "wdr-p042-text-00-part-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p091-text-01",
+                "wdr-p064-text-01",
+                "wdr-p046-text-00-part-01",
+                "wdr-p011-text-00-part-02",
+                "wdr-p098-text-00-part-01",
+                "wdr-p096-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.7279333307356598
+            },
+            {
+              "id": "wdr-p037-table-01",
+              "source": "World Development Report 2024",
+              "page": 37,
+              "score": 0.6942298080762099
+            },
+            {
+              "id": "wdr-p059-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 59,
+              "score": 0.6641471181643936
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-05",
+          "query": "What productivity benefit of mergers and acquisitions is listed in Table 4.1?",
+          "filters": {},
+          "embedding_ms": 70.91899999977613,
+          "retrieval_ms": 23.012300000118557,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p135-table-01",
+                "wdr-p135-text-01",
+                "wdr-p132-caption-01",
+                "wdr-p133-caption-01",
+                "wdr-p133-caption-02",
+                "wdr-p137-text-00-part-02",
+                "wdr-p098-caption-01",
+                "wdr-p240-caption-02",
+                "wdr-p233-caption-01",
+                "wdr-p097-caption-01",
+                "wdr-p248-text-00-part-01",
+                "wdr-p099-text-01-part-02",
+                "wdr-p255-caption-01",
+                "wdr-p062-text-01-part-02",
+                "wdr-p132-caption-02",
+                "wdr-p121-caption-01",
+                "wdr-p211-text-01",
+                "wdr-p194-table-01",
+                "wdr-p094-text-00-part-02",
+                "wdr-p118-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p135-table-01",
+              "source": "World Development Report 2024",
+              "page": 135,
+              "score": 0.578449506899766
+            },
+            {
+              "id": "wdr-p135-text-01",
+              "source": "World Development Report 2024",
+              "page": 135,
+              "score": 0.526714902284529
+            },
+            {
+              "id": "wdr-p132-caption-01",
+              "source": "World Development Report 2024",
+              "page": 132,
+              "score": 0.48091689992169273
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-01",
+          "query": "Figure O.10 shows three forces that middle-income countries must balance. Name them.",
+          "filters": {},
+          "embedding_ms": 115.05320000014763,
+          "retrieval_ms": 30.314800000269315,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p049-caption-01",
+                "wdr-p096-caption-02",
+                "wdr-p039-caption-01",
+                "wdr-p046-caption-01",
+                "wdr-p047-caption-01",
+                "wdr-p198-caption-01",
+                "wdr-p102-caption-02",
+                "wdr-p088-caption-01",
+                "wdr-p035-caption-01",
+                "wdr-p263-caption-01",
+                "wdr-p262-caption-01",
+                "wdr-p049-text-00",
+                "wdr-p205-caption-01",
+                "wdr-p090-caption-01",
+                "wdr-p213-caption-01",
+                "wdr-p276-text-00-part-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p264-caption-01",
+                "wdr-p108-caption-01",
+                "wdr-p262-text-00-part-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p049-caption-01",
+              "source": "World Development Report 2024",
+              "page": 49,
+              "score": 0.6928553716919467
+            },
+            {
+              "id": "wdr-p096-caption-02",
+              "source": "World Development Report 2024",
+              "page": 96,
+              "score": 0.687347003973897
+            },
+            {
+              "id": "wdr-p039-caption-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.642226684861203
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-02",
+          "query": "In Figure O.10, which force is shown as the largest component in the initial (left-hand) cycle?",
+          "filters": {},
+          "embedding_ms": 119.6615999997448,
+          "retrieval_ms": 21.66029999989405,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p115-caption-01",
+                "wdr-p046-caption-01",
+                "wdr-p047-caption-01",
+                "wdr-p129-caption-02",
+                "wdr-p130-caption-01",
+                "wdr-p131-caption-01",
+                "wdr-p097-caption-01",
+                "wdr-p210-caption-03",
+                "wdr-p044-caption-01",
+                "wdr-p098-caption-01",
+                "wdr-p244-caption-01",
+                "wdr-p269-caption-01",
+                "wdr-p270-caption-01",
+                "wdr-p125-text-00-part-02",
+                "wdr-p062-text-01-part-03",
+                "wdr-p267-caption-01",
+                "wdr-p157-caption-01",
+                "wdr-p156-caption-01",
+                "wdr-p074-caption-01",
+                "wdr-p210-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p115-caption-01",
+              "source": "World Development Report 2024",
+              "page": 115,
+              "score": 0.4340079281798468
+            },
+            {
+              "id": "wdr-p046-caption-01",
+              "source": "World Development Report 2024",
+              "page": 46,
+              "score": 0.41126312841879276
+            },
+            {
+              "id": "wdr-p047-caption-01",
+              "source": "World Development Report 2024",
+              "page": 47,
+              "score": 0.41126312841879276
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-03",
+          "query": "In Figure 7.2, which three elements feed into contestability?",
+          "filters": {},
+          "embedding_ms": 70.39890000032756,
+          "retrieval_ms": 31.96120000029623,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p195-caption-01",
+                "wdr-p211-caption-01",
+                "wdr-p212-caption-01",
+                "wdr-p123-caption-01",
+                "wdr-p195-text-00-part-01",
+                "wdr-p119-caption-01",
+                "wdr-p193-text-00",
+                "wdr-p195-text-01",
+                "wdr-p050-text-01",
+                "wdr-p119-text-00-part-02",
+                "wdr-p244-caption-01",
+                "wdr-p024-text-00-part-02",
+                "wdr-p121-caption-01",
+                "wdr-p195-text-00-part-02",
+                "wdr-p044-text-00-part-01",
+                "wdr-p135-table-01",
+                "wdr-p120-caption-01",
+                "wdr-p218-text-01-part-02",
+                "wdr-p210-caption-01",
+                "wdr-p213-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p195-caption-01",
+              "source": "World Development Report 2024",
+              "page": 195,
+              "score": 0.6437651456184991
+            },
+            {
+              "id": "wdr-p211-caption-01",
+              "source": "World Development Report 2024",
+              "page": 211,
+              "score": 0.5219377453150872
+            },
+            {
+              "id": "wdr-p212-caption-01",
+              "source": "World Development Report 2024",
+              "page": 212,
+              "score": 0.5219377453150872
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-04",
+          "query": "What outcome sits above contestability in the Figure 7.2 diagram?",
+          "filters": {},
+          "embedding_ms": 69.12009999996371,
+          "retrieval_ms": 20.085500000277534,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p195-caption-01",
+                "wdr-p211-caption-01",
+                "wdr-p212-caption-01",
+                "wdr-p123-caption-01",
+                "wdr-p156-caption-01",
+                "wdr-p195-text-00-part-01",
+                "wdr-p193-text-00",
+                "wdr-p119-caption-01",
+                "wdr-p244-caption-01",
+                "wdr-p195-text-01",
+                "wdr-p119-text-00-part-02",
+                "wdr-p121-caption-01",
+                "wdr-p195-text-00-part-02",
+                "wdr-p262-caption-01",
+                "wdr-p044-caption-01",
+                "wdr-p024-text-00-part-02",
+                "wdr-p096-caption-02",
+                "wdr-p212-text-00-part-01",
+                "wdr-p210-caption-01",
+                "wdr-p134-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p195-caption-01",
+              "source": "World Development Report 2024",
+              "page": 195,
+              "score": 0.5860642046108135
+            },
+            {
+              "id": "wdr-p211-caption-01",
+              "source": "World Development Report 2024",
+              "page": 211,
+              "score": 0.4936363458499179
+            },
+            {
+              "id": "wdr-p212-caption-01",
+              "source": "World Development Report 2024",
+              "page": 212,
+              "score": 0.4936363458499179
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-01",
+          "query": "In Figure 1.1, which labeled economy has the highest 2022 GNI per capita?",
+          "filters": {},
+          "embedding_ms": 69.51489999937621,
+          "retrieval_ms": 29.939200000626442,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p095-text-01",
+                "wdr-p082-table-01-part-01",
+                "wdr-p067-text-00-part-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p081-table-01-part-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p082-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p081-text-00-part-01",
+                "wdr-p238-text-00-part-02",
+                "wdr-p068-text-00-part-01",
+                "wdr-p053-text-00-part-02",
+                "wdr-p035-text-00-part-01",
+                "wdr-p068-caption-01",
+                "wdr-p071-text-01",
+                "wdr-p106-caption-01",
+                "wdr-p067-text-00-part-02",
+                "wdr-p038-text-00-part-01",
+                "wdr-p036-text-01",
+                "wdr-p060-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p095-text-01",
+              "source": "World Development Report 2024",
+              "page": 95,
+              "score": 0.5987024067786711
+            },
+            {
+              "id": "wdr-p082-table-01-part-01",
+              "source": "World Development Report 2024",
+              "page": 82,
+              "score": 0.5840945006217646
+            },
+            {
+              "id": "wdr-p067-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 67,
+              "score": 0.5836115059913343
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-02",
+          "query": "In Figure 1.1, approximately what is the 2022 GNI per capita of the Republic of Korea point?",
+          "filters": {},
+          "embedding_ms": 71.38780000059342,
+          "retrieval_ms": 39.232799999808776,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p073-caption-01",
+                "wdr-p082-table-01-part-01",
+                "wdr-p043-caption-01",
+                "wdr-p082-text-00-part-01",
+                "wdr-p095-text-01",
+                "wdr-p073-text-00-part-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p071-text-01",
+                "wdr-p041-caption-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p035-caption-01",
+                "wdr-p081-table-01-part-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p068-caption-01",
+                "wdr-p238-text-00-part-02",
+                "wdr-p081-text-00-part-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p067-text-00-part-01",
+                "wdr-p072-text-00-part-01",
+                "wdr-p040-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p073-caption-01",
+              "source": "World Development Report 2024",
+              "page": 73,
+              "score": 0.5974355436265453
+            },
+            {
+              "id": "wdr-p082-table-01-part-01",
+              "source": "World Development Report 2024",
+              "page": 82,
+              "score": 0.5682037602399875
+            },
+            {
+              "id": "wdr-p043-caption-01",
+              "source": "World Development Report 2024",
+              "page": 43,
+              "score": 0.5602507128213391
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-03",
+          "query": "In Figure 1.2, which line is higher in 2022: all middle-income countries or the series excluding China?",
+          "filters": {},
+          "embedding_ms": 121.54430000009597,
+          "retrieval_ms": 20.959399999810557,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p096-caption-02",
+                "wdr-p068-caption-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p102-caption-02",
+                "wdr-p263-caption-01",
+                "wdr-p264-caption-01",
+                "wdr-p067-caption-01",
+                "wdr-p067-text-00-part-01",
+                "wdr-p198-caption-01",
+                "wdr-p035-text-00-part-02",
+                "wdr-p262-caption-01",
+                "wdr-p066-text-01",
+                "wdr-p039-caption-01",
+                "wdr-p067-text-00-part-02",
+                "wdr-p063-table-01",
+                "wdr-p017-text-01",
+                "wdr-p223-caption-01",
+                "wdr-p088-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p096-caption-02",
+              "source": "World Development Report 2024",
+              "page": 96,
+              "score": 0.7054728422053625
+            },
+            {
+              "id": "wdr-p068-caption-01",
+              "source": "World Development Report 2024",
+              "page": 68,
+              "score": 0.66179276610368
+            },
+            {
+              "id": "wdr-p068-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 68,
+              "score": 0.6594934709093496
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-04",
+          "query": "In Figure 1.2, which series is colored orange?",
+          "filters": {},
+          "embedding_ms": 116.48609999974724,
+          "retrieval_ms": 33.41340000042692,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p210-caption-03",
+                "wdr-p156-caption-01",
+                "wdr-p102-caption-01",
+                "wdr-p103-caption-01",
+                "wdr-p035-caption-01",
+                "wdr-p263-caption-01",
+                "wdr-p044-caption-01",
+                "wdr-p262-caption-01",
+                "wdr-p096-caption-02",
+                "wdr-p098-caption-01",
+                "wdr-p097-caption-01",
+                "wdr-p074-caption-01",
+                "wdr-p267-caption-01",
+                "wdr-p264-caption-01",
+                "wdr-p114-caption-01",
+                "wdr-p041-caption-01",
+                "wdr-p210-text-00-part-02",
+                "wdr-p157-caption-01",
+                "wdr-p069-caption-01",
+                "wdr-p070-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p210-caption-03",
+              "source": "World Development Report 2024",
+              "page": 210,
+              "score": 0.4305937944623822
+            },
+            {
+              "id": "wdr-p156-caption-01",
+              "source": "World Development Report 2024",
+              "page": 156,
+              "score": 0.42461547175680325
+            },
+            {
+              "id": "wdr-p102-caption-01",
+              "source": "World Development Report 2024",
+              "page": 102,
+              "score": 0.4208000616614005
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-01",
+          "query": "Combine Tables O.1 and O.2: what share of global GDP is attributed to upper-middle-income economies, and which three policy areas are higher priority for them?",
+          "filters": {},
+          "embedding_ms": 73.09559999976045,
+          "retrieval_ms": 37.07930000018678,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-table-01",
+                "wdr-p086-text-01",
+                "wdr-p037-table-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p264-caption-01",
+                "wdr-p039-table-01",
+                "wdr-p198-caption-01",
+                "wdr-p018-text-00",
+                "wdr-p063-text-00-part-01",
+                "wdr-p087-text-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p066-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p067-text-00-part-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p035-text-00-part-02",
+                "wdr-p276-text-00-part-01",
+                "wdr-p067-text-00-part-02",
+                "wdr-p066-text-01",
+                "wdr-p154-text-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.6228469002091152
+            },
+            {
+              "id": "wdr-p086-text-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.6079861219479287
+            },
+            {
+              "id": "wdr-p037-table-01",
+              "source": "World Development Report 2024",
+              "page": 37,
+              "score": 0.5974857172088588
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-02",
+          "query": "Using Tables O.1 and O.2, give the lower-middle-income group’s global-population share and identify its lowest-priority policy area.",
+          "filters": {},
+          "embedding_ms": 73.02549999985786,
+          "retrieval_ms": 20.772400000169,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p066-text-00-part-02",
+                "wdr-p096-caption-02",
+                "wdr-p039-table-01",
+                "wdr-p018-text-00",
+                "wdr-p263-caption-01",
+                "wdr-p035-caption-01",
+                "wdr-p103-text-00-part-01",
+                "wdr-p086-text-01",
+                "wdr-p063-table-01",
+                "wdr-p102-caption-02",
+                "wdr-p063-text-00-part-02",
+                "wdr-p198-caption-01",
+                "wdr-p087-text-01",
+                "wdr-p264-caption-01",
+                "wdr-p074-text-00-part-02",
+                "wdr-p035-text-00-part-02",
+                "wdr-p001-text-00",
+                "wdr-p005-text-00",
+                "wdr-p276-text-00-part-01",
+                "wdr-p154-text-00-part-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p066-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 66,
+              "score": 0.610026630834257
+            },
+            {
+              "id": "wdr-p096-caption-02",
+              "source": "World Development Report 2024",
+              "page": 96,
+              "score": 0.6090268353811304
+            },
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.607528754994237
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-03",
+          "query": "Table O.1 gives upper-middle-income economies’ share of global CO2 emissions. Table 4.1 lists one consumer-welfare risk when fewer firms compete. What are the two facts?",
+          "filters": {},
+          "embedding_ms": 75.5565999997998,
+          "retrieval_ms": 33.093600000029255,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-table-01",
+                "wdr-p135-table-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p063-text-00-part-01",
+                "wdr-p025-text-00",
+                "wdr-p036-text-01",
+                "wdr-p208-text-01",
+                "wdr-p218-text-01-part-02",
+                "wdr-p199-text-00-part-01",
+                "wdr-p205-caption-01",
+                "wdr-p178-text-01",
+                "wdr-p036-table-01",
+                "wdr-p044-text-00-part-01",
+                "wdr-p128-caption-01",
+                "wdr-p062-text-00-part-01",
+                "wdr-p205-text-00-part-02",
+                "wdr-p062-text-00-part-02",
+                "wdr-p043-text-00-part-01",
+                "wdr-p014-text-00-part-02",
+                "wdr-p266-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.5644777746142209
+            },
+            {
+              "id": "wdr-p135-table-01",
+              "source": "World Development Report 2024",
+              "page": 135,
+              "score": 0.5390653090515791
+            },
+            {
+              "id": "wdr-p063-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.5322065417094844
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-04",
+          "query": "Combine Table O.2 with Table 4.1: what is the innovation priority for lower-middle-income countries, and what innovation risk from conglomerates is listed?",
+          "filters": {},
+          "embedding_ms": 125.32569999984844,
+          "retrieval_ms": 29.401599999800965,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p037-table-01",
+                "wdr-p039-table-01",
+                "wdr-p058-text-00-part-02",
+                "wdr-p059-text-00-part-01",
+                "wdr-p110-caption-01",
+                "wdr-p059-table-01-part-01",
+                "wdr-p091-text-01",
+                "wdr-p028-text-01",
+                "wdr-p205-caption-01",
+                "wdr-p117-text-00-part-01",
+                "wdr-p011-text-00-part-02",
+                "wdr-p037-text-00-part-01",
+                "wdr-p191-text-00-part-01",
+                "wdr-p086-table-01",
+                "wdr-p276-text-00-part-01",
+                "wdr-p007-text-00",
+                "wdr-p098-text-00-part-01",
+                "wdr-p049-text-00",
+                "wdr-p064-text-00-part-02",
+                "wdr-p046-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p037-table-01",
+              "source": "World Development Report 2024",
+              "page": 37,
+              "score": 0.633121829293951
+            },
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.6062473834794019
+            },
+            {
+              "id": "wdr-p058-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 58,
+              "score": 0.5787976108953703
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-text-01",
+          "query": "How many countries does the report say the World Bank classified as middle-income?",
+          "filters": {},
+          "embedding_ms": 72.66100000015285,
+          "retrieval_ms": 20.082300000467512,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-text-00-part-01",
+                "wdr-p006-text-00-part-01",
+                "wdr-p001-text-00",
+                "wdr-p005-text-00",
+                "wdr-p035-text-00-part-02",
+                "wdr-p096-caption-02",
+                "wdr-p065-text-00-part-01",
+                "wdr-p198-caption-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p017-text-00-part-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p070-text-00-part-01",
+                "wdr-p018-text-00",
+                "wdr-p036-text-01",
+                "wdr-p078-text-00-part-02",
+                "wdr-p068-text-00-part-01",
+                "wdr-p066-text-01",
+                "wdr-p069-text-00-part-01",
+                "wdr-p276-text-00-part-01",
+                "wdr-p035-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.7269825045124075
+            },
+            {
+              "id": "wdr-p006-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 6,
+              "score": 0.7161926086395837
+            },
+            {
+              "id": "wdr-p001-text-00",
+              "source": "World Development Report 2024",
+              "page": 1,
+              "score": 0.7138719560965161
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-text-02",
+          "query": "At about what share of US GDP per capita does the report say typical middle-income growth begins to plateau?",
+          "filters": {},
+          "embedding_ms": 68.14720000056695,
+          "retrieval_ms": 23.95410000008269,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p074-text-00-part-01",
+                "wdr-p065-text-00-part-01",
+                "wdr-p074-text-00-part-02",
+                "wdr-p036-text-00-part-02",
+                "wdr-p035-text-00-part-02",
+                "wdr-p068-text-00-part-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p074-text-01",
+                "wdr-p068-caption-01",
+                "wdr-p075-text-00-part-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p276-text-00-part-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p035-caption-01",
+                "wdr-p037-text-00-part-02",
+                "wdr-p067-text-00-part-02",
+                "wdr-p035-text-01",
+                "wdr-p078-text-01-part-02",
+                "wdr-p078-text-00-part-02",
+                "wdr-p066-text-00-part-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p074-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 74,
+              "score": 0.7484699241741742
+            },
+            {
+              "id": "wdr-p065-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 65,
+              "score": 0.7438526856608368
+            },
+            {
+              "id": "wdr-p074-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 74,
+              "score": 0.738711828693574
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-text-03",
+          "query": "Since what year does the report say the World Bank has used the term “middle-income trap”?",
+          "filters": {},
+          "embedding_ms": 68.43699999990349,
+          "retrieval_ms": 34.69649999988178,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p001-text-00",
+                "wdr-p005-text-00",
+                "wdr-p006-text-00-part-01",
+                "wdr-p017-text-00-part-01",
+                "wdr-p078-text-01-part-02",
+                "wdr-p098-text-00-part-02",
+                "wdr-p065-text-00-part-01",
+                "wdr-p276-text-00-part-01",
+                "wdr-p078-text-00-part-02",
+                "wdr-p018-text-00",
+                "wdr-p074-text-01",
+                "wdr-p003-text-00",
+                "wdr-p036-text-00-part-01",
+                "wdr-p069-text-00-part-01",
+                "wdr-p077-text-01-part-02",
+                "wdr-p074-text-00-part-01",
+                "wdr-p074-text-00-part-02",
+                "wdr-p070-text-00-part-01",
+                "wdr-p064-text-00-part-01",
+                "wdr-p068-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p001-text-00",
+              "source": "World Development Report 2024",
+              "page": 1,
+              "score": 0.7981340515754318
+            },
+            {
+              "id": "wdr-p005-text-00",
+              "source": "World Development Report 2024",
+              "page": 5,
+              "score": 0.7981340515754318
+            },
+            {
+              "id": "wdr-p006-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 6,
+              "score": 0.7752521891748854
+            }
+          ],
+          "contexts": []
+        }
+      ]
+    },
+    "L0": {
+      "retrieval_id_exact": {
+        "answerable_n": 20,
+        "hit_at_1": {
+          "n": 9,
+          "N": 20,
+          "rate": 0.45
+        },
+        "evidence_hit_at_3": {
+          "n": 8,
+          "N": 20,
+          "rate": 0.4
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 20,
+          "rate": 0.0
+        }
+      },
+      "retrieval_source_quote": {
+        "version": "source_quote_v1",
+        "answerable_n": 20,
+        "hit_at_1": {
+          "n": 10,
+          "N": 20,
+          "rate": 0.5
+        },
+        "evidence_hit_at_3": {
+          "n": 9,
+          "N": 20,
+          "rate": 0.45
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 20,
+          "rate": 0.0
+        },
+        "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+      },
+      "traces": [
+        {
+          "query_id": "bonus-dev-table-01",
+          "query": "In Table O.1, what share of the global population is in the lower-middle-income group?",
+          "filters": {},
+          "embedding_ms": 66.16920000033133,
+          "retrieval_ms": 226.78739999992104,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-text-00-part-01",
+                "wdr-p036-table-01",
+                "wdr-p063-table-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p046-text-00-part-01",
+                "wdr-p144-caption-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p036-text-01",
+                "wdr-p070-text-00-part-01",
+                "wdr-p222-text-00-part-02",
+                "wdr-p144-text-01",
+                "wdr-p065-text-00-part-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p156-text-00-part-01",
+                "wdr-p058-text-00-part-01",
+                "wdr-p102-text-00-part-01",
+                "wdr-p036-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.41054875034308225
+            },
+            {
+              "id": "wdr-p036-table-01",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.3885678505069245
+            },
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.364314028297857
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-02",
+          "query": "What share of global GDP is attributed to upper-middle-income economies in Table O.1?",
+          "filters": {},
+          "embedding_ms": 64.94709999969928,
+          "retrieval_ms": 118.55310000009922,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p036-table-01",
+                "wdr-p063-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p036-text-01",
+                "wdr-p264-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p010-text-00-part-02",
+                "wdr-p011-text-00-part-01",
+                "wdr-p067-caption-01",
+                "wdr-p038-caption-01",
+                "wdr-p046-text-00-part-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p074-text-00-part-02",
+                "wdr-p144-caption-01",
+                "wdr-p015-text-00",
+                "wdr-p066-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p036-table-01",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.3226402174416257
+            },
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.3213983196051464
+            },
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.319291241562204
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-03",
+          "query": "According to Table O.1, what share of global CO2 emissions comes from low-income economies?",
+          "filters": {},
+          "embedding_ms": 64.74100000014005,
+          "retrieval_ms": 122.36780000057479,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-table-01",
+                "wdr-p036-table-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p063-text-00-part-01",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p067-caption-01",
+                "wdr-p038-caption-01",
+                "wdr-p036-text-01",
+                "wdr-p035-caption-01",
+                "wdr-p010-text-00-part-02",
+                "wdr-p015-text-00",
+                "wdr-p144-caption-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p057-text-00-part-01",
+                "wdr-p037-text-00-part-02",
+                "wdr-p086-text-00-part-02",
+                "wdr-p046-text-00-part-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p066-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.3118095012260516
+            },
+            {
+              "id": "wdr-p036-table-01",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.30800720160905465
+            },
+            {
+              "id": "wdr-p036-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.2884596880077703
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-04",
+          "query": "In Table O.2, is innovation a higher or lower priority for lower-middle-income countries?",
+          "filters": {},
+          "embedding_ms": 68.66960000024847,
+          "retrieval_ms": 124.20650000058231,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p039-table-01",
+                "wdr-p086-text-01",
+                "wdr-p086-table-01",
+                "wdr-p039-text-00",
+                "wdr-p037-text-00-part-01",
+                "wdr-p046-text-00-part-01",
+                "wdr-p096-caption-02",
+                "wdr-p010-text-00-part-02",
+                "wdr-p176-text-00-part-01",
+                "wdr-p023-text-00",
+                "wdr-p046-caption-01",
+                "wdr-p047-caption-01",
+                "wdr-p232-caption-01",
+                "wdr-p263-text-00-part-01",
+                "wdr-p074-text-00-part-02",
+                "wdr-p011-text-00-part-01",
+                "wdr-p107-text-00-part-02",
+                "wdr-p011-text-00-part-02",
+                "wdr-p063-text-00-part-01",
+                "wdr-p035-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.6746075377555631
+            },
+            {
+              "id": "wdr-p086-text-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.5963932979562919
+            },
+            {
+              "id": "wdr-p086-table-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.5929808028556641
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-05",
+          "query": "What productivity benefit of mergers and acquisitions is listed in Table 4.1?",
+          "filters": {},
+          "embedding_ms": 70.91899999977613,
+          "retrieval_ms": 102.67320000002655,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p210-caption-02",
+                "wdr-p135-text-01",
+                "wdr-p135-table-01",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p012-text-00-part-01",
+                "wdr-p180-table-01",
+                "wdr-p156-table-01",
+                "wdr-p132-caption-01",
+                "wdr-p133-caption-01",
+                "wdr-p082-text-00-part-02",
+                "wdr-p036-table-01",
+                "wdr-p134-text-00-part-01",
+                "wdr-p133-caption-02",
+                "wdr-p133-text-00-part-01",
+                "wdr-p232-table-01",
+                "wdr-p063-table-01",
+                "wdr-p091-table-01",
+                "wdr-p079-table-01",
+                "wdr-p107-table-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p210-caption-02",
+              "source": "World Development Report 2024",
+              "page": 210,
+              "score": 0.179570438243148
+            },
+            {
+              "id": "wdr-p135-text-01",
+              "source": "World Development Report 2024",
+              "page": 135,
+              "score": 0.1707075339322712
+            },
+            {
+              "id": "wdr-p135-table-01",
+              "source": "World Development Report 2024",
+              "page": 135,
+              "score": 0.16298401606149676
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-01",
+          "query": "Figure O.10 shows three forces that middle-income countries must balance. Name them.",
+          "filters": {},
+          "embedding_ms": 115.05320000014763,
+          "retrieval_ms": 114.6891999997024,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p049-caption-01",
+                "wdr-p010-text-00-part-02",
+                "wdr-p039-caption-01",
+                "wdr-p049-text-00",
+                "wdr-p035-caption-01",
+                "wdr-p096-caption-02",
+                "wdr-p044-caption-01",
+                "wdr-p191-text-00-part-01",
+                "wdr-p048-text-00-part-02",
+                "wdr-p038-caption-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p068-caption-01",
+                "wdr-p046-caption-01",
+                "wdr-p047-caption-01",
+                "wdr-p056-text-00-part-02",
+                "wdr-p113-text-00-part-02",
+                "wdr-p253-text-00",
+                "wdr-p263-caption-01",
+                "wdr-p262-caption-01",
+                "wdr-p223-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p049-caption-01",
+              "source": "World Development Report 2024",
+              "page": 49,
+              "score": 0.41647782743475176
+            },
+            {
+              "id": "wdr-p010-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 10,
+              "score": 0.29765297066329977
+            },
+            {
+              "id": "wdr-p039-caption-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.27557275058526476
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-02",
+          "query": "In Figure O.10, which force is shown as the largest component in the initial (left-hand) cycle?",
+          "filters": {},
+          "embedding_ms": 119.6615999997448,
+          "retrieval_ms": 113.01339999954507,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p046-caption-01",
+                "wdr-p047-caption-01",
+                "wdr-p222-text-00-part-02",
+                "wdr-p157-caption-01",
+                "wdr-p156-text-00-part-01",
+                "wdr-p041-caption-01",
+                "wdr-p156-caption-02",
+                "wdr-p058-text-00-part-01",
+                "wdr-p203-text-00-part-01",
+                "wdr-p040-caption-01",
+                "wdr-p094-text-00-part-01",
+                "wdr-p157-caption-02",
+                "wdr-p010-text-00-part-01",
+                "wdr-p043-caption-01",
+                "wdr-p049-caption-01",
+                "wdr-p144-text-00-part-01",
+                "wdr-p122-text-00-part-01",
+                "wdr-p201-text-00-part-01",
+                "wdr-p260-text-01",
+                "wdr-p202-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p046-caption-01",
+              "source": "World Development Report 2024",
+              "page": 46,
+              "score": 0.20892806608733935
+            },
+            {
+              "id": "wdr-p047-caption-01",
+              "source": "World Development Report 2024",
+              "page": 47,
+              "score": 0.20892806608733935
+            },
+            {
+              "id": "wdr-p222-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 222,
+              "score": 0.1676355437018302
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-03",
+          "query": "In Figure 7.2, which three elements feed into contestability?",
+          "filters": {},
+          "embedding_ms": 70.39890000032756,
+          "retrieval_ms": 105.94440000022587,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p195-caption-01",
+                "wdr-p096-caption-02",
+                "wdr-p201-caption-01",
+                "wdr-p262-caption-01",
+                "wdr-p206-caption-01",
+                "wdr-p243-table-02",
+                "wdr-p044-caption-01",
+                "wdr-p195-text-00-part-01",
+                "wdr-p093-caption-02",
+                "wdr-p094-caption-01",
+                "wdr-p095-caption-01",
+                "wdr-p013-text-00-part-01",
+                "wdr-p256-text-00-part-02",
+                "wdr-p105-text-01",
+                "wdr-p243-caption-01",
+                "wdr-p200-caption-01",
+                "wdr-p107-text-00-part-02",
+                "wdr-p243-text-01",
+                "wdr-p241-text-01",
+                "wdr-p036-table-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p195-caption-01",
+              "source": "World Development Report 2024",
+              "page": 195,
+              "score": 0.30661029600811096
+            },
+            {
+              "id": "wdr-p096-caption-02",
+              "source": "World Development Report 2024",
+              "page": 96,
+              "score": 0.27280359378786645
+            },
+            {
+              "id": "wdr-p201-caption-01",
+              "source": "World Development Report 2024",
+              "page": 201,
+              "score": 0.19557779843416173
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-04",
+          "query": "What outcome sits above contestability in the Figure 7.2 diagram?",
+          "filters": {},
+          "embedding_ms": 69.12009999996371,
+          "retrieval_ms": 118.92109999917011,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p195-caption-01",
+                "wdr-p096-caption-02",
+                "wdr-p201-caption-01",
+                "wdr-p262-caption-01",
+                "wdr-p195-text-00-part-01",
+                "wdr-p013-text-00-part-01",
+                "wdr-p206-caption-01",
+                "wdr-p243-table-02",
+                "wdr-p243-caption-01",
+                "wdr-p241-text-01",
+                "wdr-p096-caption-01",
+                "wdr-p105-text-01",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p200-caption-01",
+                "wdr-p243-text-01",
+                "wdr-p107-text-00-part-02",
+                "wdr-p212-text-00-part-01",
+                "wdr-p107-text-00-part-01",
+                "wdr-p156-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p195-caption-01",
+              "source": "World Development Report 2024",
+              "page": 195,
+              "score": 0.3296932228845632
+            },
+            {
+              "id": "wdr-p096-caption-02",
+              "source": "World Development Report 2024",
+              "page": 96,
+              "score": 0.2933414083656004
+            },
+            {
+              "id": "wdr-p201-caption-01",
+              "source": "World Development Report 2024",
+              "page": 201,
+              "score": 0.21030172675193043
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-01",
+          "query": "In Figure 1.1, which labeled economy has the highest 2022 GNI per capita?",
+          "filters": {},
+          "embedding_ms": 69.51489999937621,
+          "retrieval_ms": 110.18260000037117,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-text-00-part-02",
+                "wdr-p068-caption-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p036-text-01",
+                "wdr-p035-caption-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p132-caption-02",
+                "wdr-p069-text-01",
+                "wdr-p055-caption-01",
+                "wdr-p067-text-00-part-02",
+                "wdr-p066-text-00-part-02",
+                "wdr-p011-text-00-part-01",
+                "wdr-p144-caption-01",
+                "wdr-p082-table-01-part-01",
+                "wdr-p171-caption-01",
+                "wdr-p081-table-01-part-01",
+                "wdr-p067-caption-01",
+                "wdr-p107-table-01",
+                "wdr-p063-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.27534456445054095
+            },
+            {
+              "id": "wdr-p068-caption-01",
+              "source": "World Development Report 2024",
+              "page": 68,
+              "score": 0.2675991984725933
+            },
+            {
+              "id": "wdr-p095-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 95,
+              "score": 0.26256196528413134
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-02",
+          "query": "In Figure 1.1, approximately what is the 2022 GNI per capita of the Republic of Korea point?",
+          "filters": {},
+          "embedding_ms": 71.38780000059342,
+          "retrieval_ms": 121.52740000055928,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p041-caption-01",
+                "wdr-p068-caption-01",
+                "wdr-p040-caption-01",
+                "wdr-p035-caption-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p036-text-01",
+                "wdr-p073-caption-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p043-caption-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p079-text-00-part-01",
+                "wdr-p069-text-01",
+                "wdr-p075-text-00-part-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p098-caption-02",
+                "wdr-p144-caption-01",
+                "wdr-p082-text-00-part-02",
+                "wdr-p070-text-00-part-01",
+                "wdr-p132-caption-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p041-caption-01",
+              "source": "World Development Report 2024",
+              "page": 41,
+              "score": 0.34392738399108624
+            },
+            {
+              "id": "wdr-p068-caption-01",
+              "source": "World Development Report 2024",
+              "page": 68,
+              "score": 0.2992223651558014
+            },
+            {
+              "id": "wdr-p040-caption-01",
+              "source": "World Development Report 2024",
+              "page": 40,
+              "score": 0.2978948675149287
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-03",
+          "query": "In Figure 1.2, which line is higher in 2022: all middle-income countries or the series excluding China?",
+          "filters": {},
+          "embedding_ms": 121.54430000009597,
+          "retrieval_ms": 153.9322999997239,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p096-caption-02",
+                "wdr-p035-text-01",
+                "wdr-p194-text-00-part-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p068-caption-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p176-text-00-part-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p154-caption-01",
+                "wdr-p146-caption-01",
+                "wdr-p066-text-01",
+                "wdr-p156-text-00-part-01",
+                "wdr-p187-text-01-part-01",
+                "wdr-p178-text-00-part-01",
+                "wdr-p263-caption-01",
+                "wdr-p155-text-01",
+                "wdr-p014-text-00-part-01",
+                "wdr-p023-text-00",
+                "wdr-p262-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p096-caption-02",
+              "source": "World Development Report 2024",
+              "page": 96,
+              "score": 0.27783503850484564
+            },
+            {
+              "id": "wdr-p035-text-01",
+              "source": "World Development Report 2024",
+              "page": 35,
+              "score": 0.23297867145569803
+            },
+            {
+              "id": "wdr-p194-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 194,
+              "score": 0.22392023472889314
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-04",
+          "query": "In Figure 1.2, which series is colored orange?",
+          "filters": {},
+          "embedding_ms": 116.48609999974724,
+          "retrieval_ms": 146.40539999982138,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p105-text-01",
+                "wdr-p096-caption-02",
+                "wdr-p241-text-01",
+                "wdr-p255-text-00-part-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p175-text-00-part-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p107-text-00-part-01",
+                "wdr-p241-text-00-part-02",
+                "wdr-p107-text-00-part-02",
+                "wdr-p043-text-01",
+                "wdr-p177-text-00-part-02",
+                "wdr-p107-table-01",
+                "wdr-p144-caption-01",
+                "wdr-p068-caption-01",
+                "wdr-p171-caption-01",
+                "wdr-p172-caption-01",
+                "wdr-p096-caption-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p171-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p105-text-01",
+              "source": "World Development Report 2024",
+              "page": 105,
+              "score": 0.22633924908334335
+            },
+            {
+              "id": "wdr-p096-caption-02",
+              "source": "World Development Report 2024",
+              "page": 96,
+              "score": 0.20365870304356992
+            },
+            {
+              "id": "wdr-p241-text-01",
+              "source": "World Development Report 2024",
+              "page": 241,
+              "score": 0.2011871337233206
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-01",
+          "query": "Combine Tables O.1 and O.2: what share of global GDP is attributed to upper-middle-income economies, and which three policy areas are higher priority for them?",
+          "filters": {},
+          "embedding_ms": 73.09559999976045,
+          "retrieval_ms": 112.75139999997918,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p039-table-01",
+                "wdr-p086-table-01",
+                "wdr-p086-text-01",
+                "wdr-p039-text-00",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p036-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p015-text-00",
+                "wdr-p010-text-00-part-02",
+                "wdr-p063-table-01",
+                "wdr-p035-caption-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p045-text-00-part-01",
+                "wdr-p046-text-00-part-01",
+                "wdr-p264-text-00-part-01",
+                "wdr-p038-caption-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p058-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.3370722688710814
+            },
+            {
+              "id": "wdr-p086-table-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.32523239112307717
+            },
+            {
+              "id": "wdr-p086-text-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.3220326843430768
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-02",
+          "query": "Using Tables O.1 and O.2, give the lower-middle-income group’s global-population share and identify its lowest-priority policy area.",
+          "filters": {},
+          "embedding_ms": 73.02549999985786,
+          "retrieval_ms": 131.22029999976803,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p039-table-01",
+                "wdr-p086-text-01",
+                "wdr-p039-text-00",
+                "wdr-p086-table-01",
+                "wdr-p036-table-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p063-text-00-part-01",
+                "wdr-p058-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p063-table-01",
+                "wdr-p015-text-00",
+                "wdr-p010-text-00-part-02",
+                "wdr-p036-text-01",
+                "wdr-p091-text-00-part-01",
+                "wdr-p010-text-00-part-01",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p158-text-00-part-02",
+                "wdr-p046-text-00-part-01",
+                "wdr-p040-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.3206423318293835
+            },
+            {
+              "id": "wdr-p086-text-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.31067478694900097
+            },
+            {
+              "id": "wdr-p039-text-00",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.2939904200662969
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-03",
+          "query": "Table O.1 gives upper-middle-income economies’ share of global CO2 emissions. Table 4.1 lists one consumer-welfare risk when fewer firms compete. What are the two facts?",
+          "filters": {},
+          "embedding_ms": 75.5565999997998,
+          "retrieval_ms": 125.8640000005471,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p036-table-01",
+                "wdr-p063-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p135-text-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p180-table-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p135-table-01",
+                "wdr-p264-text-00-part-01",
+                "wdr-p036-text-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p067-caption-01",
+                "wdr-p035-caption-01",
+                "wdr-p015-text-00",
+                "wdr-p058-text-00-part-02",
+                "wdr-p144-caption-01",
+                "wdr-p037-table-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p036-table-01",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.2520792842206721
+            },
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.2460418412339601
+            },
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.24262946618070488
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-04",
+          "query": "Combine Table O.2 with Table 4.1: what is the innovation priority for lower-middle-income countries, and what innovation risk from conglomerates is listed?",
+          "filters": {},
+          "embedding_ms": 125.32569999984844,
+          "retrieval_ms": 130.83259999984875,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p039-table-01",
+                "wdr-p086-table-01",
+                "wdr-p086-text-01",
+                "wdr-p039-text-00",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p058-text-00-part-02",
+                "wdr-p091-table-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p180-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p037-table-01",
+                "wdr-p041-caption-01",
+                "wdr-p011-text-00-part-02",
+                "wdr-p012-text-00-part-01",
+                "wdr-p135-table-01",
+                "wdr-p010-text-00-part-02",
+                "wdr-p063-table-01",
+                "wdr-p086-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.3547916109998321
+            },
+            {
+              "id": "wdr-p086-table-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.3306487875727484
+            },
+            {
+              "id": "wdr-p086-text-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.3305732091659962
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-text-01",
+          "query": "How many countries does the report say the World Bank classified as middle-income?",
+          "filters": {},
+          "embedding_ms": 72.66100000015285,
+          "retrieval_ms": 124.92310000016005,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p001-text-00",
+                "wdr-p005-text-00",
+                "wdr-p095-text-00-part-02",
+                "wdr-p143-text-00-part-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p262-caption-01",
+                "wdr-p065-text-00-part-01",
+                "wdr-p070-text-00-part-01",
+                "wdr-p006-text-00-part-01",
+                "wdr-p250-text-00-part-03",
+                "wdr-p078-text-02",
+                "wdr-p078-text-01-part-03",
+                "wdr-p062-text-01-part-02",
+                "wdr-p074-text-01",
+                "wdr-p140-text-00-part-02",
+                "wdr-p035-text-01",
+                "wdr-p078-text-01-part-02",
+                "wdr-p276-text-00-part-01",
+                "wdr-p251-text-01-part-01",
+                "wdr-p219-text-01-part-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p001-text-00",
+              "source": "World Development Report 2024",
+              "page": 1,
+              "score": 0.26394244073646234
+            },
+            {
+              "id": "wdr-p005-text-00",
+              "source": "World Development Report 2024",
+              "page": 5,
+              "score": 0.26394244073646234
+            },
+            {
+              "id": "wdr-p095-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 95,
+              "score": 0.22747152216428465
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-text-02",
+          "query": "At about what share of US GDP per capita does the report say typical middle-income growth begins to plateau?",
+          "filters": {},
+          "embedding_ms": 68.14720000056695,
+          "retrieval_ms": 131.02400000025227,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p036-text-00-part-02",
+                "wdr-p095-text-00-part-02",
+                "wdr-p068-caption-01",
+                "wdr-p065-text-00-part-01",
+                "wdr-p036-text-01",
+                "wdr-p035-caption-01",
+                "wdr-p074-text-01",
+                "wdr-p074-text-00-part-01",
+                "wdr-p071-text-01",
+                "wdr-p070-text-00-part-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p074-text-00-part-02",
+                "wdr-p075-text-00-part-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p064-text-00-part-01",
+                "wdr-p238-text-00-part-02",
+                "wdr-p276-text-00-part-01",
+                "wdr-p087-text-00-part-01",
+                "wdr-p079-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p036-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.40676163477604155
+            },
+            {
+              "id": "wdr-p095-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 95,
+              "score": 0.2105607211314295
+            },
+            {
+              "id": "wdr-p068-caption-01",
+              "source": "World Development Report 2024",
+              "page": 68,
+              "score": 0.2061347963022399
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-text-03",
+          "query": "Since what year does the report say the World Bank has used the term “middle-income trap”?",
+          "filters": {},
+          "embedding_ms": 68.43699999990349,
+          "retrieval_ms": 117.43890000070678,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p003-text-00",
+                "wdr-p001-text-00",
+                "wdr-p005-text-00",
+                "wdr-p065-text-00-part-01",
+                "wdr-p070-text-00-part-01",
+                "wdr-p069-text-00-part-01",
+                "wdr-p276-text-00-part-01",
+                "wdr-p075-text-00-part-01",
+                "wdr-p006-text-00-part-01",
+                "wdr-p074-text-01",
+                "wdr-p078-text-01-part-02",
+                "wdr-p078-text-02",
+                "wdr-p017-text-00-part-01",
+                "wdr-p029-text-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p035-text-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p029-text-00-part-02",
+                "wdr-p066-text-01",
+                "wdr-p143-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p003-text-00",
+              "source": "World Development Report 2024",
+              "page": 3,
+              "score": 0.39597527522033815
+            },
+            {
+              "id": "wdr-p001-text-00",
+              "source": "World Development Report 2024",
+              "page": 1,
+              "score": 0.3335122055694468
+            },
+            {
+              "id": "wdr-p005-text-00",
+              "source": "World Development Report 2024",
+              "page": 5,
+              "score": 0.3335122055694468
+            }
+          ],
+          "contexts": []
+        }
+      ]
+    },
+    "H1": {
+      "retrieval_id_exact": {
+        "answerable_n": 20,
+        "hit_at_1": {
+          "n": 7,
+          "N": 20,
+          "rate": 0.35
+        },
+        "evidence_hit_at_3": {
+          "n": 7,
+          "N": 20,
+          "rate": 0.35
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 20,
+          "rate": 0.0
+        }
+      },
+      "retrieval_source_quote": {
+        "version": "source_quote_v1",
+        "answerable_n": 20,
+        "hit_at_1": {
+          "n": 8,
+          "N": 20,
+          "rate": 0.4
+        },
+        "evidence_hit_at_3": {
+          "n": 8,
+          "N": 20,
+          "rate": 0.4
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 20,
+          "rate": 0.0
+        },
+        "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+      },
+      "traces": [
+        {
+          "query_id": "bonus-dev-table-01",
+          "query": "In Table O.1, what share of the global population is in the lower-middle-income group?",
+          "filters": {},
+          "embedding_ms": 66.16920000033133,
+          "retrieval_ms": 107.03520000060962,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-text-00-part-01",
+                "wdr-p063-table-01",
+                "wdr-p035-caption-01",
+                "wdr-p036-text-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p065-text-00-part-01",
+                "wdr-p036-table-01",
+                "wdr-p070-text-00-part-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p102-text-00-part-01",
+                "wdr-p156-text-00-part-01",
+                "wdr-p046-text-00-part-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p222-text-00-part-02",
+                "wdr-p011-text-00-part-01",
+                "wdr-p066-text-00-part-02",
+                "wdr-p035-text-00-part-02",
+                "wdr-p018-text-00",
+                "wdr-p144-caption-01",
+                "wdr-p096-caption-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03149801587301587
+            },
+            {
+              "id": "wdr-p035-caption-01",
+              "source": "World Development Report 2024",
+              "page": 35,
+              "score": 0.03057889822595705
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-02",
+          "query": "What share of global GDP is attributed to upper-middle-income economies in Table O.1?",
+          "filters": {},
+          "embedding_ms": 64.94709999969928,
+          "retrieval_ms": 103.59739999967132,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p036-text-01",
+                "wdr-p035-caption-01",
+                "wdr-p036-table-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p067-caption-01",
+                "wdr-p066-text-00-part-01",
+                "wdr-p264-text-00-part-01",
+                "wdr-p074-text-00-part-02",
+                "wdr-p038-caption-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p010-text-00-part-02",
+                "wdr-p046-text-00-part-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p063-text-00-part-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "wdr-p036-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.030330882352941176
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-03",
+          "query": "According to Table O.1, what share of global CO2 emissions comes from low-income economies?",
+          "filters": {},
+          "embedding_ms": 64.74100000014005,
+          "retrieval_ms": 121.229499999572,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-table-01",
+                "wdr-p036-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p036-text-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p015-text-00",
+                "wdr-p057-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p067-caption-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p046-text-00-part-01",
+                "wdr-p066-text-00-part-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p266-text-00-part-01",
+                "wdr-p264-text-01",
+                "wdr-p038-caption-01",
+                "wdr-p180-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "wdr-p036-table-01",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.03225806451612903
+            },
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.031009615384615385
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-04",
+          "query": "In Table O.2, is innovation a higher or lower priority for lower-middle-income countries?",
+          "filters": {},
+          "embedding_ms": 68.66960000024847,
+          "retrieval_ms": 110.09620000004361,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p039-table-01",
+                "wdr-p086-text-01",
+                "wdr-p086-table-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p039-text-00",
+                "wdr-p046-text-00-part-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p023-text-00",
+                "wdr-p096-caption-02",
+                "wdr-p011-text-00-part-02",
+                "wdr-p010-text-00-part-02",
+                "wdr-p074-text-00-part-02",
+                "wdr-p046-caption-01",
+                "wdr-p047-caption-01",
+                "wdr-p232-caption-01",
+                "wdr-p035-caption-01",
+                "wdr-p037-table-01",
+                "wdr-p059-text-00-part-01",
+                "wdr-p033-text-00-part-01",
+                "wdr-p028-text-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "wdr-p086-text-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.031754032258064516
+            },
+            {
+              "id": "wdr-p086-table-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.030798389007344232
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-05",
+          "query": "What productivity benefit of mergers and acquisitions is listed in Table 4.1?",
+          "filters": {},
+          "embedding_ms": 70.91899999977613,
+          "retrieval_ms": 120.59670000053302,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p135-table-01",
+                "wdr-p135-text-01",
+                "wdr-p132-caption-01",
+                "wdr-p133-caption-01",
+                "wdr-p133-caption-02",
+                "wdr-p180-table-01",
+                "wdr-p079-table-01",
+                "wdr-p107-table-01",
+                "wdr-p134-text-00-part-01",
+                "wdr-p012-text-00-part-01",
+                "wdr-p232-table-01",
+                "wdr-p091-table-01",
+                "wdr-p133-text-00-part-01",
+                "wdr-p210-caption-02",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p137-text-00-part-02",
+                "wdr-p098-caption-01",
+                "wdr-p156-table-01",
+                "wdr-p240-caption-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p135-table-01",
+              "source": "World Development Report 2024",
+              "page": 135,
+              "score": 0.032266458495966696
+            },
+            {
+              "id": "wdr-p135-text-01",
+              "source": "World Development Report 2024",
+              "page": 135,
+              "score": 0.03225806451612903
+            },
+            {
+              "id": "wdr-p132-caption-01",
+              "source": "World Development Report 2024",
+              "page": 132,
+              "score": 0.03036576949620428
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-01",
+          "query": "Figure O.10 shows three forces that middle-income countries must balance. Name them.",
+          "filters": {},
+          "embedding_ms": 115.05320000014763,
+          "retrieval_ms": 122.78860000060376,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p049-caption-01",
+                "wdr-p039-caption-01",
+                "wdr-p096-caption-02",
+                "wdr-p035-caption-01",
+                "wdr-p049-text-00",
+                "wdr-p046-caption-01",
+                "wdr-p047-caption-01",
+                "wdr-p010-text-00-part-02",
+                "wdr-p263-caption-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p048-text-00-part-02",
+                "wdr-p262-caption-01",
+                "wdr-p191-text-00-part-01",
+                "wdr-p068-caption-01",
+                "wdr-p223-caption-01",
+                "wdr-p038-caption-01",
+                "wdr-p198-caption-01",
+                "wdr-p044-caption-01",
+                "wdr-p102-caption-02",
+                "wdr-p088-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p049-caption-01",
+              "source": "World Development Report 2024",
+              "page": 49,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "wdr-p039-caption-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.031746031746031744
+            },
+            {
+              "id": "wdr-p096-caption-02",
+              "source": "World Development Report 2024",
+              "page": 96,
+              "score": 0.03128054740957967
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-02",
+          "query": "In Figure O.10, which force is shown as the largest component in the initial (left-hand) cycle?",
+          "filters": {},
+          "embedding_ms": 119.6615999997448,
+          "retrieval_ms": 118.58850000044185,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p046-caption-01",
+                "wdr-p047-caption-01",
+                "wdr-p157-caption-01",
+                "wdr-p041-caption-01",
+                "wdr-p157-caption-02",
+                "wdr-p156-caption-02",
+                "wdr-p115-caption-01",
+                "wdr-p222-text-00-part-02",
+                "wdr-p129-caption-02",
+                "wdr-p130-caption-01",
+                "wdr-p156-text-00-part-01",
+                "wdr-p131-caption-01",
+                "wdr-p097-caption-01",
+                "wdr-p058-text-00-part-01",
+                "wdr-p210-caption-03",
+                "wdr-p044-caption-01",
+                "wdr-p203-text-00-part-01",
+                "wdr-p040-caption-01",
+                "wdr-p098-caption-01",
+                "wdr-p094-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p046-caption-01",
+              "source": "World Development Report 2024",
+              "page": 46,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "wdr-p047-caption-01",
+              "source": "World Development Report 2024",
+              "page": 47,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "wdr-p157-caption-01",
+              "source": "World Development Report 2024",
+              "page": 157,
+              "score": 0.028612012987012988
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-03",
+          "query": "In Figure 7.2, which three elements feed into contestability?",
+          "filters": {},
+          "embedding_ms": 70.39890000032756,
+          "retrieval_ms": 124.79399999938323,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p195-caption-01",
+                "wdr-p195-text-00-part-01",
+                "wdr-p044-caption-01",
+                "wdr-p096-caption-02",
+                "wdr-p262-caption-01",
+                "wdr-p200-caption-01",
+                "wdr-p206-caption-01",
+                "wdr-p211-caption-01",
+                "wdr-p201-caption-01",
+                "wdr-p212-caption-01",
+                "wdr-p123-caption-01",
+                "wdr-p119-caption-01",
+                "wdr-p243-table-02",
+                "wdr-p193-text-00",
+                "wdr-p195-text-01",
+                "wdr-p050-text-01",
+                "wdr-p093-caption-02",
+                "wdr-p094-caption-01",
+                "wdr-p119-text-00-part-02",
+                "wdr-p095-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p195-caption-01",
+              "source": "World Development Report 2024",
+              "page": 195,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "wdr-p195-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 195,
+              "score": 0.030090497737556562
+            },
+            {
+              "id": "wdr-p044-caption-01",
+              "source": "World Development Report 2024",
+              "page": 44,
+              "score": 0.026973565905412694
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-04",
+          "query": "What outcome sits above contestability in the Figure 7.2 diagram?",
+          "filters": {},
+          "embedding_ms": 69.12009999996371,
+          "retrieval_ms": 123.23569999989559,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p195-caption-01",
+                "wdr-p195-text-00-part-01",
+                "wdr-p262-caption-01",
+                "wdr-p096-caption-02",
+                "wdr-p156-caption-01",
+                "wdr-p206-caption-01",
+                "wdr-p212-text-00-part-01",
+                "wdr-p200-caption-01",
+                "wdr-p201-caption-01",
+                "wdr-p211-caption-01",
+                "wdr-p212-caption-01",
+                "wdr-p123-caption-01",
+                "wdr-p013-text-00-part-01",
+                "wdr-p193-text-00",
+                "wdr-p119-caption-01",
+                "wdr-p243-table-02",
+                "wdr-p243-caption-01",
+                "wdr-p244-caption-01",
+                "wdr-p195-text-01",
+                "wdr-p241-text-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p195-caption-01",
+              "source": "World Development Report 2024",
+              "page": 195,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "wdr-p195-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 195,
+              "score": 0.030536130536130537
+            },
+            {
+              "id": "wdr-p262-caption-01",
+              "source": "World Development Report 2024",
+              "page": 262,
+              "score": 0.029138513513513514
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-01",
+          "query": "In Figure 1.1, which labeled economy has the highest 2022 GNI per capita?",
+          "filters": {},
+          "embedding_ms": 69.51489999937621,
+          "retrieval_ms": 110.17709999941872,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-text-00-part-02",
+                "wdr-p095-text-00-part-02",
+                "wdr-p035-caption-01",
+                "wdr-p068-caption-01",
+                "wdr-p082-table-01-part-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p081-table-01-part-01",
+                "wdr-p036-text-01",
+                "wdr-p067-text-00-part-02",
+                "wdr-p132-caption-02",
+                "wdr-p067-caption-01",
+                "wdr-p069-text-01",
+                "wdr-p066-text-00-part-02",
+                "wdr-p095-text-01",
+                "wdr-p067-text-00-part-01",
+                "wdr-p082-text-00-part-01",
+                "wdr-p081-text-00-part-01",
+                "wdr-p055-caption-01",
+                "wdr-p238-text-00-part-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.032018442622950824
+            },
+            {
+              "id": "wdr-p095-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 95,
+              "score": 0.031024531024531024
+            },
+            {
+              "id": "wdr-p035-caption-01",
+              "source": "World Development Report 2024",
+              "page": 35,
+              "score": 0.030090497737556562
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-02",
+          "query": "In Figure 1.1, approximately what is the 2022 GNI per capita of the Republic of Korea point?",
+          "filters": {},
+          "embedding_ms": 71.38780000059342,
+          "retrieval_ms": 123.89039999925444,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p073-caption-01",
+                "wdr-p041-caption-01",
+                "wdr-p043-caption-01",
+                "wdr-p035-caption-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p068-caption-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p040-caption-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p036-text-01",
+                "wdr-p132-caption-02",
+                "wdr-p011-text-00-part-01",
+                "wdr-p079-text-00-part-01",
+                "wdr-p069-text-01",
+                "wdr-p082-text-00-part-02",
+                "wdr-p070-text-00-part-01",
+                "wdr-p082-table-01-part-01",
+                "wdr-p082-text-00-part-01",
+                "wdr-p095-text-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p073-caption-01",
+              "source": "World Development Report 2024",
+              "page": 73,
+              "score": 0.03131881575727918
+            },
+            {
+              "id": "wdr-p041-caption-01",
+              "source": "World Development Report 2024",
+              "page": 41,
+              "score": 0.030886196246139225
+            },
+            {
+              "id": "wdr-p043-caption-01",
+              "source": "World Development Report 2024",
+              "page": 43,
+              "score": 0.03036576949620428
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-03",
+          "query": "In Figure 1.2, which line is higher in 2022: all middle-income countries or the series excluding China?",
+          "filters": {},
+          "embedding_ms": 121.54430000009597,
+          "retrieval_ms": 144.4826999995712,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p096-caption-02",
+                "wdr-p068-caption-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p263-caption-01",
+                "wdr-p066-text-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p262-caption-01",
+                "wdr-p035-text-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p154-caption-01",
+                "wdr-p156-text-00-part-01",
+                "wdr-p194-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p102-caption-02",
+                "wdr-p176-text-00-part-01",
+                "wdr-p264-caption-01",
+                "wdr-p067-caption-01",
+                "wdr-p067-text-00-part-01",
+                "wdr-p146-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p096-caption-02",
+              "source": "World Development Report 2024",
+              "page": 96,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "wdr-p068-caption-01",
+              "source": "World Development Report 2024",
+              "page": 68,
+              "score": 0.0315136476426799
+            },
+            {
+              "id": "wdr-p068-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 68,
+              "score": 0.031024531024531024
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-04",
+          "query": "In Figure 1.2, which series is colored orange?",
+          "filters": {},
+          "embedding_ms": 116.48609999974724,
+          "retrieval_ms": 111.47119999986899,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p096-caption-02",
+                "wdr-p043-text-01",
+                "wdr-p105-text-01",
+                "wdr-p171-caption-01",
+                "wdr-p068-caption-01",
+                "wdr-p107-table-01",
+                "wdr-p096-caption-01",
+                "wdr-p210-caption-03",
+                "wdr-p156-caption-01",
+                "wdr-p102-caption-01",
+                "wdr-p241-text-01",
+                "wdr-p103-caption-01",
+                "wdr-p255-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p175-text-00-part-01",
+                "wdr-p263-caption-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p044-caption-01",
+                "wdr-p107-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p096-caption-02",
+              "source": "World Development Report 2024",
+              "page": 96,
+              "score": 0.030621785881252923
+            },
+            {
+              "id": "wdr-p043-text-01",
+              "source": "World Development Report 2024",
+              "page": 43,
+              "score": 0.024501173708920188
+            },
+            {
+              "id": "wdr-p105-text-01",
+              "source": "World Development Report 2024",
+              "page": 105,
+              "score": 0.023746383799421407
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-01",
+          "query": "Combine Tables O.1 and O.2: what share of global GDP is attributed to upper-middle-income economies, and which three policy areas are higher priority for them?",
+          "filters": {},
+          "embedding_ms": 73.09559999976045,
+          "retrieval_ms": 106.10450000058336,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p086-text-01",
+                "wdr-p039-table-01",
+                "wdr-p063-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p039-text-00",
+                "wdr-p036-table-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p038-caption-01",
+                "wdr-p086-table-01",
+                "wdr-p264-text-00-part-01",
+                "wdr-p010-text-00-part-02",
+                "wdr-p037-table-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p044-caption-02",
+                "wdr-p264-caption-01",
+                "wdr-p045-caption-01",
+                "wdr-p198-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p086-text-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.031544957774465976
+            },
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03047794966520434
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-02",
+          "query": "Using Tables O.1 and O.2, give the lower-middle-income group’s global-population share and identify its lowest-priority policy area.",
+          "filters": {},
+          "embedding_ms": 73.02549999985786,
+          "retrieval_ms": 119.31760000061331,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p039-table-01",
+                "wdr-p086-text-01",
+                "wdr-p035-caption-01",
+                "wdr-p063-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p036-text-01",
+                "wdr-p086-table-01",
+                "wdr-p039-text-00",
+                "wdr-p036-table-01",
+                "wdr-p046-text-00-part-01",
+                "wdr-p066-text-00-part-02",
+                "wdr-p096-caption-02",
+                "wdr-p018-text-00",
+                "wdr-p263-caption-01",
+                "wdr-p103-text-00-part-01",
+                "wdr-p058-text-00-part-01",
+                "wdr-p102-caption-02",
+                "wdr-p015-text-00",
+                "wdr-p063-text-00-part-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.032266458495966696
+            },
+            {
+              "id": "wdr-p086-text-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.030834914611005692
+            },
+            {
+              "id": "wdr-p035-caption-01",
+              "source": "World Development Report 2024",
+              "page": 35,
+              "score": 0.02964426877470356
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-03",
+          "query": "Table O.1 gives upper-middle-income economies’ share of global CO2 emissions. Table 4.1 lists one consumer-welfare risk when fewer firms compete. What are the two facts?",
+          "filters": {},
+          "embedding_ms": 75.5565999997998,
+          "retrieval_ms": 133.63790000039444,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p036-table-01",
+                "wdr-p135-table-01",
+                "wdr-p036-text-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p264-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p058-text-00-part-02",
+                "wdr-p037-table-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p044-caption-02",
+                "wdr-p025-text-00",
+                "wdr-p045-caption-01",
+                "wdr-p135-text-01",
+                "wdr-p208-text-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p218-text-01-part-02",
+                "wdr-p180-table-01",
+                "wdr-p199-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03149801587301587
+            },
+            {
+              "id": "wdr-p036-table-01",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.03028233151183971
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-04",
+          "query": "Combine Table O.2 with Table 4.1: what is the innovation priority for lower-middle-income countries, and what innovation risk from conglomerates is listed?",
+          "filters": {},
+          "embedding_ms": 125.32569999984844,
+          "retrieval_ms": 129.74919999942358,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p039-table-01",
+                "wdr-p058-text-00-part-02",
+                "wdr-p037-table-01",
+                "wdr-p086-table-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p039-text-00",
+                "wdr-p086-text-01",
+                "wdr-p011-text-00-part-02",
+                "wdr-p011-text-00-part-01",
+                "wdr-p041-caption-01",
+                "wdr-p086-text-00-part-01",
+                "wdr-p012-text-00-part-01",
+                "wdr-p010-text-00-part-02",
+                "wdr-p059-text-00-part-01",
+                "wdr-p044-caption-02",
+                "wdr-p110-caption-01",
+                "wdr-p045-caption-01",
+                "wdr-p059-table-01-part-01",
+                "wdr-p091-text-01",
+                "wdr-p028-text-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "wdr-p058-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 58,
+              "score": 0.03057889822595705
+            },
+            {
+              "id": "wdr-p037-table-01",
+              "source": "World Development Report 2024",
+              "page": 37,
+              "score": 0.03009207275993712
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-text-01",
+          "query": "How many countries does the report say the World Bank classified as middle-income?",
+          "filters": {},
+          "embedding_ms": 72.66100000015285,
+          "retrieval_ms": 106.84999999921274,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p001-text-00",
+                "wdr-p063-text-00-part-01",
+                "wdr-p005-text-00",
+                "wdr-p006-text-00-part-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p065-text-00-part-01",
+                "wdr-p070-text-00-part-01",
+                "wdr-p276-text-00-part-01",
+                "wdr-p035-text-01",
+                "wdr-p078-text-01-part-02",
+                "wdr-p262-caption-01",
+                "wdr-p074-text-01",
+                "wdr-p251-text-01-part-01",
+                "wdr-p143-text-00-part-01",
+                "wdr-p035-text-00-part-02",
+                "wdr-p096-caption-02",
+                "wdr-p198-caption-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p017-text-00-part-01",
+                "wdr-p250-text-00-part-03"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p001-text-00",
+              "source": "World Development Report 2024",
+              "page": 1,
+              "score": 0.032266458495966696
+            },
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03177805800756621
+            },
+            {
+              "id": "wdr-p005-text-00",
+              "source": "World Development Report 2024",
+              "page": 5,
+              "score": 0.031754032258064516
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-text-02",
+          "query": "At about what share of US GDP per capita does the report say typical middle-income growth begins to plateau?",
+          "filters": {},
+          "embedding_ms": 68.14720000056695,
+          "retrieval_ms": 125.39420000030077,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p036-text-00-part-02",
+                "wdr-p065-text-00-part-01",
+                "wdr-p074-text-00-part-01",
+                "wdr-p068-caption-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p074-text-01",
+                "wdr-p074-text-00-part-02",
+                "wdr-p035-caption-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p075-text-00-part-01",
+                "wdr-p276-text-00-part-01",
+                "wdr-p064-text-00-part-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p070-text-00-part-01",
+                "wdr-p087-text-00-part-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p238-text-00-part-02",
+                "wdr-p079-text-00-part-01",
+                "wdr-p035-text-00-part-02",
+                "wdr-p036-text-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p036-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.032018442622950824
+            },
+            {
+              "id": "wdr-p065-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 65,
+              "score": 0.031754032258064516
+            },
+            {
+              "id": "wdr-p074-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 74,
+              "score": 0.031099324975891997
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-text-03",
+          "query": "Since what year does the report say the World Bank has used the term “middle-income trap”?",
+          "filters": {},
+          "embedding_ms": 68.43699999990349,
+          "retrieval_ms": 118.32390000017767,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p001-text-00",
+                "wdr-p005-text-00",
+                "wdr-p065-text-00-part-01",
+                "wdr-p006-text-00-part-01",
+                "wdr-p003-text-00",
+                "wdr-p276-text-00-part-01",
+                "wdr-p078-text-01-part-02",
+                "wdr-p017-text-00-part-01",
+                "wdr-p069-text-00-part-01",
+                "wdr-p074-text-01",
+                "wdr-p070-text-00-part-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p075-text-00-part-01",
+                "wdr-p035-text-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p066-text-01",
+                "wdr-p098-text-00-part-02",
+                "wdr-p078-text-00-part-02",
+                "wdr-p018-text-00",
+                "wdr-p078-text-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p001-text-00",
+              "source": "World Development Report 2024",
+              "page": 1,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "wdr-p005-text-00",
+              "source": "World Development Report 2024",
+              "page": 5,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "wdr-p065-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 65,
+              "score": 0.03055037313432836
+            }
+          ],
+          "contexts": []
+        }
+      ]
+    },
+    "H2": {
+      "retrieval_id_exact": {
+        "answerable_n": 20,
+        "hit_at_1": {
+          "n": 7,
+          "N": 20,
+          "rate": 0.35
+        },
+        "evidence_hit_at_3": {
+          "n": 7,
+          "N": 20,
+          "rate": 0.35
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 20,
+          "rate": 0.0
+        }
+      },
+      "retrieval_source_quote": {
+        "version": "source_quote_v1",
+        "answerable_n": 20,
+        "hit_at_1": {
+          "n": 8,
+          "N": 20,
+          "rate": 0.4
+        },
+        "evidence_hit_at_3": {
+          "n": 8,
+          "N": 20,
+          "rate": 0.4
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 20,
+          "rate": 0.0
+        },
+        "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+      },
+      "traces": [
+        {
+          "query_id": "bonus-dev-table-01",
+          "query": "In Table O.1, what share of the global population is in the lower-middle-income group?",
+          "filters": {},
+          "embedding_ms": 66.16920000033133,
+          "retrieval_ms": 114.00569999932486,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-text-00-part-01",
+                "wdr-p063-table-01",
+                "wdr-p035-caption-01",
+                "wdr-p036-text-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p065-text-00-part-01",
+                "wdr-p036-table-01",
+                "wdr-p070-text-00-part-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p102-text-00-part-01",
+                "wdr-p156-text-00-part-01",
+                "wdr-p046-text-00-part-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p222-text-00-part-02",
+                "wdr-p011-text-00-part-01",
+                "wdr-p066-text-00-part-02",
+                "wdr-p035-text-00-part-02",
+                "wdr-p018-text-00",
+                "wdr-p144-caption-01",
+                "wdr-p096-caption-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03149801587301587
+            },
+            {
+              "id": "wdr-p035-caption-01",
+              "source": "World Development Report 2024",
+              "page": 35,
+              "score": 0.03057889822595705
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-02",
+          "query": "What share of global GDP is attributed to upper-middle-income economies in Table O.1?",
+          "filters": {},
+          "embedding_ms": 64.94709999969928,
+          "retrieval_ms": 135.3663999998389,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p036-text-01",
+                "wdr-p035-caption-01",
+                "wdr-p036-table-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p067-caption-01",
+                "wdr-p066-text-00-part-01",
+                "wdr-p264-text-00-part-01",
+                "wdr-p074-text-00-part-02",
+                "wdr-p038-caption-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p010-text-00-part-02",
+                "wdr-p046-text-00-part-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p063-text-00-part-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "wdr-p036-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.030330882352941176
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-03",
+          "query": "According to Table O.1, what share of global CO2 emissions comes from low-income economies?",
+          "filters": {},
+          "embedding_ms": 64.74100000014005,
+          "retrieval_ms": 134.48109999990265,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-table-01",
+                "wdr-p036-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p036-text-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p015-text-00",
+                "wdr-p057-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p067-caption-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p046-text-00-part-01",
+                "wdr-p066-text-00-part-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p266-text-00-part-01",
+                "wdr-p264-text-01",
+                "wdr-p038-caption-01",
+                "wdr-p180-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "wdr-p036-table-01",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.03225806451612903
+            },
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.031009615384615385
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-04",
+          "query": "In Table O.2, is innovation a higher or lower priority for lower-middle-income countries?",
+          "filters": {},
+          "embedding_ms": 68.66960000024847,
+          "retrieval_ms": 106.0950999999477,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p039-table-01",
+                "wdr-p086-text-01",
+                "wdr-p086-table-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p039-text-00",
+                "wdr-p046-text-00-part-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p023-text-00",
+                "wdr-p096-caption-02",
+                "wdr-p011-text-00-part-02",
+                "wdr-p010-text-00-part-02",
+                "wdr-p074-text-00-part-02",
+                "wdr-p046-caption-01",
+                "wdr-p047-caption-01",
+                "wdr-p232-caption-01",
+                "wdr-p035-caption-01",
+                "wdr-p037-table-01",
+                "wdr-p059-text-00-part-01",
+                "wdr-p033-text-00-part-01",
+                "wdr-p028-text-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "wdr-p086-text-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.031754032258064516
+            },
+            {
+              "id": "wdr-p086-table-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.030798389007344232
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-table-05",
+          "query": "What productivity benefit of mergers and acquisitions is listed in Table 4.1?",
+          "filters": {},
+          "embedding_ms": 70.91899999977613,
+          "retrieval_ms": 107.680099999925,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p135-table-01",
+                "wdr-p135-text-01",
+                "wdr-p132-caption-01",
+                "wdr-p133-caption-01",
+                "wdr-p133-caption-02",
+                "wdr-p180-table-01",
+                "wdr-p079-table-01",
+                "wdr-p107-table-01",
+                "wdr-p134-text-00-part-01",
+                "wdr-p012-text-00-part-01",
+                "wdr-p232-table-01",
+                "wdr-p091-table-01",
+                "wdr-p133-text-00-part-01",
+                "wdr-p210-caption-02",
+                "wdr-p044-caption-02",
+                "wdr-p045-caption-01",
+                "wdr-p137-text-00-part-02",
+                "wdr-p098-caption-01",
+                "wdr-p156-table-01",
+                "wdr-p240-caption-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p135-table-01",
+              "source": "World Development Report 2024",
+              "page": 135,
+              "score": 0.032266458495966696
+            },
+            {
+              "id": "wdr-p135-text-01",
+              "source": "World Development Report 2024",
+              "page": 135,
+              "score": 0.03225806451612903
+            },
+            {
+              "id": "wdr-p132-caption-01",
+              "source": "World Development Report 2024",
+              "page": 132,
+              "score": 0.03036576949620428
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-01",
+          "query": "Figure O.10 shows three forces that middle-income countries must balance. Name them.",
+          "filters": {},
+          "embedding_ms": 115.05320000014763,
+          "retrieval_ms": 116.29069999980857,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p049-caption-01",
+                "wdr-p039-caption-01",
+                "wdr-p096-caption-02",
+                "wdr-p035-caption-01",
+                "wdr-p049-text-00",
+                "wdr-p046-caption-01",
+                "wdr-p047-caption-01",
+                "wdr-p010-text-00-part-02",
+                "wdr-p263-caption-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p048-text-00-part-02",
+                "wdr-p262-caption-01",
+                "wdr-p191-text-00-part-01",
+                "wdr-p068-caption-01",
+                "wdr-p223-caption-01",
+                "wdr-p038-caption-01",
+                "wdr-p198-caption-01",
+                "wdr-p044-caption-01",
+                "wdr-p102-caption-02",
+                "wdr-p088-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p049-caption-01",
+              "source": "World Development Report 2024",
+              "page": 49,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "wdr-p039-caption-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.031746031746031744
+            },
+            {
+              "id": "wdr-p096-caption-02",
+              "source": "World Development Report 2024",
+              "page": 96,
+              "score": 0.03128054740957967
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-02",
+          "query": "In Figure O.10, which force is shown as the largest component in the initial (left-hand) cycle?",
+          "filters": {},
+          "embedding_ms": 119.6615999997448,
+          "retrieval_ms": 121.3199000003442,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p046-caption-01",
+                "wdr-p047-caption-01",
+                "wdr-p157-caption-01",
+                "wdr-p041-caption-01",
+                "wdr-p157-caption-02",
+                "wdr-p156-caption-02",
+                "wdr-p115-caption-01",
+                "wdr-p222-text-00-part-02",
+                "wdr-p129-caption-02",
+                "wdr-p130-caption-01",
+                "wdr-p156-text-00-part-01",
+                "wdr-p131-caption-01",
+                "wdr-p097-caption-01",
+                "wdr-p058-text-00-part-01",
+                "wdr-p210-caption-03",
+                "wdr-p044-caption-01",
+                "wdr-p203-text-00-part-01",
+                "wdr-p040-caption-01",
+                "wdr-p098-caption-01",
+                "wdr-p094-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p046-caption-01",
+              "source": "World Development Report 2024",
+              "page": 46,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "wdr-p047-caption-01",
+              "source": "World Development Report 2024",
+              "page": 47,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "wdr-p157-caption-01",
+              "source": "World Development Report 2024",
+              "page": 157,
+              "score": 0.028612012987012988
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-03",
+          "query": "In Figure 7.2, which three elements feed into contestability?",
+          "filters": {},
+          "embedding_ms": 70.39890000032756,
+          "retrieval_ms": 121.21159999969677,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p195-caption-01",
+                "wdr-p195-text-00-part-01",
+                "wdr-p044-caption-01",
+                "wdr-p096-caption-02",
+                "wdr-p262-caption-01",
+                "wdr-p200-caption-01",
+                "wdr-p206-caption-01",
+                "wdr-p211-caption-01",
+                "wdr-p201-caption-01",
+                "wdr-p212-caption-01",
+                "wdr-p123-caption-01",
+                "wdr-p119-caption-01",
+                "wdr-p243-table-02",
+                "wdr-p193-text-00",
+                "wdr-p195-text-01",
+                "wdr-p050-text-01",
+                "wdr-p093-caption-02",
+                "wdr-p094-caption-01",
+                "wdr-p119-text-00-part-02",
+                "wdr-p095-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p195-caption-01",
+              "source": "World Development Report 2024",
+              "page": 195,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "wdr-p195-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 195,
+              "score": 0.030090497737556562
+            },
+            {
+              "id": "wdr-p044-caption-01",
+              "source": "World Development Report 2024",
+              "page": 44,
+              "score": 0.026973565905412694
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-image-04",
+          "query": "What outcome sits above contestability in the Figure 7.2 diagram?",
+          "filters": {},
+          "embedding_ms": 69.12009999996371,
+          "retrieval_ms": 127.60900000012043,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p195-caption-01",
+                "wdr-p195-text-00-part-01",
+                "wdr-p262-caption-01",
+                "wdr-p096-caption-02",
+                "wdr-p156-caption-01",
+                "wdr-p206-caption-01",
+                "wdr-p212-text-00-part-01",
+                "wdr-p200-caption-01",
+                "wdr-p201-caption-01",
+                "wdr-p211-caption-01",
+                "wdr-p212-caption-01",
+                "wdr-p123-caption-01",
+                "wdr-p013-text-00-part-01",
+                "wdr-p193-text-00",
+                "wdr-p119-caption-01",
+                "wdr-p243-table-02",
+                "wdr-p243-caption-01",
+                "wdr-p244-caption-01",
+                "wdr-p195-text-01",
+                "wdr-p241-text-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p195-caption-01",
+              "source": "World Development Report 2024",
+              "page": 195,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "wdr-p195-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 195,
+              "score": 0.030536130536130537
+            },
+            {
+              "id": "wdr-p262-caption-01",
+              "source": "World Development Report 2024",
+              "page": 262,
+              "score": 0.029138513513513514
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-01",
+          "query": "In Figure 1.1, which labeled economy has the highest 2022 GNI per capita?",
+          "filters": {},
+          "embedding_ms": 69.51489999937621,
+          "retrieval_ms": 112.71140000008018,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-text-00-part-02",
+                "wdr-p095-text-00-part-02",
+                "wdr-p035-caption-01",
+                "wdr-p068-caption-01",
+                "wdr-p082-table-01-part-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p081-table-01-part-01",
+                "wdr-p036-text-01",
+                "wdr-p067-text-00-part-02",
+                "wdr-p132-caption-02",
+                "wdr-p067-caption-01",
+                "wdr-p069-text-01",
+                "wdr-p066-text-00-part-02",
+                "wdr-p095-text-01",
+                "wdr-p067-text-00-part-01",
+                "wdr-p082-text-00-part-01",
+                "wdr-p081-text-00-part-01",
+                "wdr-p055-caption-01",
+                "wdr-p238-text-00-part-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.032018442622950824
+            },
+            {
+              "id": "wdr-p095-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 95,
+              "score": 0.031024531024531024
+            },
+            {
+              "id": "wdr-p035-caption-01",
+              "source": "World Development Report 2024",
+              "page": 35,
+              "score": 0.030090497737556562
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-02",
+          "query": "In Figure 1.1, approximately what is the 2022 GNI per capita of the Republic of Korea point?",
+          "filters": {},
+          "embedding_ms": 71.38780000059342,
+          "retrieval_ms": 123.93350000002101,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p073-caption-01",
+                "wdr-p041-caption-01",
+                "wdr-p043-caption-01",
+                "wdr-p035-caption-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p068-caption-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p040-caption-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p036-text-01",
+                "wdr-p132-caption-02",
+                "wdr-p011-text-00-part-01",
+                "wdr-p079-text-00-part-01",
+                "wdr-p069-text-01",
+                "wdr-p082-text-00-part-02",
+                "wdr-p070-text-00-part-01",
+                "wdr-p082-table-01-part-01",
+                "wdr-p082-text-00-part-01",
+                "wdr-p095-text-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p073-caption-01",
+              "source": "World Development Report 2024",
+              "page": 73,
+              "score": 0.03131881575727918
+            },
+            {
+              "id": "wdr-p041-caption-01",
+              "source": "World Development Report 2024",
+              "page": 41,
+              "score": 0.030886196246139225
+            },
+            {
+              "id": "wdr-p043-caption-01",
+              "source": "World Development Report 2024",
+              "page": 43,
+              "score": 0.03036576949620428
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-03",
+          "query": "In Figure 1.2, which line is higher in 2022: all middle-income countries or the series excluding China?",
+          "filters": {},
+          "embedding_ms": 121.54430000009597,
+          "retrieval_ms": 287.86180000042805,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p096-caption-02",
+                "wdr-p068-caption-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p263-caption-01",
+                "wdr-p066-text-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p262-caption-01",
+                "wdr-p035-text-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p154-caption-01",
+                "wdr-p156-text-00-part-01",
+                "wdr-p194-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p102-caption-02",
+                "wdr-p176-text-00-part-01",
+                "wdr-p264-caption-01",
+                "wdr-p067-caption-01",
+                "wdr-p067-text-00-part-01",
+                "wdr-p146-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p096-caption-02",
+              "source": "World Development Report 2024",
+              "page": 96,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "wdr-p068-caption-01",
+              "source": "World Development Report 2024",
+              "page": 68,
+              "score": 0.0315136476426799
+            },
+            {
+              "id": "wdr-p068-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 68,
+              "score": 0.031024531024531024
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-chart-04",
+          "query": "In Figure 1.2, which series is colored orange?",
+          "filters": {},
+          "embedding_ms": 116.48609999974724,
+          "retrieval_ms": 102.04679999969812,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p096-caption-02",
+                "wdr-p043-text-01",
+                "wdr-p105-text-01",
+                "wdr-p171-caption-01",
+                "wdr-p068-caption-01",
+                "wdr-p107-table-01",
+                "wdr-p096-caption-01",
+                "wdr-p210-caption-03",
+                "wdr-p156-caption-01",
+                "wdr-p102-caption-01",
+                "wdr-p241-text-01",
+                "wdr-p103-caption-01",
+                "wdr-p255-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p068-text-00-part-01",
+                "wdr-p175-text-00-part-01",
+                "wdr-p263-caption-01",
+                "wdr-p035-text-00-part-01",
+                "wdr-p044-caption-01",
+                "wdr-p107-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p096-caption-02",
+              "source": "World Development Report 2024",
+              "page": 96,
+              "score": 0.030621785881252923
+            },
+            {
+              "id": "wdr-p043-text-01",
+              "source": "World Development Report 2024",
+              "page": 43,
+              "score": 0.024501173708920188
+            },
+            {
+              "id": "wdr-p105-text-01",
+              "source": "World Development Report 2024",
+              "page": 105,
+              "score": 0.023746383799421407
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-01",
+          "query": "Combine Tables O.1 and O.2: what share of global GDP is attributed to upper-middle-income economies, and which three policy areas are higher priority for them?",
+          "filters": {},
+          "embedding_ms": 73.09559999976045,
+          "retrieval_ms": 132.35290000011446,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p086-text-01",
+                "wdr-p039-table-01",
+                "wdr-p063-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p039-text-00",
+                "wdr-p036-table-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p038-caption-01",
+                "wdr-p086-table-01",
+                "wdr-p264-text-00-part-01",
+                "wdr-p010-text-00-part-02",
+                "wdr-p037-table-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p044-caption-02",
+                "wdr-p264-caption-01",
+                "wdr-p045-caption-01",
+                "wdr-p198-caption-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p086-text-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.031544957774465976
+            },
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03047794966520434
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-02",
+          "query": "Using Tables O.1 and O.2, give the lower-middle-income group’s global-population share and identify its lowest-priority policy area.",
+          "filters": {},
+          "embedding_ms": 73.02549999985786,
+          "retrieval_ms": 105.65810000025522,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p039-table-01",
+                "wdr-p086-text-01",
+                "wdr-p035-caption-01",
+                "wdr-p063-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p036-text-01",
+                "wdr-p086-table-01",
+                "wdr-p039-text-00",
+                "wdr-p036-table-01",
+                "wdr-p046-text-00-part-01",
+                "wdr-p066-text-00-part-02",
+                "wdr-p096-caption-02",
+                "wdr-p018-text-00",
+                "wdr-p263-caption-01",
+                "wdr-p103-text-00-part-01",
+                "wdr-p058-text-00-part-01",
+                "wdr-p102-caption-02",
+                "wdr-p015-text-00",
+                "wdr-p063-text-00-part-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.032266458495966696
+            },
+            {
+              "id": "wdr-p086-text-01",
+              "source": "World Development Report 2024",
+              "page": 86,
+              "score": 0.030834914611005692
+            },
+            {
+              "id": "wdr-p035-caption-01",
+              "source": "World Development Report 2024",
+              "page": 35,
+              "score": 0.02964426877470356
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-03",
+          "query": "Table O.1 gives upper-middle-income economies’ share of global CO2 emissions. Table 4.1 lists one consumer-welfare risk when fewer firms compete. What are the two facts?",
+          "filters": {},
+          "embedding_ms": 75.5565999997998,
+          "retrieval_ms": 127.72140000015497,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p063-table-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p036-table-01",
+                "wdr-p135-table-01",
+                "wdr-p036-text-01",
+                "wdr-p036-text-00-part-02",
+                "wdr-p264-text-00-part-01",
+                "wdr-p035-caption-01",
+                "wdr-p058-text-00-part-02",
+                "wdr-p037-table-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p044-caption-02",
+                "wdr-p025-text-00",
+                "wdr-p045-caption-01",
+                "wdr-p135-text-01",
+                "wdr-p208-text-01",
+                "wdr-p011-text-00-part-01",
+                "wdr-p218-text-01-part-02",
+                "wdr-p180-table-01",
+                "wdr-p199-text-00-part-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p063-table-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03149801587301587
+            },
+            {
+              "id": "wdr-p036-table-01",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.03028233151183971
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-multi-04",
+          "query": "Combine Table O.2 with Table 4.1: what is the innovation priority for lower-middle-income countries, and what innovation risk from conglomerates is listed?",
+          "filters": {},
+          "embedding_ms": 125.32569999984844,
+          "retrieval_ms": 114.54009999943082,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p039-table-01",
+                "wdr-p058-text-00-part-02",
+                "wdr-p037-table-01",
+                "wdr-p086-table-01",
+                "wdr-p037-text-00-part-01",
+                "wdr-p039-text-00",
+                "wdr-p086-text-01",
+                "wdr-p011-text-00-part-02",
+                "wdr-p011-text-00-part-01",
+                "wdr-p041-caption-01",
+                "wdr-p086-text-00-part-01",
+                "wdr-p012-text-00-part-01",
+                "wdr-p010-text-00-part-02",
+                "wdr-p059-text-00-part-01",
+                "wdr-p044-caption-02",
+                "wdr-p110-caption-01",
+                "wdr-p045-caption-01",
+                "wdr-p059-table-01-part-01",
+                "wdr-p091-text-01",
+                "wdr-p028-text-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p039-table-01",
+              "source": "World Development Report 2024",
+              "page": 39,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "wdr-p058-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 58,
+              "score": 0.03057889822595705
+            },
+            {
+              "id": "wdr-p037-table-01",
+              "source": "World Development Report 2024",
+              "page": 37,
+              "score": 0.03009207275993712
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-text-01",
+          "query": "How many countries does the report say the World Bank classified as middle-income?",
+          "filters": {},
+          "embedding_ms": 72.66100000015285,
+          "retrieval_ms": 120.1108999994176,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p001-text-00",
+                "wdr-p063-text-00-part-01",
+                "wdr-p005-text-00",
+                "wdr-p006-text-00-part-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p065-text-00-part-01",
+                "wdr-p070-text-00-part-01",
+                "wdr-p276-text-00-part-01",
+                "wdr-p035-text-01",
+                "wdr-p078-text-01-part-02",
+                "wdr-p262-caption-01",
+                "wdr-p074-text-01",
+                "wdr-p251-text-01-part-01",
+                "wdr-p143-text-00-part-01",
+                "wdr-p035-text-00-part-02",
+                "wdr-p096-caption-02",
+                "wdr-p198-caption-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p017-text-00-part-01",
+                "wdr-p250-text-00-part-03"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p001-text-00",
+              "source": "World Development Report 2024",
+              "page": 1,
+              "score": 0.032266458495966696
+            },
+            {
+              "id": "wdr-p063-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 63,
+              "score": 0.03177805800756621
+            },
+            {
+              "id": "wdr-p005-text-00",
+              "source": "World Development Report 2024",
+              "page": 5,
+              "score": 0.031754032258064516
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-text-02",
+          "query": "At about what share of US GDP per capita does the report say typical middle-income growth begins to plateau?",
+          "filters": {},
+          "embedding_ms": 68.14720000056695,
+          "retrieval_ms": 119.12130000018806,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p036-text-00-part-02",
+                "wdr-p065-text-00-part-01",
+                "wdr-p074-text-00-part-01",
+                "wdr-p068-caption-01",
+                "wdr-p095-text-00-part-02",
+                "wdr-p074-text-01",
+                "wdr-p074-text-00-part-02",
+                "wdr-p035-caption-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p075-text-00-part-01",
+                "wdr-p276-text-00-part-01",
+                "wdr-p064-text-00-part-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p070-text-00-part-01",
+                "wdr-p087-text-00-part-01",
+                "wdr-p063-text-00-part-02",
+                "wdr-p238-text-00-part-02",
+                "wdr-p079-text-00-part-01",
+                "wdr-p035-text-00-part-02",
+                "wdr-p036-text-01"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p036-text-00-part-02",
+              "source": "World Development Report 2024",
+              "page": 36,
+              "score": 0.032018442622950824
+            },
+            {
+              "id": "wdr-p065-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 65,
+              "score": 0.031754032258064516
+            },
+            {
+              "id": "wdr-p074-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 74,
+              "score": 0.031099324975891997
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "bonus-dev-text-03",
+          "query": "Since what year does the report say the World Bank has used the term “middle-income trap”?",
+          "filters": {},
+          "embedding_ms": 68.43699999990349,
+          "retrieval_ms": 107.67959999975574,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "wdr-p001-text-00",
+                "wdr-p005-text-00",
+                "wdr-p065-text-00-part-01",
+                "wdr-p006-text-00-part-01",
+                "wdr-p003-text-00",
+                "wdr-p276-text-00-part-01",
+                "wdr-p078-text-01-part-02",
+                "wdr-p017-text-00-part-01",
+                "wdr-p069-text-00-part-01",
+                "wdr-p074-text-01",
+                "wdr-p070-text-00-part-01",
+                "wdr-p036-text-00-part-01",
+                "wdr-p075-text-00-part-01",
+                "wdr-p035-text-01",
+                "wdr-p063-text-00-part-01",
+                "wdr-p066-text-01",
+                "wdr-p098-text-00-part-02",
+                "wdr-p078-text-00-part-02",
+                "wdr-p018-text-00",
+                "wdr-p078-text-02"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "wdr-p001-text-00",
+              "source": "World Development Report 2024",
+              "page": 1,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "wdr-p005-text-00",
+              "source": "World Development Report 2024",
+              "page": 5,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "wdr-p065-text-00-part-01",
+              "source": "World Development Report 2024",
+              "page": 65,
+              "score": 0.03055037313432836
+            }
+          ],
+          "contexts": []
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "suite": "core",
+  "baseline_config": "D0",
+  "selected_config": "D0",
+  "dev_only": true,
+  "test_used_for_selection": false,
+  "reason": "Highest context coverage, then fewer errors, then lower cost on the final dev comparison.",
+  "comparison_path": "results/core/dev/comparison-final.json",
+  "baseline_and_selected_share_one_test_run": true
+}

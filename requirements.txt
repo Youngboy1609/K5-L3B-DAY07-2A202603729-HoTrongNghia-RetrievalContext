@@ -1,0 +1,9 @@
+# Python 3.11; local Qwen embeddings on CUDA 12.1, following the Lab6 stack.
+psycopg[binary]==3.3.8
+python-dotenv==1.2.4
+pdfplumber==0.11.9
+pypdfium2==5.8.0
+sentence-transformers==5.2.3
+transformers==5.2.0
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1+cu121

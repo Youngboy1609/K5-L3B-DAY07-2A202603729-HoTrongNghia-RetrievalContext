@@ -1,0 +1,53 @@
+{
+  "suite": "bonus",
+  "split": "dev",
+  "config": "H2",
+  "n": 24,
+  "status": "complete",
+  "errors": 0,
+  "cost_usd": 0.009210425999999999,
+  "latency_ms_median": 4918.128799999749,
+  "retrieval": {
+    "answerable_n": 20,
+    "hit_at_1": {
+      "n": 7,
+      "N": 20,
+      "rate": 0.35
+    },
+    "evidence_hit_at_3": {
+      "n": 8,
+      "N": 20,
+      "rate": 0.4
+    },
+    "context_evidence_rate": {
+      "n": 14,
+      "N": 20,
+      "rate": 0.7
+    }
+  },
+  "retrieval_source_quote": {
+    "version": "source_quote_v1",
+    "answerable_n": 20,
+    "hit_at_1": {
+      "n": 8,
+      "N": 20,
+      "rate": 0.4
+    },
+    "evidence_hit_at_3": {
+      "n": 9,
+      "N": 20,
+      "rate": 0.45
+    },
+    "context_evidence_rate": {
+      "n": 15,
+      "N": 20,
+      "rate": 0.75
+    },
+    "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+  },
+  "components": [
+    "results/bonus/dev/H2-release-ready.jsonl",
+    "results/bonus/dev/H2-release-resume.jsonl"
+  ],
+  "interruption_note": "Original process was externally interrupted with8 completed rows. One orphan API reservation counted fully as spent. Remaining16 dev questions resumed without overwriting completed traces."
+}

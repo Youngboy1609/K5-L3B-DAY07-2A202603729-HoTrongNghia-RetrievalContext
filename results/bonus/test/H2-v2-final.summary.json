@@ -1,0 +1,31 @@
+{
+  "suite": "bonus",
+  "split": "test",
+  "config": "H2",
+  "run_id": "e45ccc5cbb5749b0b3ba08695e6c11f5",
+  "n": 30,
+  "status": "complete",
+  "pending_query_ids": [],
+  "errors": 2,
+  "cost_usd": 0.099629026,
+  "latency_ms_median": 8078.435600002194,
+  "retrieval": {
+    "answerable_n": 24,
+    "hit_at_1": {
+      "n": 3,
+      "N": 24,
+      "rate": 0.125
+    },
+    "evidence_hit_at_3": {
+      "n": 2,
+      "N": 24,
+      "rate": 0.08333333333333333
+    },
+    "context_evidence_rate": {
+      "n": 5,
+      "N": 24,
+      "rate": 0.20833333333333334
+    }
+  },
+  "trace_path": "results\\bonus\\test\\H2-v2-final.jsonl"
+}

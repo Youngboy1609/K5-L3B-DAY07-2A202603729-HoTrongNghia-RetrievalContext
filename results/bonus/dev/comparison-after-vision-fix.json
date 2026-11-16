@@ -1,0 +1,104 @@
+{
+  "suite": "bonus",
+  "split": "dev",
+  "code_snapshot": "after vision payload and context dedup fixes; see Git worktree snapshot",
+  "comparison": [
+    {
+      "config": "D0",
+      "n": 24,
+      "status": "complete",
+      "errors": 5,
+      "cost_usd": 0.010601308,
+      "median_latency_ms": 5151.344950001658,
+      "answerable_n": 20,
+      "hit_at_1": {
+        "n": 5,
+        "N": 20,
+        "rate": 0.25
+      },
+      "evidence_hit_at_3": {
+        "n": 6,
+        "N": 20,
+        "rate": 0.3
+      },
+      "context_evidence_rate": {
+        "n": 7,
+        "N": 20,
+        "rate": 0.35
+      }
+    },
+    {
+      "config": "L0",
+      "n": 24,
+      "status": "complete",
+      "errors": 2,
+      "cost_usd": 0.008627342,
+      "median_latency_ms": 4658.786550000514,
+      "answerable_n": 20,
+      "hit_at_1": {
+        "n": 6,
+        "N": 20,
+        "rate": 0.3
+      },
+      "evidence_hit_at_3": {
+        "n": 9,
+        "N": 20,
+        "rate": 0.45
+      },
+      "context_evidence_rate": {
+        "n": 11,
+        "N": 20,
+        "rate": 0.55
+      }
+    },
+    {
+      "config": "H1",
+      "n": 24,
+      "status": "complete",
+      "errors": 3,
+      "cost_usd": 0.00900204,
+      "median_latency_ms": 5124.6722000014415,
+      "answerable_n": 20,
+      "hit_at_1": {
+        "n": 7,
+        "N": 20,
+        "rate": 0.35
+      },
+      "evidence_hit_at_3": {
+        "n": 8,
+        "N": 20,
+        "rate": 0.4
+      },
+      "context_evidence_rate": {
+        "n": 10,
+        "N": 20,
+        "rate": 0.5
+      }
+    },
+    {
+      "config": "H2",
+      "n": 24,
+      "status": "complete",
+      "errors": 2,
+      "cost_usd": 0.012057590000000003,
+      "median_latency_ms": 4401.764999998704,
+      "answerable_n": 20,
+      "hit_at_1": {
+        "n": 6,
+        "N": 20,
+        "rate": 0.3
+      },
+      "evidence_hit_at_3": {
+        "n": 8,
+        "N": 20,
+        "rate": 0.4
+      },
+      "context_evidence_rate": {
+        "n": 12,
+        "N": 20,
+        "rate": 0.6
+      }
+    }
+  ],
+  "note": "All configs ran on the same 24-row dev split and current code. The first D0 attempt was interrupted by one HTTP 500 with unknown usage; it was reconciled as the full reservation, then rerun to completion under the shared $1.50 cap."
+}

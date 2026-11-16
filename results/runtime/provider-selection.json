@@ -1,0 +1,67 @@
+{
+  "source": "https://openrouter.ai/api/v1/models/z-ai/glm-5.3-flash/endpoints",
+  "checked_date": "2026-11-16",
+  "endpoints": [
+    {
+      "provider_name": "Relace",
+      "tag": "relace/fp4",
+      "pricing": {
+        "prompt": "0.0000000399",
+        "completion": "0.0000000784",
+        "input_cache_read": "0.00000003",
+        "discount": 0
+      },
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "stop",
+        "frequency_penalty",
+        "presence_penalty",
+        "seed",
+        "top_k",
+        "repetition_penalty",
+        "tools",
+        "tool_choice",
+        "reasoning_effort"
+      ]
+    },
+    {
+      "provider_name": "Wafer",
+      "tag": "wafer/us",
+      "pricing": {
+        "prompt": "0.000000042",
+        "completion": "0.000000184",
+        "input_cache_read": "0.000000041",
+        "discount": 0
+      },
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "response_format",
+        "structured_outputs",
+        "tools",
+        "tool_choice",
+        "logprobs",
+        "top_logprobs",
+        "temperature",
+        "top_p",
+        "top_k",
+        "min_p",
+        "presence_penalty",
+        "frequency_penalty",
+        "repetition_penalty",
+        "stop",
+        "seed",
+        "max_tokens",
+        "logit_bias",
+        "reasoning_effort"
+      ]
+    }
+  ],
+  "selected_provider": "wafer",
+  "reason": "Relace is cheaper in this catalog but two real current attempts stopped at HTTP500 with unknown usage; reservations reconciled conservatively. Wafer has observed text/tools/vision support and is pinned consistently for final comparisons. This is a reliability exception, not a claim Wafer is globally cheapest.",
+  "fallbacks": false
+}

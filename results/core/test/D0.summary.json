@@ -1,0 +1,31 @@
+{
+  "suite": "core",
+  "split": "test",
+  "config": "D0",
+  "run_id": "d4a48419d0564ab8a6931d401827dad4",
+  "n": 8,
+  "status": "complete",
+  "pending_query_ids": [],
+  "errors": 1,
+  "cost_usd": 0.0013518699,
+  "latency_ms_median": 4522.557399999982,
+  "retrieval": {
+    "answerable_n": 6,
+    "hit_at_1": {
+      "n": 5,
+      "N": 6,
+      "rate": 0.8333333333333334
+    },
+    "evidence_hit_at_3": {
+      "n": 6,
+      "N": 6,
+      "rate": 1.0
+    },
+    "context_evidence_rate": {
+      "n": 6,
+      "N": 6,
+      "rate": 1.0
+    }
+  },
+  "trace_path": "results\\core\\test\\D0.jsonl"
+}

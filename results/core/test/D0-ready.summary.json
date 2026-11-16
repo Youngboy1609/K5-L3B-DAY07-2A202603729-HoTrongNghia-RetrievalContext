@@ -1,0 +1,51 @@
+{
+  "suite": "core",
+  "split": "test",
+  "config": "D0",
+  "run_id": "9939ef0243064a4e948d030846c592d9",
+  "n": 8,
+  "status": "complete",
+  "pending_query_ids": [],
+  "errors": 0,
+  "cost_usd": 0.0015035579999999999,
+  "latency_ms_median": 2893.7263499997243,
+  "retrieval": {
+    "answerable_n": 6,
+    "hit_at_1": {
+      "n": 5,
+      "N": 6,
+      "rate": 0.8333333333333334
+    },
+    "evidence_hit_at_3": {
+      "n": 6,
+      "N": 6,
+      "rate": 1.0
+    },
+    "context_evidence_rate": {
+      "n": 6,
+      "N": 6,
+      "rate": 1.0
+    }
+  },
+  "retrieval_source_quote": {
+    "version": "source_quote_v1",
+    "answerable_n": 6,
+    "hit_at_1": {
+      "n": 5,
+      "N": 6,
+      "rate": 0.8333333333333334
+    },
+    "evidence_hit_at_3": {
+      "n": 6,
+      "N": 6,
+      "rate": 1.0
+    },
+    "context_evidence_rate": {
+      "n": 6,
+      "N": 6,
+      "rate": 1.0
+    },
+    "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+  },
+  "trace_path": "results\\core\\test\\D0-ready.jsonl"
+}

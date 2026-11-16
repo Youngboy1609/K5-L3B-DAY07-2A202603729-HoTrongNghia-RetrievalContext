@@ -1,0 +1,37 @@
+services:
+  postgres:
+    image: pgvector/pgvector:0.8.7-pg16
+    environment:
+      POSTGRES_DB: lab7_agentic
+      POSTGRES_USER: lab7
+      POSTGRES_PASSWORD: lab7_local_only
+    ports:
+      - "127.0.0.1:55434:5432"
+    volumes:
+      - lab7_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lab7 -d lab7_agentic"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+  core-replay:
+    profiles: ["replay"]
+    image: pgvector/pgvector:0.8.7-pg16
+    environment:
+      POSTGRES_DB: core_replay
+      POSTGRES_USER: replay
+      POSTGRES_PASSWORD: replay_local_only
+    ports:
+      - "127.0.0.1:55435:5432"
+    volumes:
+      - core_replay_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U replay -d core_replay"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  lab7_pg_data:
+  core_replay_data:

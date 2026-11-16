@@ -1,0 +1,73 @@
+{
+  "suite": "bonus",
+  "split": "dev",
+  "config": "H2",
+  "run_id": "05289be3c33144ec96c74763e54e5a35",
+  "n": 24,
+  "status": "complete",
+  "pending_query_ids": [],
+  "errors": 0,
+  "cost_usd": 0.007340746,
+  "latency_ms_median": 4049.3396000001667,
+  "retrieval": {
+    "answerable_n": 20,
+    "hit_at_1": {
+      "n": 7,
+      "N": 20,
+      "rate": 0.35
+    },
+    "evidence_hit_at_3": {
+      "n": 8,
+      "N": 20,
+      "rate": 0.4
+    },
+    "context_evidence_rate": {
+      "n": 13,
+      "N": 20,
+      "rate": 0.65
+    }
+  },
+  "retrieval_source_quote": {
+    "version": "source_quote_v1",
+    "answerable_n": 20,
+    "hit_at_1": {
+      "n": 8,
+      "N": 20,
+      "rate": 0.4
+    },
+    "evidence_hit_at_3": {
+      "n": 9,
+      "N": 20,
+      "rate": 0.45
+    },
+    "context_evidence_rate": {
+      "n": 14,
+      "N": 20,
+      "rate": 0.7
+    },
+    "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+  },
+  "trace_path": "results\\bonus\\dev\\H2-context-v3.jsonl",
+  "input_sha256": {
+    "src\\agent.py": "6471bfc36b72c644eb077106e0fc358bdf65457b43fe8f0ec47986852eee3525",
+    "src\\bonus_retrieval.py": "faf90cbd82c8baafa21f8a134ac023e86080991d28766d4d3afd1720b6dde1e4",
+    "src\\cli.py": "cfc0c77a14677f083fc3f0380a54e9ba66b29e7cca3af4234fcdb5b996a81b8a",
+    "src\\context.py": "ce77ff297263c6517ad1e35a03aa8a8121b59ae41ecbe53362505c23b72c5082",
+    "src\\evaluation.py": "bbc7b51fdfe5a999ee5ece4273e097d3c3f42c82331a0e24a267643ccd5b2d25",
+    "src\\index_bonus.py": "6bd1a40fa3f51d5e2c9c972624cb8bb686c78c3e515d33abb6e64e9b3c3545d7",
+    "src\\ingest_bonus.py": "550ab4651293b91f07b219b1535e16e5efe9e9b7157e05043f0c37e5ad9c9591",
+    "src\\model.py": "af4134063f02e0cac1ac1b2287596065933cdf55533a28704419226f566938e2",
+    "src\\retrieval.py": "725c7f0a5b307e4e2e2c9cb499ef3c15a36609d4b805461e06bc268eb82a268c",
+    "src\\runner.py": "7c820d7c8b269b7b0a8612b161f37332f066e79e152f15a80bc4ca18001f7b21",
+    "src\\runtime.py": "b02ebc59cf7eca634bf64a8807a6a1fe783f29b02d4f3b3846322a3fc56e826e",
+    "src\\store.py": "4673907f2abe0d483681bb82e42178c38a065487b54499ea3af61a95f8c091be",
+    "src\\__init__.py": "c38bc525b251d0e43e06da2265baa8eb6d0d630c098ecc43256c8de426105dab",
+    "configs\\D0.json": "60df62b50573e2c2076bd99a588992011ec41b7e09922bd98690f97741758b3a",
+    "configs\\H1.json": "4128cdba0e4a1d14960e1f70dccfd17fda070f1d1ed7120404997cec64623ad1",
+    "configs\\H2.json": "6bf5c0fbcaf2073f608ccf0b5e63647aa57836ad8b8dd225ac44eea3ea518c95",
+    "configs\\L0.json": "37e4a8f240309a31e4f4f806f60b2890ee04e6325e431c0686911c64a1f3206b",
+    "configs\\prompts.json": "01a1dc3530e9e3dd646ccc0348c693a033cb396f04f76e1bba9dae6d64caf0d3",
+    "benchmark\\bonus\\questions.jsonl": "5b4924ba975e65e648f5dcb3b495118e2b8cb8b29b62875cbfcf23ed239a1810"
+  },
+  "trace_sha256": "7ece70ffe85633d1b370be9f7f5da1de2f1d682faea8179ca3d28bb90fc75b12"
+}

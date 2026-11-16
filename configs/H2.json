@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "config": "H2",
+  "retrieval_method": "hybrid_rrf_k60",
+  "context_text_budget_tokens": 4000,
+  "candidate_limit": 20,
+  "max_search_calls": 4,
+  "max_regions": 2,
+  "image_token_reserve": 20000,
+  "max_model_turns": 8,
+  "hypothesis": "With hybrid retrieval unchanged, additional context may raise Context Evidence Rate and answer support."
+}

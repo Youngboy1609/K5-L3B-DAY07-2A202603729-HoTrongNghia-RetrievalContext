@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "model": "z-ai/glm-5.3-flash",
+  "system_prompt_file": "src/agent.py",
+  "provider_by_suite": {
+    "core_text": "relace",
+    "bonus_multimodal": "wafer"
+  },
+  "temperature": "provider_default",
+  "max_output_tokens": 700,
+  "fallbacks": false,
+  "note": "Provider IDs are pinned in OpenRouterClient; API model weights may change over time."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "suite": "bonus",
+  "source_id": "wdr2024",
+  "source_manifest": "data/bonus/manifest.json",
+  "benchmark_path": "benchmark/bonus/questions.jsonl",
+  "total": 54,
+  "split_counts": {
+    "dev": {
+      "table": 5,
+      "image_diagram": 4,
+      "chart": 4,
+      "multihop": 4,
+      "text": 3,
+      "unanswerable": 4
+    },
+    "test": {
+      "table": 6,
+      "image_diagram": 5,
+      "chart": 5,
+      "multihop": 4,
+      "text": 4,
+      "unanswerable": 6
+    }
+  },
+  "gold_policy": "Gold includes physical page, exact source quote, region ID for all visual items, table unit/column and chart calculations. Original rendered PDF checked before run. Gold never passed into agent.",
+  "unanswerable_policy": "No external facts are provided; answer is absent from this 2024 report. Absence reasons must be checked across full text, tables, and relevant figures before freeze.",
+  "split_policy": "Release test:30 new items after final dev selection. Historical v1/v2 test questions/outputs were exposed; preserve them and do not rerun them for a better score. New table country/column targets, diagram labels, chart calculations and text targets were reviewed against exposed splits; no exact duplicate or same-answer paraphrase identified. Some figures/pages overlap, disclosed in review.",
+  "semantic_overlap_review": "Historical v2: three independent review lanes and user acceptance in results/bonus/reviews.json. Current release: pre-run original-source and overlap review in results/bonus/benchmark-release-review.json; different question targets, some figures/pages reused. Structural near-match warnings and post-run wording ambiguity chart03 are disclosed in the report; no benchmark edited after this run.",
+  "rights_review": "User explicitly authorized continuing corpus visual processing for coursework. Source PDF/crops remain local; no public redistribution of images authorized.",
+  "review_record": "results/bonus/benchmark-release-review.json"
+}

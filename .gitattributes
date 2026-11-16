@@ -1,0 +1,2 @@
+# Preserve exact bytes used by frozen experiment fingerprints across platforms.
+* -text

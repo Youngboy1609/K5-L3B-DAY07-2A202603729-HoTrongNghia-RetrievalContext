@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "config": "L0",
+  "retrieval_method": "tfidf",
+  "context_text_budget_tokens": 1800,
+  "candidate_limit": 20,
+  "max_search_calls": 4,
+  "max_regions": 2,
+  "image_token_reserve": 20000,
+  "max_model_turns": 8
+}

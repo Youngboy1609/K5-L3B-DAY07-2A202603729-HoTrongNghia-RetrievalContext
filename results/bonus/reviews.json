@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "suite": "bonus",
+  "split": "test",
+  "reviewed_at": "2026-11-16",
+  "review_status": "subagent_reviewed_user_accepted",
+  "review_method": "Three read-only subagent lanes reviewed disjoint ID ranges against the local WDR 2024 PDF and extracted corpus. This is not a claim that the student personally inspected every page.",
+  "user_decision": "The user accepted the review findings and authorized continuation.",
+  "overlap_note": "Pairwise lexical screening and manual review of the strongest matches are recorded in overlap_review. Same-topic/template similarities remain disclosed; no exact duplicate or same-answer paraphrase was found in the reviewed highest-similarity pairs.",
+  "rights_note": "User authorized transient OpenRouter processing of the listed test visual regions for this coursework run. This is not independent third-party rights clearance; do not commit or redistribute the source PDF/crops. Region credits and scope are recorded in data/bonus/manifest.json.",
+  "reviews": [
+    {
+      "question_id": "bonus-test-v2-table-01",
+      "primary_group": "table",
+      "reviewer_lane": "subagent_lane_1",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        81
+      ],
+      "region_ids": [],
+      "finding": "Viet Nam 3.70 aligns with the electricity-constraint column."
+    },
+    {
+      "question_id": "bonus-test-v2-table-02",
+      "primary_group": "table",
+      "reviewer_lane": "subagent_lane_1",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        81
+      ],
+      "region_ids": [],
+      "finding": "India 255.7 aligns with researchers per million inhabitants."
+    },
+    {
+      "question_id": "bonus-test-v2-table-03",
+      "primary_group": "table",
+      "reviewer_lane": "subagent_lane_1",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        81
+      ],
+      "region_ids": [],
+      "finding": "Malaysia 11.90; unit is exajoules per trillion US dollars of GDP."
+    },
+    {
+      "question_id": "bonus-test-v2-table-04",
+      "primary_group": "table",
+      "reviewer_lane": "subagent_lane_1",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        82
+      ],
+      "region_ids": [],
+      "finding": "France Economic Complexity Index is 1.3."
+    },
+    {
+      "question_id": "bonus-test-v2-table-05",
+      "primary_group": "table",
+      "reviewer_lane": "subagent_lane_1",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        82
+      ],
+      "region_ids": [],
+      "finding": "Japan social-mobility value is 0.65."
+    },
+    {
+      "question_id": "bonus-test-v2-table-06",
+      "primary_group": "table",
+      "reviewer_lane": "subagent_lane_1",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        82
+      ],
+      "region_ids": [],
+      "finding": "United States technology index is 100.0; column header added to evidence."
+    },
+    {
+      "question_id": "bonus-test-v2-image-01",
+      "primary_group": "image_diagram",
+      "reviewer_lane": "subagent_lane_1",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        44
+      ],
+      "region_ids": [
+        "wdr-p044-caption-01"
+      ],
+      "finding": "Page 44 panel c states incumbents and entrants add value; added the supporting text chunk."
+    },
+    {
+      "question_id": "bonus-test-v2-image-02",
+      "primary_group": "image_diagram",
+      "reviewer_lane": "subagent_lane_1",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        88
+      ],
+      "region_ids": [
+        "wdr-p088-caption-01"
+      ],
+      "finding": "Page 88 2i label is Investment + Infusion; added the supporting text chunk."
+    },
+    {
+      "question_id": "bonus-test-v2-image-03",
+      "primary_group": "image_diagram",
+      "reviewer_lane": "subagent_lane_2",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        119
+      ],
+      "region_ids": [
+        "wdr-p119-caption-01"
+      ],
+      "finding": "Page 119 panel a states dominant incumbents can collude to block competition."
+    },
+    {
+      "question_id": "bonus-test-v2-image-04",
+      "primary_group": "image_diagram",
+      "reviewer_lane": "subagent_lane_2",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        120
+      ],
+      "region_ids": [
+        "wdr-p120-caption-01"
+      ],
+      "finding": "Page 120 note maps OUT to a firm exiting; added text evidence alongside figure region."
+    },
+    {
+      "question_id": "bonus-test-v2-image-05",
+      "primary_group": "image_diagram",
+      "reviewer_lane": "subagent_lane_2",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        121
+      ],
+      "region_ids": [
+        "wdr-p121-caption-01"
+      ],
+      "finding": "Page 121 diagram and adjacent text identify Internal R&D for improving existing products."
+    },
+    {
+      "question_id": "bonus-test-v2-chart-01",
+      "primary_group": "chart",
+      "reviewer_lane": "subagent_lane_2",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        46
+      ],
+      "region_ids": [
+        "wdr-p046-caption-01"
+      ],
+      "finding": "Figure O.9 panel a labels energy intensity as 2.5 times higher than HIC; approximate relation checked visually."
+    },
+    {
+      "question_id": "bonus-test-v2-chart-02",
+      "primary_group": "chart",
+      "reviewer_lane": "subagent_lane_2",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        171
+      ],
+      "region_ids": [
+        "wdr-p171-caption-01"
+      ],
+      "finding": "Figure 6.1 solar photovoltaics is lowest at the 2020 endpoint; visual check required."
+    },
+    {
+      "question_id": "bonus-test-v2-chart-03",
+      "primary_group": "chart",
+      "reviewer_lane": "subagent_lane_2",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        172
+      ],
+      "region_ids": [
+        "wdr-p172-caption-01"
+      ],
+      "finding": "Figure 6.2 panel a is approximately 2.4% in 2022; approximate wording is appropriate."
+    },
+    {
+      "question_id": "bonus-test-v2-chart-04",
+      "primary_group": "chart",
+      "reviewer_lane": "subagent_lane_2",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        177
+      ],
+      "region_ids": [
+        "wdr-p177-caption-01"
+      ],
+      "finding": "Figure 6.4 panel a has the higher-income group above MIC at the final year."
+    },
+    {
+      "question_id": "bonus-test-v2-chart-05",
+      "primary_group": "chart",
+      "reviewer_lane": "subagent_lane_2",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        257
+      ],
+      "region_ids": [
+        "wdr-p257-caption-01"
+      ],
+      "finding": "Figure 9.3 panel a identifies Democratic Republic of Congo as largest cobalt extraction share."
+    },
+    {
+      "question_id": "bonus-test-v2-multi-01",
+      "primary_group": "multihop",
+      "reviewer_lane": "subagent_lane_2",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        63,
+        88
+      ],
+      "region_ids": [
+        "wdr-p088-caption-01"
+      ],
+      "finding": "Table P1.1 gives 55.4%; Figure 2.2 labels 2i Investment + Infusion."
+    },
+    {
+      "question_id": "bonus-test-v2-multi-02",
+      "primary_group": "multihop",
+      "reviewer_lane": "subagent_lane_2",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        63,
+        120
+      ],
+      "region_ids": [
+        "wdr-p120-caption-01"
+      ],
+      "finding": "Table P1.1 gives 48.6%; Figure 4.3 note maps IN to a new firm entering; added text and region evidence."
+    },
+    {
+      "question_id": "bonus-test-v2-multi-03",
+      "primary_group": "multihop",
+      "reviewer_lane": "subagent_lane_3",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        87,
+        88
+      ],
+      "region_ids": [
+        "wdr-p088-caption-01"
+      ],
+      "finding": "Page 87 definition and Figure 2.2 3i components are supported across pages 87–88."
+    },
+    {
+      "question_id": "bonus-test-v2-multi-04",
+      "primary_group": "multihop",
+      "reviewer_lane": "subagent_lane_3",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        119,
+        121
+      ],
+      "region_ids": [
+        "wdr-p121-caption-01"
+      ],
+      "finding": "Page 119 attributes 50–70% to firm reallocation; page 121 links Internal R&D to existing products."
+    },
+    {
+      "question_id": "bonus-test-v2-text-01",
+      "primary_group": "text",
+      "reviewer_lane": "subagent_lane_3",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        93
+      ],
+      "region_ids": [],
+      "finding": "Page 93 supports the telecommunications-network answer; “sent abroad” is a source-faithful paraphrase."
+    },
+    {
+      "question_id": "bonus-test-v2-text-02",
+      "primary_group": "text",
+      "reviewer_lane": "subagent_lane_3",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        123
+      ],
+      "region_ids": [],
+      "finding": "Page 123 supports personal computers as the eventual product category."
+    },
+    {
+      "question_id": "bonus-test-v2-text-03",
+      "primary_group": "text",
+      "reviewer_lane": "subagent_lane_3",
+      "review_label": "answer_supported",
+      "confidence": "medium",
+      "source_pages": [
+        225
+      ],
+      "region_ids": [],
+      "finding": "Page 225 supports classroom instruction and paid work; OCR interleaves columns, so evidence is cited as multiple exact fragments."
+    },
+    {
+      "question_id": "bonus-test-v2-text-04",
+      "primary_group": "text",
+      "reviewer_lane": "subagent_lane_3",
+      "review_label": "answer_supported",
+      "confidence": "high",
+      "source_pages": [
+        94
+      ],
+      "region_ids": [],
+      "finding": "Page 94 supports trade competition and hard budget constraints for SOEs in Poland’s early transition."
+    },
+    {
+      "question_id": "bonus-test-v2-absent-01",
+      "primary_group": "unanswerable",
+      "reviewer_lane": "subagent_lane_3",
+      "review_label": "unanswerable_supported",
+      "confidence": "high",
+      "source_pages": [],
+      "region_ids": [],
+      "finding": "No Viet Nam-specific 2025 inflation observation; a general 2025 reference elsewhere is not the requested statistic."
+    },
+    {
+      "question_id": "bonus-test-v2-absent-02",
+      "primary_group": "unanswerable",
+      "reviewer_lane": "subagent_lane_3",
+      "review_label": "unanswerable_supported",
+      "confidence": "medium-high",
+      "source_pages": [],
+      "region_ids": [],
+      "finding": "No province-level Vietnamese GDP-per-capita observation found; confidence medium-high."
+    },
+    {
+      "question_id": "bonus-test-v2-absent-03",
+      "primary_group": "unanswerable",
+      "reviewer_lane": "subagent_lane_3",
+      "review_label": "unanswerable_supported",
+      "confidence": "high",
+      "source_pages": [],
+      "region_ids": [],
+      "finding": "No Viet Nam-specific 2023 offshore-wind commissioning count found."
+    },
+    {
+      "question_id": "bonus-test-v2-absent-04",
+      "primary_group": "unanswerable",
+      "reviewer_lane": "subagent_lane_3",
+      "review_label": "unanswerable_supported",
+      "confidence": "high",
+      "source_pages": [],
+      "region_ids": [],
+      "finding": "No 2023 temperature anomaly or 1901–2000 baseline found."
+    },
+    {
+      "question_id": "bonus-test-v2-absent-05",
+      "primary_group": "unanswerable",
+      "reviewer_lane": "subagent_lane_3",
+      "review_label": "unanswerable_supported",
+      "confidence": "medium-high",
+      "source_pages": [],
+      "region_ids": [],
+      "finding": "Thailand and solar PV are discussed separately, but no Thailand-specific 2023 module-production count; confidence medium-high."
+    },
+    {
+      "question_id": "bonus-test-v2-absent-06",
+      "primary_group": "unanswerable",
+      "reviewer_lane": "subagent_lane_3",
+      "review_label": "unanswerable_supported",
+      "confidence": "high",
+      "source_pages": [],
+      "region_ids": [],
+      "finding": "No Ho Chi Minh City 2023 rainfall observation found; old Tokyo/2024 item is factually different but structurally similar."
+    }
+  ],
+  "overlap_review": {
+    "method": "Pairwise SequenceMatcher screening of all test-v2 prompts against 24 dev prompts and the exposed v1 test prompts; manually inspected the highest-similarity pairs.",
+    "result": "No exact duplicate or same-answer paraphrase was identified among the inspected pairs. The dataset validator still reports manual review required because it only checks exact normalized prompt duplication.",
+    "documented_near_matches": [
+      {
+        "new": "bonus-test-v2-absent-06",
+        "prior": "bonus-test-absent-06",
+        "difference": "Ho Chi Minh City/2023 rainfall vs Tokyo/2024 rainfall; same template, different target fact."
+      },
+      {
+        "new": "bonus-test-v2-absent-01",
+        "prior": "bonus-test-absent-01",
+        "difference": "Viet Nam inflation in 2025 vs Viet Nam GDP growth forecast in 2027; different statistic and period."
+      },
+      {
+        "new": "bonus-test-v2-multi-03",
+        "prior": "bonus-test-text-02",
+        "difference": "Trap definition plus 3i components vs count of economies exiting the trap."
+      },
+      {
+        "new": "bonus-test-v2-multi-02",
+        "prior": "bonus-test-multi-02",
+        "difference": "Upper-middle-income CO2 share plus firm entry vs high-income CO2 share plus low-income investment priority."
+      },
+      {
+        "new": "bonus-test-v2-absent-01",
+        "prior": "bonus-dev-absent-01",
+        "difference": "Viet Nam 2025 inflation vs population on 1 January 2025."
+      }
+    ],
+    "residual_limit": "Lexical screening cannot prove full semantic independence. The user accepted the subagent label review; no held-out score has been produced."
+  }
+}

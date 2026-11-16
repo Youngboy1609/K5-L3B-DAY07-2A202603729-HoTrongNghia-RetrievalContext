@@ -1,0 +1,51 @@
+{
+  "suite": "bonus",
+  "split": "test",
+  "config": "H2",
+  "run_id": "85c0dbfad1784f3a9aae7f0d8fa8ed68",
+  "n": 30,
+  "status": "complete",
+  "pending_query_ids": [],
+  "errors": 0,
+  "cost_usd": 0.018658788,
+  "latency_ms_median": 6212.218349999603,
+  "retrieval": {
+    "answerable_n": 24,
+    "hit_at_1": {
+      "n": 3,
+      "N": 24,
+      "rate": 0.125
+    },
+    "evidence_hit_at_3": {
+      "n": 4,
+      "N": 24,
+      "rate": 0.16666666666666666
+    },
+    "context_evidence_rate": {
+      "n": 7,
+      "N": 24,
+      "rate": 0.2916666666666667
+    }
+  },
+  "retrieval_source_quote": {
+    "version": "source_quote_v1",
+    "answerable_n": 24,
+    "hit_at_1": {
+      "n": 4,
+      "N": 24,
+      "rate": 0.16666666666666666
+    },
+    "evidence_hit_at_3": {
+      "n": 5,
+      "N": 24,
+      "rate": 0.20833333333333334
+    },
+    "context_evidence_rate": {
+      "n": 10,
+      "N": 24,
+      "rate": 0.4166666666666667
+    },
+    "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+  },
+  "trace_path": "results\\bonus\\test\\H2-release.jsonl"
+}

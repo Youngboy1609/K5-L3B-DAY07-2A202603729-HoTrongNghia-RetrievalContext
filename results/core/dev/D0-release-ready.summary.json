@@ -1,0 +1,51 @@
+{
+  "suite": "core",
+  "split": "dev",
+  "config": "D0",
+  "run_id": "aae90388e50b49669bc3b74a849b4716",
+  "n": 18,
+  "status": "complete",
+  "pending_query_ids": [],
+  "errors": 1,
+  "cost_usd": 0.0023285299999999997,
+  "latency_ms_median": 3010.939350000058,
+  "retrieval": {
+    "answerable_n": 16,
+    "hit_at_1": {
+      "n": 10,
+      "N": 16,
+      "rate": 0.625
+    },
+    "evidence_hit_at_3": {
+      "n": 11,
+      "N": 16,
+      "rate": 0.6875
+    },
+    "context_evidence_rate": {
+      "n": 13,
+      "N": 16,
+      "rate": 0.8125
+    }
+  },
+  "retrieval_source_quote": {
+    "version": "source_quote_v1",
+    "answerable_n": 16,
+    "hit_at_1": {
+      "n": 10,
+      "N": 16,
+      "rate": 0.625
+    },
+    "evidence_hit_at_3": {
+      "n": 11,
+      "N": 16,
+      "rate": 0.6875
+    },
+    "context_evidence_rate": {
+      "n": 13,
+      "N": 16,
+      "rate": 0.8125
+    },
+    "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+  },
+  "trace_path": "results\\core\\dev\\D0-release-ready.jsonl"
+}

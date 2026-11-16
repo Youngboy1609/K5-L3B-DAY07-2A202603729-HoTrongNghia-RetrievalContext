@@ -1,0 +1,452 @@
+{
+  "schema_version": 1,
+  "suite": "bonus",
+  "split": "test",
+  "config": "H2",
+  "run_id": "e45ccc5cbb5749b0b3ba08695e6c11f5",
+  "trace_path": "results/bonus/test/H2-v2-final.jsonl",
+  "summary_path": "results/bonus/test/H2-v2-final.summary.json",
+  "review_status": "ai_assisted_source_anchored_adjudication",
+  "review_method": "Every final answer and citation was compared against the user-approved gold labels and the recorded retrieved context/visual-region tool events. Visual spot-checks included source pages 88 and 172. This is not a claim that the student personally inspected all 30 source pages; instructor/student spot-check remains possible.",
+  "grading_rule": "ADVANCED.md all-or-nothing: answerable items require a complete correct answer and supporting source/page evidence; unanswerable items require a clear abstention without unsupported claims; errors and partial multi-hop answers fail.",
+  "n": 30,
+  "passed": 20,
+  "failed": 10,
+  "rate": 0.6666666666666666,
+  "required_passes_for_90_percent": 27,
+  "bonus_threshold_met": false,
+  "answerable": {
+    "passed": 14,
+    "total": 24
+  },
+  "unanswerable": {
+    "passed": 6,
+    "total": 6
+  },
+  "system_error_count": 2,
+  "system_error_ids": [
+    "bonus-test-v2-table-03",
+    "bonus-test-v2-multi-03"
+  ],
+  "retrieval_metrics": {
+    "answerable_n": 24,
+    "hit_at_1": {
+      "n": 3,
+      "N": 24,
+      "rate": 0.125
+    },
+    "evidence_hit_at_3": {
+      "n": 2,
+      "N": 24,
+      "rate": 0.08333333333333333
+    },
+    "context_evidence_rate": {
+      "n": 5,
+      "N": 24,
+      "rate": 0.20833333333333334
+    }
+  },
+  "latency_ms_median": 8078.435600002194,
+  "api_cost_usd": 0.099629026,
+  "group_metrics": {
+    "table": {
+      "passed": 3,
+      "total": 6,
+      "rate": 0.5
+    },
+    "image_diagram": {
+      "passed": 4,
+      "total": 5,
+      "rate": 0.8
+    },
+    "chart": {
+      "passed": 3,
+      "total": 5,
+      "rate": 0.6
+    },
+    "multihop": {
+      "passed": 0,
+      "total": 4,
+      "rate": 0.0
+    },
+    "text": {
+      "passed": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    "unanswerable": {
+      "passed": 6,
+      "total": 6,
+      "rate": 1.0
+    }
+  },
+  "borderline_note": "Chart-03 is scored incorrect under the strict numeric-reading rule (about 2.4% expected vs roughly 2% returned). If a grader accepts this approximation, the total becomes 21/30, still below the required 27/30.",
+  "reviews": [
+    {
+      "question_id": "bonus-test-v2-table-01",
+      "primary_group": "table",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Reports 3.70% and cites the page-81 table text chunk containing the matching Viet Nam row and energy-constraint column."
+    },
+    {
+      "question_id": "bonus-test-v2-table-02",
+      "primary_group": "table",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Reports 255.7 researchers per million and cites the exact page-81 table row/column."
+    },
+    {
+      "question_id": "bonus-test-v2-table-03",
+      "primary_group": "table",
+      "answerable": true,
+      "trace_status": "abstain",
+      "answer_correct_and_complete": false,
+      "citation_support": "not_applicable",
+      "abstention_correct": null,
+      "system_errors": [
+        "tool_validation:ValueError",
+        "tool_validation:ValueError",
+        "max_turns_reached"
+      ],
+      "pass": false,
+      "rationale": "Abstains on an answerable table lookup after two tool-validation failures and max-turn exhaustion; expected 11.90 exajoules per trillion US dollars of GDP."
+    },
+    {
+      "question_id": "bonus-test-v2-table-04",
+      "primary_group": "table",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Reports France Economic Complexity Index 1.3 and cites the page-82 table chunk."
+    },
+    {
+      "question_id": "bonus-test-v2-table-05",
+      "primary_group": "table",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": false,
+      "citation_support": "not_applicable",
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": false,
+      "rationale": "Abstains on an answerable table lookup; page-82 Table S.1 lists Japan social mobility as 0.65."
+    },
+    {
+      "question_id": "bonus-test-v2-table-06",
+      "primary_group": "table",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": false,
+      "citation_support": "not_applicable",
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": false,
+      "rationale": "Abstains on an answerable table lookup; page-82 Table S.1 lists United States technology index as 100.0."
+    },
+    {
+      "question_id": "bonus-test-v2-image-01",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Answers incumbents and entrants; opened the page-44 figure region and cites page-119 text for the corresponding panel plus corroborating page-48 text."
+    },
+    {
+      "question_id": "bonus-test-v2-image-02",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": false,
+      "citation_support": false,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": false,
+      "rationale": "Answers imitation instead of infusion; the opened page-88 figure labels the 2i stage Investment + Infusion."
+    },
+    {
+      "question_id": "bonus-test-v2-image-03",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Correctly identifies collusion to block competition; cited page-119 text explicitly states this."
+    },
+    {
+      "question_id": "bonus-test-v2-image-04",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Correctly interprets OUT as firm exit; opened the page-120 visual region and cites its figure region."
+    },
+    {
+      "question_id": "bonus-test-v2-image-05",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Correctly identifies internal R&D; cited page-121 diagram text links it to improving existing product lines."
+    },
+    {
+      "question_id": "bonus-test-v2-chart-01",
+      "primary_group": "chart",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Reports 2.5 times higher; opened the page-46 chart region and cites source text including the page-265 statement."
+    },
+    {
+      "question_id": "bonus-test-v2-chart-02",
+      "primary_group": "chart",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": false,
+      "citation_support": "not_applicable",
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": false,
+      "rationale": "Abstains on an answerable visual chart; the opened page-171 chart shows solar photovoltaics at the lowest 2020 relative price index."
+    },
+    {
+      "question_id": "bonus-test-v2-chart-03",
+      "primary_group": "chart",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": false,
+      "citation_support": "page_valid_value_inaccurate",
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": false,
+      "rationale": "Reads the endpoint as roughly 2%; the page-172 chart endpoint is about 2.4%, so the numeric answer is not sufficiently accurate under the strict criterion."
+    },
+    {
+      "question_id": "bonus-test-v2-chart-04",
+      "primary_group": "chart",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Correctly identifies high-income countries; page-176 text gives wind generation shares of 9.5% vs 4.1%, and the cited page-177 figure supports the comparison."
+    },
+    {
+      "question_id": "bonus-test-v2-chart-05",
+      "primary_group": "chart",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Correctly identifies the Democratic Republic of the Congo as the largest cobalt extractor; cited page-257 chart/OCR shows the ranking."
+    },
+    {
+      "question_id": "bonus-test-v2-multi-01",
+      "primary_group": "multihop",
+      "answerable": true,
+      "trace_status": "abstain",
+      "answer_correct_and_complete": false,
+      "citation_support": "partial",
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": false,
+      "rationale": "Gets 55.4% but abstains on the second required hop, investment and infusion; multi-hop answers receive no partial credit."
+    },
+    {
+      "question_id": "bonus-test-v2-multi-02",
+      "primary_group": "multihop",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": false,
+      "citation_support": "partial",
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": false,
+      "rationale": "Gets 48.6% but abstains on what IN represents; the answer is incomplete and the caption citation does not establish the entry label."
+    },
+    {
+      "question_id": "bonus-test-v2-multi-03",
+      "primary_group": "multihop",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": false,
+      "citation_support": "partial",
+      "abstention_correct": null,
+      "system_errors": [
+        "tool_validation:ValueError"
+      ],
+      "pass": false,
+      "rationale": "Does not state the requested definition of the middle-income trap; it gives related 3i process text, but one tool-validation error occurred and the full two-part answer is absent."
+    },
+    {
+      "question_id": "bonus-test-v2-multi-04",
+      "primary_group": "multihop",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": false,
+      "citation_support": "not_applicable",
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": false,
+      "rationale": "Abstains on both answerable hops; expected 50–70% and internal R&D."
+    },
+    {
+      "question_id": "bonus-test-v2-text-01",
+      "primary_group": "text",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Correctly answers telecommunications network and cites the matching page-93 passage."
+    },
+    {
+      "question_id": "bonus-test-v2-text-02",
+      "primary_group": "text",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Correctly answers personal computers and cites the matching page-123 passage."
+    },
+    {
+      "question_id": "bonus-test-v2-text-03",
+      "primary_group": "text",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Correctly states the co-op alternates classroom instruction and paid work; cited page-225 chunk contains the exact statement."
+    },
+    {
+      "question_id": "bonus-test-v2-text-04",
+      "primary_group": "text",
+      "answerable": true,
+      "trace_status": "complete",
+      "answer_correct_and_complete": true,
+      "citation_support": true,
+      "abstention_correct": null,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Correctly names trade competition and hard budget constraints for SOEs; cited page-94 passage supports both."
+    },
+    {
+      "question_id": "bonus-test-v2-absent-01",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "trace_status": "complete",
+      "answer_correct_and_complete": null,
+      "citation_support": "not_applicable",
+      "abstention_correct": true,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Clearly says the 2024 corpus cannot provide Viet Nam’s 2025 inflation rate; no unsupported figure."
+    },
+    {
+      "question_id": "bonus-test-v2-absent-02",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "trace_status": "complete",
+      "answer_correct_and_complete": null,
+      "citation_support": "supported_context",
+      "abstention_correct": true,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Abstains on province-level GDP per capita; cited national-level GNI context is distinguished from the requested provincial value."
+    },
+    {
+      "question_id": "bonus-test-v2-absent-03",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "trace_status": "complete",
+      "answer_correct_and_complete": null,
+      "citation_support": "not_applicable",
+      "abstention_correct": true,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Clearly says the corpus lacks Viet Nam’s offshore-wind commissioning count; no guessed number."
+    },
+    {
+      "question_id": "bonus-test-v2-absent-04",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "trace_status": "complete",
+      "answer_correct_and_complete": null,
+      "citation_support": "not_applicable",
+      "abstention_correct": true,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Clearly says the corpus lacks the requested 2023 temperature anomaly; no guessed number."
+    },
+    {
+      "question_id": "bonus-test-v2-absent-05",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "trace_status": "complete",
+      "answer_correct_and_complete": null,
+      "citation_support": "supported_context",
+      "abstention_correct": true,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Abstains on Thailand-specific module production; the cited China/global production example is explicitly not presented as Thailand’s value."
+    },
+    {
+      "question_id": "bonus-test-v2-absent-06",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "trace_status": "complete",
+      "answer_correct_and_complete": null,
+      "citation_support": "not_applicable",
+      "abstention_correct": true,
+      "system_errors": [],
+      "pass": true,
+      "rationale": "Clearly says the corpus lacks Ho Chi Minh City rainfall data; no guessed value."
+    }
+  ]
+}

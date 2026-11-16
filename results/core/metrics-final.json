@@ -1,0 +1,46 @@
+{
+  "n": 8,
+  "answerable_n": 6,
+  "unanswerable_n": 2,
+  "passed": 8,
+  "context_scores": {
+    "0": 0,
+    "1": 0,
+    "2": 6
+  },
+  "grounded_answer_scores": {
+    "0": 0,
+    "1": 0,
+    "2": 6
+  },
+  "grounded_answer_mean_over_2": 2.0,
+  "citation_support": {
+    "n": 9,
+    "N": 9
+  },
+  "responses_with_citation": {
+    "n": 8,
+    "N": 8
+  },
+  "abstention": {
+    "n": 2,
+    "N": 2
+  },
+  "false_abstention": {
+    "n": 0,
+    "N": 6
+  },
+  "retrieval_tool_use": {
+    "n": 8,
+    "N": 8
+  },
+  "tool_call_distribution": {
+    "1": 6,
+    "2": 1,
+    "5": 1
+  },
+  "errors": 0,
+  "baseline_config": "D0",
+  "selected_config": "D0",
+  "baseline_and_selected_share_run": true
+}

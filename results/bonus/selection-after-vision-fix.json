@@ -1,0 +1,15 @@
+{
+  "suite": "bonus",
+  "selected_config": "H2",
+  "selection_status": "selected_on_current_dev_retrieval_and_errors_semantic_review_pending",
+  "dev_only": true,
+  "reason": "H2 has the best Context Evidence Rate (12/20), tied with L0 for lowest errors (2/24), and lowest median latency among the four current-code runs. L0 has higher Evidence Hit@3 (9/20). Semantic answer/citation grades are still required before freezing.",
+  "benchmark_sizes": {
+    "dev": 24,
+    "test": 30
+  },
+  "test_used_for_selection": false,
+  "comparison_path": "results/bonus/dev/comparison-after-vision-fix.json",
+  "trace_path": "results/bonus/dev/H2-after-vision-fix.jsonl",
+  "config_path": "configs/H2.json"
+}

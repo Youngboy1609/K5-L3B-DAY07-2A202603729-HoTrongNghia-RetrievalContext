@@ -1,0 +1,3763 @@
+{
+  "suite": "core",
+  "split": "dev",
+  "query_mode": "original_without_rewrite",
+  "top_k": 20,
+  "cutoff_for_comparison": 3,
+  "api_cost_usd": 0,
+  "context_note": "No model context is assembled here; context coverage is reported separately for the agent runs.",
+  "configs": {
+    "D0": {
+      "retrieval_id_exact": {
+        "answerable_n": 16,
+        "hit_at_1": {
+          "n": 10,
+          "N": 16,
+          "rate": 0.625
+        },
+        "evidence_hit_at_3": {
+          "n": 12,
+          "N": 16,
+          "rate": 0.75
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 16,
+          "rate": 0.0
+        }
+      },
+      "retrieval_source_quote": {
+        "version": "source_quote_v1",
+        "answerable_n": 16,
+        "hit_at_1": {
+          "n": 10,
+          "N": 16,
+          "rate": 0.625
+        },
+        "evidence_hit_at_3": {
+          "n": 12,
+          "N": 16,
+          "rate": 0.75
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 16,
+          "rate": 0.0
+        },
+        "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+      },
+      "traces": [
+        {
+          "query_id": "core-dev-str-01",
+          "query": "How does the chapter define a string in relation to its characters?",
+          "filters": {},
+          "embedding_ms": 132.96919999993406,
+          "retrieval_ms": 38.65990000031161,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "bd2c44687d9138ac33a600d9",
+                "d01dfb0ae06c83318834950c",
+                "9099b45e2f7e26f43bd3aec3",
+                "e9462aa7f3f6ad894908d8ef",
+                "b83a574fa239a171afeafe44",
+                "d7debd9f06e5cb992add123d",
+                "e8a87eaeaa6fe23dea69d44a",
+                "ef8f1b384b07da4636d5642b",
+                "2b38f47599d5bf33e0a01064",
+                "79ecff34f1d9537880a3f2b1",
+                "db73790f1e7415ac0e73caa1",
+                "1a7bb003f9cb4a69226f6f74",
+                "332edbb9411ad73c5dd75481",
+                "6633b277060b65939cab5bcc",
+                "b9646e3644803f61e315e24f",
+                "0b52403c4376c09af6b27a2c",
+                "731b07b74054015bd885af3c",
+                "c3d357405f48fd864e867fc4",
+                "e3bdf6a76bbb1faca17118a3",
+                "cf3ac9ff49c3c8a1901a1f9a"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "bd2c44687d9138ac33a600d9",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 93,
+              "score": 0.6567093079392148
+            },
+            {
+              "id": "d01dfb0ae06c83318834950c",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 96,
+              "score": 0.51577894435491
+            },
+            {
+              "id": "9099b45e2f7e26f43bd3aec3",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 116,
+              "score": 0.5099140459745537
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-str-02",
+          "query": "In Chapter 8 Strings, what kind of value must be used inside the brackets to select a character?",
+          "filters": {},
+          "embedding_ms": 131.55249999999796,
+          "retrieval_ms": 18.878099999710685,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "1a7bb003f9cb4a69226f6f74",
+                "bd2c44687d9138ac33a600d9",
+                "d7debd9f06e5cb992add123d",
+                "e9462aa7f3f6ad894908d8ef",
+                "d01dfb0ae06c83318834950c",
+                "ef8f1b384b07da4636d5642b",
+                "9099b45e2f7e26f43bd3aec3",
+                "5f63b07981ab6016764e4dd1",
+                "2b38f47599d5bf33e0a01064",
+                "dc3a1c318efb4bade5f974c2",
+                "e3bdf6a76bbb1faca17118a3",
+                "db73790f1e7415ac0e73caa1",
+                "332edbb9411ad73c5dd75481",
+                "be58543977e1cd20ca72a49e",
+                "b9646e3644803f61e315e24f",
+                "b83a574fa239a171afeafe44",
+                "79ecff34f1d9537880a3f2b1",
+                "731b07b74054015bd885af3c",
+                "c88d26af2a7711bc9acad373",
+                "088821c4da5141c2cfc30197"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "1a7bb003f9cb4a69226f6f74",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 93,
+              "score": 0.6294641552558293
+            },
+            {
+              "id": "bd2c44687d9138ac33a600d9",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 93,
+              "score": 0.600012173374755
+            },
+            {
+              "id": "d7debd9f06e5cb992add123d",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 100,
+              "score": 0.5207012976383538
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-str-03",
+          "query": "What does find return when the requested character does not occur in the word?",
+          "filters": {},
+          "embedding_ms": 117.33809999986988,
+          "retrieval_ms": 12.984200000573765,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "be58543977e1cd20ca72a49e",
+                "dc3a1c318efb4bade5f974c2",
+                "088821c4da5141c2cfc30197",
+                "a4d7d2bac172cab9bddc0d4d",
+                "db043a77c5eb0038adad2871",
+                "db73790f1e7415ac0e73caa1",
+                "78035bb2c9ebb26641ad60fb",
+                "e091dae524baee73df60ffe1",
+                "c88d26af2a7711bc9acad373",
+                "71ff34529d3a76ec268cb807",
+                "b3b6ef17fb00700a2bb5d31f",
+                "1a7bb003f9cb4a69226f6f74",
+                "c3d357405f48fd864e867fc4",
+                "2229e73f9a8b322d52d5c1a3",
+                "c94aad40a0b58b458c2b9838",
+                "79ecff34f1d9537880a3f2b1",
+                "d7debd9f06e5cb992add123d",
+                "27704b09156a093f7ba26714",
+                "e9462aa7f3f6ad894908d8ef",
+                "da8ec762feccec4b24cecf89"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "be58543977e1cd20ca72a49e",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 98,
+              "score": 0.6865823368350574
+            },
+            {
+              "id": "dc3a1c318efb4bade5f974c2",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 97,
+              "score": 0.6845014744305936
+            },
+            {
+              "id": "088821c4da5141c2cfc30197",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 97,
+              "score": 0.683191655894372
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-str-04",
+          "query": "How can a caller specify a starting position when searching a string with find?",
+          "filters": {},
+          "embedding_ms": 79.20070000000123,
+          "retrieval_ms": 28.02620000056777,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "db043a77c5eb0038adad2871",
+                "be58543977e1cd20ca72a49e",
+                "088821c4da5141c2cfc30197",
+                "db73790f1e7415ac0e73caa1",
+                "a4d7d2bac172cab9bddc0d4d",
+                "dc3a1c318efb4bade5f974c2",
+                "b9646e3644803f61e315e24f",
+                "e3bdf6a76bbb1faca17118a3",
+                "219f7d3d9fa91b807764d6d1",
+                "731b07b74054015bd885af3c",
+                "1a7bb003f9cb4a69226f6f74",
+                "d01dfb0ae06c83318834950c",
+                "1c0a12aa1a281743d242b290",
+                "c3d357405f48fd864e867fc4",
+                "6633b277060b65939cab5bcc",
+                "e9462aa7f3f6ad894908d8ef",
+                "2b38f47599d5bf33e0a01064",
+                "71ff34529d3a76ec268cb807",
+                "73e04745d7993249ece17da9",
+                "9e2aed6086dcdfc692e78469"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "db043a77c5eb0038adad2871",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 98,
+              "score": 0.7482102786615914
+            },
+            {
+              "id": "be58543977e1cd20ca72a49e",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 98,
+              "score": 0.6865160990655156
+            },
+            {
+              "id": "088821c4da5141c2cfc30197",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 97,
+              "score": 0.6598916346606706
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-01",
+          "query": "What assignment operation in the chapter demonstrates that a list element can be changed?",
+          "filters": {},
+          "embedding_ms": 68.20549999974901,
+          "retrieval_ms": 26.62230000078125,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "debda678d3050400f02f19c5",
+                "5f63b07981ab6016764e4dd1",
+                "406cf9aecf17d6de9ec883b4",
+                "b5d918f4ab2650fc81527603",
+                "3a27643eeff846779b8db402",
+                "3bd26d52c8ec471104884e53",
+                "e0a9167ee32971afe1f8ce35",
+                "7396b631dcd13a3ec84a0eff",
+                "da3230c13e796a744352f952",
+                "ef8f1b384b07da4636d5642b",
+                "bc02d9e46833e8ceab68ee58",
+                "f27f85398ee711bdbfc8bdff",
+                "e8a87eaeaa6fe23dea69d44a",
+                "6bf3e5226dca8c9f40265e84",
+                "935ddf0fbf91664c335c06b9",
+                "f97829ab790d82550119c52d",
+                "1136fed79cfabaa175c1e307",
+                "3447d0ab91119646e6eb090c",
+                "b9ebd72ed0bce842f98a5c63",
+                "055cbd622a00ccc3ecfc7812"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "debda678d3050400f02f19c5",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 114,
+              "score": 0.6854079159282247
+            },
+            {
+              "id": "5f63b07981ab6016764e4dd1",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 112,
+              "score": 0.5971385521906923
+            },
+            {
+              "id": "406cf9aecf17d6de9ec883b4",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 119,
+              "score": 0.5823349602189084
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-02",
+          "query": "How does the chapter describe the most common way to traverse all elements of a list?",
+          "filters": {},
+          "embedding_ms": 69.44879999991826,
+          "retrieval_ms": 32.992899999953806,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "1136fed79cfabaa175c1e307",
+                "8170ad3f17736ea5d34a3338",
+                "fb567a8065b0869972efb038",
+                "e8a87eaeaa6fe23dea69d44a",
+                "da3230c13e796a744352f952",
+                "e0a9167ee32971afe1f8ce35",
+                "97b860ebffb11a91f3597e6d",
+                "0faaf1fef31260b5fc516b7d",
+                "7396b631dcd13a3ec84a0eff",
+                "d513867d0cffbe765791beb0",
+                "f27f85398ee711bdbfc8bdff",
+                "79ecff34f1d9537880a3f2b1",
+                "cf9867b54536d9da0ea867a8",
+                "6e32cb55527fb7af51cf420b",
+                "debda678d3050400f02f19c5",
+                "3447d0ab91119646e6eb090c",
+                "0e5ec6edd092bccc38693283",
+                "0b52403c4376c09af6b27a2c",
+                "9a5718a1a6c1d4f629645616",
+                "f97829ab790d82550119c52d"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "1136fed79cfabaa175c1e307",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 113,
+              "score": 0.66592463828205
+            },
+            {
+              "id": "8170ad3f17736ea5d34a3338",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 143,
+              "score": 0.529942185913676
+            },
+            {
+              "id": "fb567a8065b0869972efb038",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 115,
+              "score": 0.5131818527040397
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-03",
+          "query": "What does t[:] produce for a list, and how does it relate to the original list?",
+          "filters": {},
+          "embedding_ms": 66.24689999989641,
+          "retrieval_ms": 29.316400000425347,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "b9ebd72ed0bce842f98a5c63",
+                "b2b2e5cc569075333e61cdad",
+                "b5d918f4ab2650fc81527603",
+                "3a27643eeff846779b8db402",
+                "3bd26d52c8ec471104884e53",
+                "406cf9aecf17d6de9ec883b4",
+                "8d7f0a7d94a4114c395a6a60",
+                "055cbd622a00ccc3ecfc7812",
+                "7b5016cbf03fdbe4b79d810e",
+                "f27f85398ee711bdbfc8bdff",
+                "6bf3e5226dca8c9f40265e84",
+                "782001a9167987fcd966fab8",
+                "e0a9167ee32971afe1f8ce35",
+                "06af86ada72b1d9199f51185",
+                "e9c083ae3929c9bf31e09cdf",
+                "debda678d3050400f02f19c5",
+                "79ecff34f1d9537880a3f2b1",
+                "f97829ab790d82550119c52d",
+                "fb567a8065b0869972efb038",
+                "6e32cb55527fb7af51cf420b"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "b9ebd72ed0bce842f98a5c63",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 120,
+              "score": 0.6693643640284973
+            },
+            {
+              "id": "b2b2e5cc569075333e61cdad",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 121,
+              "score": 0.631586517154476
+            },
+            {
+              "id": "b5d918f4ab2650fc81527603",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 120,
+              "score": 0.594810931175126
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-04",
+          "query": "What makes an operation a filter when processing a list?",
+          "filters": {},
+          "embedding_ms": 63.69350000022678,
+          "retrieval_ms": 42.37409999950614,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "97b860ebffb11a91f3597e6d",
+                "406cf9aecf17d6de9ec883b4",
+                "cf9867b54536d9da0ea867a8",
+                "fd372fa0351784f0e8f1adb3",
+                "0faaf1fef31260b5fc516b7d",
+                "debda678d3050400f02f19c5",
+                "f27f85398ee711bdbfc8bdff",
+                "6bf3e5226dca8c9f40265e84",
+                "bc02d9e46833e8ceab68ee58",
+                "b5d918f4ab2650fc81527603",
+                "3bd26d52c8ec471104884e53",
+                "fb567a8065b0869972efb038",
+                "055cbd622a00ccc3ecfc7812",
+                "3a27643eeff846779b8db402",
+                "f97829ab790d82550119c52d",
+                "b9ebd72ed0bce842f98a5c63",
+                "0e5ec6edd092bccc38693283",
+                "3447d0ab91119646e6eb090c",
+                "7b5016cbf03fdbe4b79d810e",
+                "e0a9167ee32971afe1f8ce35"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "97b860ebffb11a91f3597e6d",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 116,
+              "score": 0.6178934688831643
+            },
+            {
+              "id": "406cf9aecf17d6de9ec883b4",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 119,
+              "score": 0.5269327266234763
+            },
+            {
+              "id": "cf9867b54536d9da0ea867a8",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 115,
+              "score": 0.5060278948879536
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-01",
+          "query": "Unlike a list, what kinds of index can a dictionary use?",
+          "filters": {},
+          "embedding_ms": 65.8077999996749,
+          "retrieval_ms": 13.467499999933352,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "cfac32c57e24fd06f89a5927",
+                "df2f75dff3538e1fc4d7ea22",
+                "60f50bf6dc5cdfd857d72fbc",
+                "80c21b02f1af9ede049d5e47",
+                "f44df4f7b62aca135c848989",
+                "03ff112311e23ce87798326c",
+                "271704fc65eed718d259bc01",
+                "ef2084023b45960add09f64f",
+                "0faaf1fef31260b5fc516b7d",
+                "611fc925745473701fc4b150",
+                "8d7f0a7d94a4114c395a6a60",
+                "754749a1bc3b5d8481456d51",
+                "8fe84c71a337711b0d54c6fe",
+                "d0312ced1cd4ef865d449cb0",
+                "7396b631dcd13a3ec84a0eff",
+                "9d8fe9d8f820ec8ee0100c89",
+                "1da5764870428c5393c83469",
+                "ff9ae89b32b1001dbb17c8bd",
+                "46a2945a2121871e563aea75",
+                "4f898847739ee4bd49ec570c"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "cfac32c57e24fd06f89a5927",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 125,
+              "score": 0.7213503913711575
+            },
+            {
+              "id": "df2f75dff3538e1fc4d7ea22",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 126,
+              "score": 0.6356270586150947
+            },
+            {
+              "id": "60f50bf6dc5cdfd857d72fbc",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 130,
+              "score": 0.5959730224658262
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-02",
+          "query": "When looping directly over a dictionary, what does the loop traverse?",
+          "filters": {},
+          "embedding_ms": 65.22860000040964,
+          "retrieval_ms": 23.91429999988759,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "b6e7809d3f8fd5fb8e869d78",
+                "03ff112311e23ce87798326c",
+                "e4e3d3ccbc7919908ad39b0f",
+                "df2f75dff3538e1fc4d7ea22",
+                "b5be7e24341b5a5b1861ba77",
+                "d513867d0cffbe765791beb0",
+                "271704fc65eed718d259bc01",
+                "80c21b02f1af9ede049d5e47",
+                "0e4d4054206a2e24b5eccb1b",
+                "cfac32c57e24fd06f89a5927",
+                "da3230c13e796a744352f952",
+                "d0312ced1cd4ef865d449cb0",
+                "1136fed79cfabaa175c1e307",
+                "c3d357405f48fd864e867fc4",
+                "16a5268efb6434275901a086",
+                "8fe84c71a337711b0d54c6fe",
+                "ef2084023b45960add09f64f",
+                "0550a5ab635bef126301b125",
+                "754749a1bc3b5d8481456d51",
+                "611fc925745473701fc4b150"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "b6e7809d3f8fd5fb8e869d78",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 128,
+              "score": 0.595631780238679
+            },
+            {
+              "id": "03ff112311e23ce87798326c",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 142,
+              "score": 0.5693197767151257
+            },
+            {
+              "id": "e4e3d3ccbc7919908ad39b0f",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 142,
+              "score": 0.5659235007879011
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-03",
+          "query": "How can get avoid a missing-key error when looking up a key that may not exist?",
+          "filters": {},
+          "embedding_ms": 65.7271000000037,
+          "retrieval_ms": 59.31380000038189,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "c94aad40a0b58b458c2b9838",
+                "78035bb2c9ebb26641ad60fb",
+                "27704b09156a093f7ba26714",
+                "44ac3a20fe89a87e5d5c277b",
+                "611fc925745473701fc4b150",
+                "8fe84c71a337711b0d54c6fe",
+                "60f50bf6dc5cdfd857d72fbc",
+                "df2f75dff3538e1fc4d7ea22",
+                "46a2945a2121871e563aea75",
+                "ff9ae89b32b1001dbb17c8bd",
+                "ef2084023b45960add09f64f",
+                "3f59477932a8d50c7f79f300",
+                "088821c4da5141c2cfc30197",
+                "271704fc65eed718d259bc01",
+                "b5be7e24341b5a5b1861ba77",
+                "da8ec762feccec4b24cecf89",
+                "c82425bb596e87fea82690d1",
+                "cfac32c57e24fd06f89a5927",
+                "be58543977e1cd20ca72a49e",
+                "f44df4f7b62aca135c848989"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "c94aad40a0b58b458c2b9838",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 128,
+              "score": 0.6366478503842938
+            },
+            {
+              "id": "78035bb2c9ebb26641ad60fb",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 129,
+              "score": 0.6196622353960289
+            },
+            {
+              "id": "27704b09156a093f7ba26714",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 128,
+              "score": 0.5720263322186502
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-04",
+          "query": "In Chapter 11 Dictionaries, what is one advantage of using get with a default when incrementing a counter?",
+          "filters": {},
+          "embedding_ms": 65.48930000008113,
+          "retrieval_ms": 12.872500000412401,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "b5be7e24341b5a5b1861ba77",
+                "da8ec762feccec4b24cecf89",
+                "38d24809151400da7538df94",
+                "d4f49d1070b12762d144f6e2",
+                "9ed4a1e8ee0899956c949afc",
+                "d0312ced1cd4ef865d449cb0",
+                "16a5268efb6434275901a086",
+                "271704fc65eed718d259bc01",
+                "e091dae524baee73df60ffe1",
+                "9d8fe9d8f820ec8ee0100c89",
+                "1da5764870428c5393c83469",
+                "0b52403c4376c09af6b27a2c",
+                "611fc925745473701fc4b150",
+                "088821c4da5141c2cfc30197",
+                "fef778392d6ccd2872288cc6",
+                "cf9867b54536d9da0ea867a8",
+                "2452b953d03efe3a530f7bd9",
+                "0faaf1fef31260b5fc516b7d",
+                "dc3a1c318efb4bade5f974c2",
+                "e9c083ae3929c9bf31e09cdf"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "b5be7e24341b5a5b1861ba77",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 128,
+              "score": 0.6264056975381637
+            },
+            {
+              "id": "da8ec762feccec4b24cecf89",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 127,
+              "score": 0.5809116438428414
+            },
+            {
+              "id": "38d24809151400da7538df94",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 127,
+              "score": 0.510836852924831
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-01",
+          "query": "What happens when tuple() receives a sequence such as a string, list, or tuple?",
+          "filters": {},
+          "embedding_ms": 65.90719999985595,
+          "retrieval_ms": 58.557599999403465,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "55d70d82bf9c61565932b05b",
+                "69556335b9879d129b053dc0",
+                "8d7f0a7d94a4114c395a6a60",
+                "e9c083ae3929c9bf31e09cdf",
+                "7c955b513dbf0952dd3a2c18",
+                "8170ad3f17736ea5d34a3338",
+                "b7c6c8a5edc62d6aa21929d5",
+                "0b52403c4376c09af6b27a2c",
+                "b4c239675b5a7688f18318a8",
+                "2f6ea20b8b72aade51c93c92",
+                "0550a5ab635bef126301b125",
+                "e4c546792c2fa3617803f6a9",
+                "8415a23d91863125c4966f94",
+                "3542ff1bde5022ebdf79c765",
+                "e8a87eaeaa6fe23dea69d44a",
+                "b83a574fa239a171afeafe44",
+                "05a048375707add244069f25",
+                "79ecff34f1d9537880a3f2b1",
+                "7b5016cbf03fdbe4b79d810e",
+                "079b9522f62937dff57359ad"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "55d70d82bf9c61565932b05b",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 138,
+              "score": 0.7023532596762769
+            },
+            {
+              "id": "69556335b9879d129b053dc0",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 137,
+              "score": 0.6687695580405518
+            },
+            {
+              "id": "8d7f0a7d94a4114c395a6a60",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 143,
+              "score": 0.6600900124417474
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-02",
+          "query": "In Chapter 12 Tuples, how does Python associate values on the right side with names on the left in a tuple assignment?",
+          "filters": {},
+          "embedding_ms": 73.83089999984804,
+          "retrieval_ms": 29.205099999671802,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "a25a5ac627a9e93863a6d648",
+                "0b52403c4376c09af6b27a2c",
+                "55d70d82bf9c61565932b05b",
+                "7c955b513dbf0952dd3a2c18",
+                "0550a5ab635bef126301b125",
+                "b4c239675b5a7688f18318a8",
+                "03ff112311e23ce87798326c",
+                "e9c083ae3929c9bf31e09cdf",
+                "84623db97b77dc4a30eecc29",
+                "69556335b9879d129b053dc0",
+                "8415a23d91863125c4966f94",
+                "0e4d4054206a2e24b5eccb1b",
+                "988a39abb61b05d84a64f525",
+                "8d7f0a7d94a4114c395a6a60",
+                "e4c546792c2fa3617803f6a9",
+                "05a048375707add244069f25",
+                "b7c6c8a5edc62d6aa21929d5",
+                "079b9522f62937dff57359ad",
+                "9a4442ae70324827c9ebdc44",
+                "79ecff34f1d9537880a3f2b1"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "a25a5ac627a9e93863a6d648",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 139,
+              "score": 0.719476720493193
+            },
+            {
+              "id": "0b52403c4376c09af6b27a2c",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 142,
+              "score": 0.652042583510322
+            },
+            {
+              "id": "55d70d82bf9c61565932b05b",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 138,
+              "score": 0.6222295467761633
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-03",
+          "query": "What does a function parameter beginning with * do to the arguments it receives?",
+          "filters": {},
+          "embedding_ms": 65.223500000684,
+          "retrieval_ms": 14.71899999978632,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "079b9522f62937dff57359ad",
+                "2f6ea20b8b72aade51c93c92",
+                "3bd26d52c8ec471104884e53",
+                "3542ff1bde5022ebdf79c765",
+                "e3bdf6a76bbb1faca17118a3",
+                "06af86ada72b1d9199f51185",
+                "1400a6c50a22a12c186fa7b9",
+                "e4c546792c2fa3617803f6a9",
+                "a51d086cee4bb0ca494efdcc",
+                "b9ebd72ed0bce842f98a5c63",
+                "e9c083ae3929c9bf31e09cdf",
+                "db043a77c5eb0038adad2871",
+                "bc6c970750dc4ab5cacc58b6",
+                "f00537375fd30ca509a6a05e",
+                "e958269d52a76930084698d3",
+                "db73790f1e7415ac0e73caa1",
+                "9b97442139de78e7d924ca66",
+                "2db6d5d0cceb6e32d65f6c3b",
+                "e0a9167ee32971afe1f8ce35",
+                "be58543977e1cd20ca72a49e"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "079b9522f62937dff57359ad",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.6282624235134803
+            },
+            {
+              "id": "2f6ea20b8b72aade51c93c92",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.5289577103245185
+            },
+            {
+              "id": "3bd26d52c8ec471104884e53",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 119,
+              "score": 0.4959841728823482
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-04",
+          "query": "What limitation distinguishes a zip iterator from a list when accessing an element?",
+          "filters": {},
+          "embedding_ms": 64.43570000010368,
+          "retrieval_ms": 27.764899999965564,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "3203ce903ea969769ba53088",
+                "d83143d751253a0ffb2909c3",
+                "0550a5ab635bef126301b125",
+                "05a048375707add244069f25",
+                "da3230c13e796a744352f952",
+                "1136fed79cfabaa175c1e307",
+                "8d7f0a7d94a4114c395a6a60",
+                "5f63b07981ab6016764e4dd1",
+                "79ecff34f1d9537880a3f2b1",
+                "0faaf1fef31260b5fc516b7d",
+                "7b5016cbf03fdbe4b79d810e",
+                "f44df4f7b62aca135c848989",
+                "a6387f1980173b28a04c03b8",
+                "e8a87eaeaa6fe23dea69d44a",
+                "6e32cb55527fb7af51cf420b",
+                "6bf3e5226dca8c9f40265e84",
+                "7396b631dcd13a3ec84a0eff",
+                "f27f85398ee711bdbfc8bdff",
+                "e0a9167ee32971afe1f8ce35",
+                "97b860ebffb11a91f3597e6d"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "3203ce903ea969769ba53088",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 141,
+              "score": 0.7399405008488028
+            },
+            {
+              "id": "d83143d751253a0ffb2909c3",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.6388024601627704
+            },
+            {
+              "id": "0550a5ab635bef126301b125",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 141,
+              "score": 0.5608532780201907
+            }
+          ],
+          "contexts": []
+        }
+      ]
+    },
+    "L0": {
+      "retrieval_id_exact": {
+        "answerable_n": 16,
+        "hit_at_1": {
+          "n": 7,
+          "N": 16,
+          "rate": 0.4375
+        },
+        "evidence_hit_at_3": {
+          "n": 11,
+          "N": 16,
+          "rate": 0.6875
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 16,
+          "rate": 0.0
+        }
+      },
+      "retrieval_source_quote": {
+        "version": "source_quote_v1",
+        "answerable_n": 16,
+        "hit_at_1": {
+          "n": 7,
+          "N": 16,
+          "rate": 0.4375
+        },
+        "evidence_hit_at_3": {
+          "n": 11,
+          "N": 16,
+          "rate": 0.6875
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 16,
+          "rate": 0.0
+        },
+        "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+      },
+      "traces": [
+        {
+          "query_id": "core-dev-str-01",
+          "query": "How does the chapter define a string in relation to its characters?",
+          "filters": {},
+          "embedding_ms": 132.96919999993406,
+          "retrieval_ms": 6.203300000379386,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "b83a574fa239a171afeafe44",
+                "bd2c44687d9138ac33a600d9",
+                "9099b45e2f7e26f43bd3aec3",
+                "e8a87eaeaa6fe23dea69d44a",
+                "d0312ced1cd4ef865d449cb0",
+                "1a7bb003f9cb4a69226f6f74",
+                "2b38f47599d5bf33e0a01064",
+                "e9c083ae3929c9bf31e09cdf",
+                "e9462aa7f3f6ad894908d8ef",
+                "b9646e3644803f61e315e24f",
+                "ef8f1b384b07da4636d5642b",
+                "611fc925745473701fc4b150",
+                "a25a5ac627a9e93863a6d648",
+                "d01dfb0ae06c83318834950c",
+                "c3d357405f48fd864e867fc4",
+                "79ecff34f1d9537880a3f2b1",
+                "b5d918f4ab2650fc81527603",
+                "d83143d751253a0ffb2909c3",
+                "1da5764870428c5393c83469",
+                "55d70d82bf9c61565932b05b"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "b83a574fa239a171afeafe44",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 143,
+              "score": 0.26913087580286893
+            },
+            {
+              "id": "bd2c44687d9138ac33a600d9",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 93,
+              "score": 0.2639290914854203
+            },
+            {
+              "id": "9099b45e2f7e26f43bd3aec3",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 116,
+              "score": 0.25037455373556516
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-str-02",
+          "query": "In Chapter 8 Strings, what kind of value must be used inside the brackets to select a character?",
+          "filters": {},
+          "embedding_ms": 131.55249999999796,
+          "retrieval_ms": 6.1709999999948195,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "2b38f47599d5bf33e0a01064",
+                "dc3a1c318efb4bade5f974c2",
+                "bd2c44687d9138ac33a600d9",
+                "80c21b02f1af9ede049d5e47",
+                "1a7bb003f9cb4a69226f6f74",
+                "b83a574fa239a171afeafe44",
+                "f3d5ffb3154812e6aef1c515",
+                "d7debd9f06e5cb992add123d",
+                "5f63b07981ab6016764e4dd1",
+                "e8a87eaeaa6fe23dea69d44a",
+                "fd372fa0351784f0e8f1adb3",
+                "cfac32c57e24fd06f89a5927",
+                "eeb5bb0438c5965800f72e22",
+                "9a5718a1a6c1d4f629645616",
+                "d01dfb0ae06c83318834950c",
+                "332edbb9411ad73c5dd75481",
+                "e9462aa7f3f6ad894908d8ef",
+                "d513867d0cffbe765791beb0",
+                "fef778392d6ccd2872288cc6",
+                "79ecff34f1d9537880a3f2b1"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "2b38f47599d5bf33e0a01064",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 94,
+              "score": 0.22452344684105585
+            },
+            {
+              "id": "dc3a1c318efb4bade5f974c2",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 97,
+              "score": 0.2145753171314116
+            },
+            {
+              "id": "bd2c44687d9138ac33a600d9",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 93,
+              "score": 0.20422350890497404
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-str-03",
+          "query": "What does find return when the requested character does not occur in the word?",
+          "filters": {},
+          "embedding_ms": 117.33809999986988,
+          "retrieval_ms": 6.368999999722291,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "a4d7d2bac172cab9bddc0d4d",
+                "be58543977e1cd20ca72a49e",
+                "db043a77c5eb0038adad2871",
+                "dc3a1c318efb4bade5f974c2",
+                "088821c4da5141c2cfc30197",
+                "611fc925745473701fc4b150",
+                "4fc27fe805fc806f5afe6f3b",
+                "ef8f1b384b07da4636d5642b",
+                "b5d918f4ab2650fc81527603",
+                "1a7bb003f9cb4a69226f6f74",
+                "c3d357405f48fd864e867fc4",
+                "79ecff34f1d9537880a3f2b1",
+                "f44df4f7b62aca135c848989",
+                "b9646e3644803f61e315e24f",
+                "b3b6ef17fb00700a2bb5d31f",
+                "332edbb9411ad73c5dd75481",
+                "3447d0ab91119646e6eb090c",
+                "e091dae524baee73df60ffe1",
+                "adafe554fa7735889708bf8f",
+                "71ff34529d3a76ec268cb807"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "a4d7d2bac172cab9bddc0d4d",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 96,
+              "score": 0.37472823602383476
+            },
+            {
+              "id": "be58543977e1cd20ca72a49e",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 98,
+              "score": 0.30465085809365167
+            },
+            {
+              "id": "db043a77c5eb0038adad2871",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 98,
+              "score": 0.28638256084523084
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-str-04",
+          "query": "How can a caller specify a starting position when searching a string with find?",
+          "filters": {},
+          "embedding_ms": 79.20070000000123,
+          "retrieval_ms": 6.256300000131887,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "db043a77c5eb0038adad2871",
+                "be58543977e1cd20ca72a49e",
+                "e8a87eaeaa6fe23dea69d44a",
+                "3bd26d52c8ec471104884e53",
+                "d0312ced1cd4ef865d449cb0",
+                "6633b277060b65939cab5bcc",
+                "9099b45e2f7e26f43bd3aec3",
+                "088821c4da5141c2cfc30197",
+                "cfac32c57e24fd06f89a5927",
+                "c88d26af2a7711bc9acad373",
+                "bd2c44687d9138ac33a600d9",
+                "c3d357405f48fd864e867fc4",
+                "deb9616475487e7239e4f7f8",
+                "b83a574fa239a171afeafe44",
+                "3a27643eeff846779b8db402",
+                "fbcf2be48c56172ef883ce82",
+                "b7c6c8a5edc62d6aa21929d5",
+                "8d7f0a7d94a4114c395a6a60",
+                "cf3ac9ff49c3c8a1901a1f9a",
+                "db73790f1e7415ac0e73caa1"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "db043a77c5eb0038adad2871",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 98,
+              "score": 0.229071909223444
+            },
+            {
+              "id": "be58543977e1cd20ca72a49e",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 98,
+              "score": 0.21746251512092923
+            },
+            {
+              "id": "e8a87eaeaa6fe23dea69d44a",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 111,
+              "score": 0.17406064327476967
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-01",
+          "query": "What assignment operation in the chapter demonstrates that a list element can be changed?",
+          "filters": {},
+          "embedding_ms": 68.20549999974901,
+          "retrieval_ms": 5.902400000195485,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "e8a87eaeaa6fe23dea69d44a",
+                "da3230c13e796a744352f952",
+                "fd372fa0351784f0e8f1adb3",
+                "79ecff34f1d9537880a3f2b1",
+                "97b860ebffb11a91f3597e6d",
+                "0e5ec6edd092bccc38693283",
+                "f27f85398ee711bdbfc8bdff",
+                "5f63b07981ab6016764e4dd1",
+                "a93baaf72d20449f58ff5381",
+                "cfac32c57e24fd06f89a5927",
+                "0550a5ab635bef126301b125",
+                "27704b09156a093f7ba26714",
+                "f3d5ffb3154812e6aef1c515",
+                "9a5718a1a6c1d4f629645616",
+                "754749a1bc3b5d8481456d51",
+                "55d70d82bf9c61565932b05b",
+                "e091dae524baee73df60ffe1",
+                "9099b45e2f7e26f43bd3aec3",
+                "60f50bf6dc5cdfd857d72fbc",
+                "f44df4f7b62aca135c848989"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "e8a87eaeaa6fe23dea69d44a",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 111,
+              "score": 0.26333929264428546
+            },
+            {
+              "id": "da3230c13e796a744352f952",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 113,
+              "score": 0.2054012405801705
+            },
+            {
+              "id": "fd372fa0351784f0e8f1adb3",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 115,
+              "score": 0.20237903592944895
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-02",
+          "query": "How does the chapter describe the most common way to traverse all elements of a list?",
+          "filters": {},
+          "embedding_ms": 69.44879999991826,
+          "retrieval_ms": 6.342599999697995,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "1136fed79cfabaa175c1e307",
+                "7396b631dcd13a3ec84a0eff",
+                "e8a87eaeaa6fe23dea69d44a",
+                "9099b45e2f7e26f43bd3aec3",
+                "55d70d82bf9c61565932b05b",
+                "97b860ebffb11a91f3597e6d",
+                "0550a5ab635bef126301b125",
+                "9a5718a1a6c1d4f629645616",
+                "0e5ec6edd092bccc38693283",
+                "da3230c13e796a744352f952",
+                "fd372fa0351784f0e8f1adb3",
+                "b9ebd72ed0bce842f98a5c63",
+                "d83143d751253a0ffb2909c3",
+                "e9c083ae3929c9bf31e09cdf",
+                "b5d918f4ab2650fc81527603",
+                "3bd26d52c8ec471104884e53",
+                "1c0a12aa1a281743d242b290",
+                "d0312ced1cd4ef865d449cb0",
+                "3447d0ab91119646e6eb090c",
+                "4fc27fe805fc806f5afe6f3b"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "1136fed79cfabaa175c1e307",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 113,
+              "score": 0.3555281165380992
+            },
+            {
+              "id": "7396b631dcd13a3ec84a0eff",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 112,
+              "score": 0.23366107232751537
+            },
+            {
+              "id": "e8a87eaeaa6fe23dea69d44a",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 111,
+              "score": 0.2182473705871567
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-03",
+          "query": "What does t[:] produce for a list, and how does it relate to the original list?",
+          "filters": {},
+          "embedding_ms": 66.24689999989641,
+          "retrieval_ms": 6.609600000047067,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "b9ebd72ed0bce842f98a5c63",
+                "b5d918f4ab2650fc81527603",
+                "3bd26d52c8ec471104884e53",
+                "9099b45e2f7e26f43bd3aec3",
+                "611fc925745473701fc4b150",
+                "9a5718a1a6c1d4f629645616",
+                "e8a87eaeaa6fe23dea69d44a",
+                "da3230c13e796a744352f952",
+                "79ecff34f1d9537880a3f2b1",
+                "7396b631dcd13a3ec84a0eff",
+                "1136fed79cfabaa175c1e307",
+                "0550a5ab635bef126301b125",
+                "a4d7d2bac172cab9bddc0d4d",
+                "fd372fa0351784f0e8f1adb3",
+                "055cbd622a00ccc3ecfc7812",
+                "ef8f1b384b07da4636d5642b",
+                "8cd4b681c8169ac016fdff22",
+                "3447d0ab91119646e6eb090c",
+                "9ed4a1e8ee0899956c949afc",
+                "b2b2e5cc569075333e61cdad"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "b9ebd72ed0bce842f98a5c63",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 120,
+              "score": 0.29525700867339516
+            },
+            {
+              "id": "b5d918f4ab2650fc81527603",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 120,
+              "score": 0.26776970644135384
+            },
+            {
+              "id": "3bd26d52c8ec471104884e53",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 119,
+              "score": 0.21727814932980344
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-04",
+          "query": "What makes an operation a filter when processing a list?",
+          "filters": {},
+          "embedding_ms": 63.69350000022678,
+          "retrieval_ms": 5.864400000064052,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "97b860ebffb11a91f3597e6d",
+                "fd372fa0351784f0e8f1adb3",
+                "d513867d0cffbe765791beb0",
+                "e8a87eaeaa6fe23dea69d44a",
+                "0e5ec6edd092bccc38693283",
+                "8415a23d91863125c4966f94",
+                "cf9867b54536d9da0ea867a8",
+                "deb9616475487e7239e4f7f8",
+                "9099b45e2f7e26f43bd3aec3",
+                "cfac32c57e24fd06f89a5927",
+                "9a5718a1a6c1d4f629645616",
+                "088821c4da5141c2cfc30197",
+                "3a27643eeff846779b8db402",
+                "3bd26d52c8ec471104884e53",
+                "27704b09156a093f7ba26714",
+                "3203ce903ea969769ba53088",
+                "78035bb2c9ebb26641ad60fb",
+                "44ac3a20fe89a87e5d5c277b",
+                "9a4442ae70324827c9ebdc44",
+                "8d7f0a7d94a4114c395a6a60"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "97b860ebffb11a91f3597e6d",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 116,
+              "score": 0.2800316124162203
+            },
+            {
+              "id": "fd372fa0351784f0e8f1adb3",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 115,
+              "score": 0.18300572829611325
+            },
+            {
+              "id": "d513867d0cffbe765791beb0",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 94,
+              "score": 0.180606636185974
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-01",
+          "query": "Unlike a list, what kinds of index can a dictionary use?",
+          "filters": {},
+          "embedding_ms": 65.8077999996749,
+          "retrieval_ms": 6.325199999992037,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "a4d7d2bac172cab9bddc0d4d",
+                "cfac32c57e24fd06f89a5927",
+                "3203ce903ea969769ba53088",
+                "9099b45e2f7e26f43bd3aec3",
+                "e8a87eaeaa6fe23dea69d44a",
+                "4f898847739ee4bd49ec570c",
+                "b83a574fa239a171afeafe44",
+                "754749a1bc3b5d8481456d51",
+                "d513867d0cffbe765791beb0",
+                "1a7bb003f9cb4a69226f6f74",
+                "5f63b07981ab6016764e4dd1",
+                "fef778392d6ccd2872288cc6",
+                "8d7f0a7d94a4114c395a6a60",
+                "9a5718a1a6c1d4f629645616",
+                "a93baaf72d20449f58ff5381",
+                "98961ea0f763be0ea5e15b28",
+                "dc3a1c318efb4bade5f974c2",
+                "df2f75dff3538e1fc4d7ea22",
+                "eeb5bb0438c5965800f72e22",
+                "ff9ae89b32b1001dbb17c8bd"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "a4d7d2bac172cab9bddc0d4d",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 96,
+              "score": 0.24351127222479313
+            },
+            {
+              "id": "cfac32c57e24fd06f89a5927",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 125,
+              "score": 0.23344806281055303
+            },
+            {
+              "id": "3203ce903ea969769ba53088",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 141,
+              "score": 0.23095402887581548
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-02",
+          "query": "When looping directly over a dictionary, what does the loop traverse?",
+          "filters": {},
+          "embedding_ms": 65.22860000040964,
+          "retrieval_ms": 6.336499999633816,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "088821c4da5141c2cfc30197",
+                "611fc925745473701fc4b150",
+                "da3230c13e796a744352f952",
+                "0550a5ab635bef126301b125",
+                "dc3a1c318efb4bade5f974c2",
+                "3ebf67114eab9c1ba0bb967c",
+                "cfac32c57e24fd06f89a5927",
+                "c3d357405f48fd864e867fc4",
+                "754749a1bc3b5d8481456d51",
+                "e8a87eaeaa6fe23dea69d44a",
+                "a4d7d2bac172cab9bddc0d4d",
+                "b83a574fa239a171afeafe44",
+                "4f898847739ee4bd49ec570c",
+                "b5be7e24341b5a5b1861ba77",
+                "b5d918f4ab2650fc81527603",
+                "e9462aa7f3f6ad894908d8ef",
+                "1136fed79cfabaa175c1e307",
+                "b6e7809d3f8fd5fb8e869d78",
+                "80c21b02f1af9ede049d5e47",
+                "d513867d0cffbe765791beb0"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "088821c4da5141c2cfc30197",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 97,
+              "score": 0.2063742915083943
+            },
+            {
+              "id": "611fc925745473701fc4b150",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 129,
+              "score": 0.18485525799185104
+            },
+            {
+              "id": "da3230c13e796a744352f952",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 113,
+              "score": 0.16956410040649864
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-03",
+          "query": "How can get avoid a missing-key error when looking up a key that may not exist?",
+          "filters": {},
+          "embedding_ms": 65.7271000000037,
+          "retrieval_ms": 6.352599999445374,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "46a2945a2121871e563aea75",
+                "da8ec762feccec4b24cecf89",
+                "e4e3d3ccbc7919908ad39b0f",
+                "cfac32c57e24fd06f89a5927",
+                "088821c4da5141c2cfc30197",
+                "44ac3a20fe89a87e5d5c277b",
+                "6acdb1ac9a021f3eb19ce537",
+                "df2f75dff3538e1fc4d7ea22",
+                "8fe84c71a337711b0d54c6fe",
+                "deb9616475487e7239e4f7f8",
+                "c82425bb596e87fea82690d1",
+                "60f50bf6dc5cdfd857d72fbc",
+                "9099b45e2f7e26f43bd3aec3",
+                "d0312ced1cd4ef865d449cb0",
+                "754749a1bc3b5d8481456d51",
+                "bd2c44687d9138ac33a600d9",
+                "f44df4f7b62aca135c848989",
+                "9149f937dd9cb03241ada9a0",
+                "3f59477932a8d50c7f79f300",
+                "1400a6c50a22a12c186fa7b9"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "46a2945a2121871e563aea75",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 130,
+              "score": 0.22984341282005888
+            },
+            {
+              "id": "da8ec762feccec4b24cecf89",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 127,
+              "score": 0.20738180122877697
+            },
+            {
+              "id": "e4e3d3ccbc7919908ad39b0f",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 142,
+              "score": 0.20382950167038455
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-04",
+          "query": "In Chapter 11 Dictionaries, what is one advantage of using get with a default when incrementing a counter?",
+          "filters": {},
+          "embedding_ms": 65.48930000008113,
+          "retrieval_ms": 6.2346000004254165,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "1da5764870428c5393c83469",
+                "da8ec762feccec4b24cecf89",
+                "b5be7e24341b5a5b1861ba77",
+                "e8a87eaeaa6fe23dea69d44a",
+                "d4f49d1070b12762d144f6e2",
+                "55d70d82bf9c61565932b05b",
+                "c3d357405f48fd864e867fc4",
+                "1a7bb003f9cb4a69226f6f74",
+                "2452b953d03efe3a530f7bd9",
+                "9ed4a1e8ee0899956c949afc",
+                "e091dae524baee73df60ffe1",
+                "9d8fe9d8f820ec8ee0100c89",
+                "cfac32c57e24fd06f89a5927",
+                "e9c083ae3929c9bf31e09cdf",
+                "cf3ac9ff49c3c8a1901a1f9a",
+                "16a5268efb6434275901a086",
+                "78035bb2c9ebb26641ad60fb",
+                "0b52403c4376c09af6b27a2c",
+                "38438b7eb65dc1cea51eb671",
+                "b5d918f4ab2650fc81527603"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "1da5764870428c5393c83469",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 125,
+              "score": 0.26765833688742
+            },
+            {
+              "id": "da8ec762feccec4b24cecf89",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 127,
+              "score": 0.26345253952515557
+            },
+            {
+              "id": "b5be7e24341b5a5b1861ba77",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 128,
+              "score": 0.24343209041927238
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-01",
+          "query": "What happens when tuple() receives a sequence such as a string, list, or tuple?",
+          "filters": {},
+          "embedding_ms": 65.90719999985595,
+          "retrieval_ms": 6.229199999324919,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "b7c6c8a5edc62d6aa21929d5",
+                "55d70d82bf9c61565932b05b",
+                "e8a87eaeaa6fe23dea69d44a",
+                "8d7f0a7d94a4114c395a6a60",
+                "9099b45e2f7e26f43bd3aec3",
+                "79ecff34f1d9537880a3f2b1",
+                "988a39abb61b05d84a64f525",
+                "69556335b9879d129b053dc0",
+                "8415a23d91863125c4966f94",
+                "0e4d4054206a2e24b5eccb1b",
+                "80c21b02f1af9ede049d5e47",
+                "088821c4da5141c2cfc30197",
+                "0550a5ab635bef126301b125",
+                "0e5ec6edd092bccc38693283",
+                "bd2c44687d9138ac33a600d9",
+                "1a7bb003f9cb4a69226f6f74",
+                "cfac32c57e24fd06f89a5927",
+                "05a048375707add244069f25",
+                "deb9616475487e7239e4f7f8",
+                "e4e3d3ccbc7919908ad39b0f"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "b7c6c8a5edc62d6aa21929d5",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 137,
+              "score": 0.3451958833343341
+            },
+            {
+              "id": "55d70d82bf9c61565932b05b",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 138,
+              "score": 0.33793020981540856
+            },
+            {
+              "id": "e8a87eaeaa6fe23dea69d44a",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 111,
+              "score": 0.2673187894793238
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-02",
+          "query": "In Chapter 12 Tuples, how does Python associate values on the right side with names on the left in a tuple assignment?",
+          "filters": {},
+          "embedding_ms": 73.83089999984804,
+          "retrieval_ms": 6.72020000001794,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "a25a5ac627a9e93863a6d648",
+                "e9c083ae3929c9bf31e09cdf",
+                "0b52403c4376c09af6b27a2c",
+                "55d70d82bf9c61565932b05b",
+                "ef8f1b384b07da4636d5642b",
+                "b4c239675b5a7688f18318a8",
+                "69556335b9879d129b053dc0",
+                "e8a87eaeaa6fe23dea69d44a",
+                "0e4d4054206a2e24b5eccb1b",
+                "5f63b07981ab6016764e4dd1",
+                "7c955b513dbf0952dd3a2c18",
+                "8170ad3f17736ea5d34a3338",
+                "b7c6c8a5edc62d6aa21929d5",
+                "0550a5ab635bef126301b125",
+                "79ecff34f1d9537880a3f2b1",
+                "4cfebbb3aa1c4a6bddd113b0",
+                "debda678d3050400f02f19c5",
+                "ff9ae89b32b1001dbb17c8bd",
+                "c88d26af2a7711bc9acad373",
+                "332edbb9411ad73c5dd75481"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "a25a5ac627a9e93863a6d648",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 139,
+              "score": 0.5124150701585165
+            },
+            {
+              "id": "e9c083ae3929c9bf31e09cdf",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 137,
+              "score": 0.2739943008849294
+            },
+            {
+              "id": "0b52403c4376c09af6b27a2c",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 142,
+              "score": 0.2681313568600675
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-03",
+          "query": "What does a function parameter beginning with * do to the arguments it receives?",
+          "filters": {},
+          "embedding_ms": 65.223500000684,
+          "retrieval_ms": 7.308600000214938,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "079b9522f62937dff57359ad",
+                "2f6ea20b8b72aade51c93c92",
+                "a4d7d2bac172cab9bddc0d4d",
+                "3542ff1bde5022ebdf79c765",
+                "088821c4da5141c2cfc30197",
+                "3bd26d52c8ec471104884e53",
+                "611fc925745473701fc4b150",
+                "db73790f1e7415ac0e73caa1",
+                "db043a77c5eb0038adad2871",
+                "8cd4b681c8169ac016fdff22",
+                "d513867d0cffbe765791beb0",
+                "adafe554fa7735889708bf8f",
+                "deb9616475487e7239e4f7f8",
+                "b9ebd72ed0bce842f98a5c63",
+                "1a7bb003f9cb4a69226f6f74",
+                "be58543977e1cd20ca72a49e",
+                "ef8f1b384b07da4636d5642b",
+                "27704b09156a093f7ba26714",
+                "b9646e3644803f61e315e24f",
+                "9ed4a1e8ee0899956c949afc"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "079b9522f62937dff57359ad",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.24288137123538373
+            },
+            {
+              "id": "2f6ea20b8b72aade51c93c92",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.2349647887131215
+            },
+            {
+              "id": "a4d7d2bac172cab9bddc0d4d",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 96,
+              "score": 0.1870889493486206
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-04",
+          "query": "What limitation distinguishes a zip iterator from a list when accessing an element?",
+          "filters": {},
+          "embedding_ms": 64.43570000010368,
+          "retrieval_ms": 5.946100000073784,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "3203ce903ea969769ba53088",
+                "d83143d751253a0ffb2909c3",
+                "79ecff34f1d9537880a3f2b1",
+                "5f63b07981ab6016764e4dd1",
+                "a6387f1980173b28a04c03b8",
+                "e8a87eaeaa6fe23dea69d44a",
+                "4f898847739ee4bd49ec570c",
+                "9099b45e2f7e26f43bd3aec3",
+                "da3230c13e796a744352f952",
+                "a93baaf72d20449f58ff5381",
+                "cfac32c57e24fd06f89a5927",
+                "3bd26d52c8ec471104884e53",
+                "e4e3d3ccbc7919908ad39b0f",
+                "7b5016cbf03fdbe4b79d810e",
+                "0550a5ab635bef126301b125",
+                "9a5718a1a6c1d4f629645616",
+                "f97829ab790d82550119c52d",
+                "fd372fa0351784f0e8f1adb3",
+                "088821c4da5141c2cfc30197",
+                "b9ebd72ed0bce842f98a5c63"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "3203ce903ea969769ba53088",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 141,
+              "score": 0.37712007516059387
+            },
+            {
+              "id": "d83143d751253a0ffb2909c3",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.25414003896197457
+            },
+            {
+              "id": "79ecff34f1d9537880a3f2b1",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 141,
+              "score": 0.22011052978654214
+            }
+          ],
+          "contexts": []
+        }
+      ]
+    },
+    "H1": {
+      "retrieval_id_exact": {
+        "answerable_n": 16,
+        "hit_at_1": {
+          "n": 10,
+          "N": 16,
+          "rate": 0.625
+        },
+        "evidence_hit_at_3": {
+          "n": 13,
+          "N": 16,
+          "rate": 0.8125
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 16,
+          "rate": 0.0
+        }
+      },
+      "retrieval_source_quote": {
+        "version": "source_quote_v1",
+        "answerable_n": 16,
+        "hit_at_1": {
+          "n": 10,
+          "N": 16,
+          "rate": 0.625
+        },
+        "evidence_hit_at_3": {
+          "n": 13,
+          "N": 16,
+          "rate": 0.8125
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 16,
+          "rate": 0.0
+        },
+        "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+      },
+      "traces": [
+        {
+          "query_id": "core-dev-str-01",
+          "query": "How does the chapter define a string in relation to its characters?",
+          "filters": {},
+          "embedding_ms": 132.96919999993406,
+          "retrieval_ms": 40.83379999974568,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "bd2c44687d9138ac33a600d9",
+                "b83a574fa239a171afeafe44",
+                "9099b45e2f7e26f43bd3aec3",
+                "e8a87eaeaa6fe23dea69d44a",
+                "e9462aa7f3f6ad894908d8ef",
+                "d01dfb0ae06c83318834950c",
+                "2b38f47599d5bf33e0a01064",
+                "1a7bb003f9cb4a69226f6f74",
+                "ef8f1b384b07da4636d5642b",
+                "b9646e3644803f61e315e24f",
+                "79ecff34f1d9537880a3f2b1",
+                "c3d357405f48fd864e867fc4",
+                "d0312ced1cd4ef865d449cb0",
+                "d7debd9f06e5cb992add123d",
+                "e9c083ae3929c9bf31e09cdf",
+                "db73790f1e7415ac0e73caa1",
+                "611fc925745473701fc4b150",
+                "332edbb9411ad73c5dd75481",
+                "a25a5ac627a9e93863a6d648",
+                "6633b277060b65939cab5bcc"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "bd2c44687d9138ac33a600d9",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 93,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "b83a574fa239a171afeafe44",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 143,
+              "score": 0.03177805800756621
+            },
+            {
+              "id": "9099b45e2f7e26f43bd3aec3",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 116,
+              "score": 0.031746031746031744
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-str-02",
+          "query": "In Chapter 8 Strings, what kind of value must be used inside the brackets to select a character?",
+          "filters": {},
+          "embedding_ms": 131.55249999999796,
+          "retrieval_ms": 19.04740000009042,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "bd2c44687d9138ac33a600d9",
+                "1a7bb003f9cb4a69226f6f74",
+                "2b38f47599d5bf33e0a01064",
+                "d7debd9f06e5cb992add123d",
+                "dc3a1c318efb4bade5f974c2",
+                "5f63b07981ab6016764e4dd1",
+                "d01dfb0ae06c83318834950c",
+                "e9462aa7f3f6ad894908d8ef",
+                "b83a574fa239a171afeafe44",
+                "332edbb9411ad73c5dd75481",
+                "79ecff34f1d9537880a3f2b1",
+                "80c21b02f1af9ede049d5e47",
+                "ef8f1b384b07da4636d5642b",
+                "9099b45e2f7e26f43bd3aec3",
+                "f3d5ffb3154812e6aef1c515",
+                "e8a87eaeaa6fe23dea69d44a",
+                "e3bdf6a76bbb1faca17118a3",
+                "fd372fa0351784f0e8f1adb3",
+                "cfac32c57e24fd06f89a5927",
+                "db73790f1e7415ac0e73caa1"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "bd2c44687d9138ac33a600d9",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 93,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "1a7bb003f9cb4a69226f6f74",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 93,
+              "score": 0.03177805800756621
+            },
+            {
+              "id": "2b38f47599d5bf33e0a01064",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 94,
+              "score": 0.030886196246139225
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-str-03",
+          "query": "What does find return when the requested character does not occur in the word?",
+          "filters": {},
+          "embedding_ms": 117.33809999986988,
+          "retrieval_ms": 32.209599999987404,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "be58543977e1cd20ca72a49e",
+                "a4d7d2bac172cab9bddc0d4d",
+                "dc3a1c318efb4bade5f974c2",
+                "088821c4da5141c2cfc30197",
+                "db043a77c5eb0038adad2871",
+                "1a7bb003f9cb4a69226f6f74",
+                "c3d357405f48fd864e867fc4",
+                "e091dae524baee73df60ffe1",
+                "b3b6ef17fb00700a2bb5d31f",
+                "79ecff34f1d9537880a3f2b1",
+                "71ff34529d3a76ec268cb807",
+                "611fc925745473701fc4b150",
+                "db73790f1e7415ac0e73caa1",
+                "4fc27fe805fc806f5afe6f3b",
+                "78035bb2c9ebb26641ad60fb",
+                "ef8f1b384b07da4636d5642b",
+                "b5d918f4ab2650fc81527603",
+                "c88d26af2a7711bc9acad373",
+                "f44df4f7b62aca135c848989",
+                "2229e73f9a8b322d52d5c1a3"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "be58543977e1cd20ca72a49e",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 98,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "a4d7d2bac172cab9bddc0d4d",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 96,
+              "score": 0.032018442622950824
+            },
+            {
+              "id": "dc3a1c318efb4bade5f974c2",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 97,
+              "score": 0.031754032258064516
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-str-04",
+          "query": "How can a caller specify a starting position when searching a string with find?",
+          "filters": {},
+          "embedding_ms": 79.20070000000123,
+          "retrieval_ms": 42.10590000002412,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "db043a77c5eb0038adad2871",
+                "be58543977e1cd20ca72a49e",
+                "088821c4da5141c2cfc30197",
+                "6633b277060b65939cab5bcc",
+                "db73790f1e7415ac0e73caa1",
+                "c3d357405f48fd864e867fc4",
+                "e8a87eaeaa6fe23dea69d44a",
+                "3bd26d52c8ec471104884e53",
+                "a4d7d2bac172cab9bddc0d4d",
+                "d0312ced1cd4ef865d449cb0",
+                "dc3a1c318efb4bade5f974c2",
+                "9099b45e2f7e26f43bd3aec3",
+                "b9646e3644803f61e315e24f",
+                "e3bdf6a76bbb1faca17118a3",
+                "219f7d3d9fa91b807764d6d1",
+                "cfac32c57e24fd06f89a5927",
+                "731b07b74054015bd885af3c",
+                "c88d26af2a7711bc9acad373",
+                "1a7bb003f9cb4a69226f6f74",
+                "bd2c44687d9138ac33a600d9"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "db043a77c5eb0038adad2871",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 98,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "be58543977e1cd20ca72a49e",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 98,
+              "score": 0.03225806451612903
+            },
+            {
+              "id": "088821c4da5141c2cfc30197",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 97,
+              "score": 0.03057889822595705
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-01",
+          "query": "What assignment operation in the chapter demonstrates that a list element can be changed?",
+          "filters": {},
+          "embedding_ms": 68.20549999974901,
+          "retrieval_ms": 24.148299999978917,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "5f63b07981ab6016764e4dd1",
+                "da3230c13e796a744352f952",
+                "e8a87eaeaa6fe23dea69d44a",
+                "f27f85398ee711bdbfc8bdff",
+                "debda678d3050400f02f19c5",
+                "406cf9aecf17d6de9ec883b4",
+                "fd372fa0351784f0e8f1adb3",
+                "79ecff34f1d9537880a3f2b1",
+                "b5d918f4ab2650fc81527603",
+                "3a27643eeff846779b8db402",
+                "97b860ebffb11a91f3597e6d",
+                "0e5ec6edd092bccc38693283",
+                "3bd26d52c8ec471104884e53",
+                "e0a9167ee32971afe1f8ce35",
+                "7396b631dcd13a3ec84a0eff",
+                "a93baaf72d20449f58ff5381",
+                "cfac32c57e24fd06f89a5927",
+                "ef8f1b384b07da4636d5642b",
+                "0550a5ab635bef126301b125",
+                "bc02d9e46833e8ceab68ee58"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "5f63b07981ab6016764e4dd1",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 112,
+              "score": 0.030834914611005692
+            },
+            {
+              "id": "da3230c13e796a744352f952",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 113,
+              "score": 0.030621785881252923
+            },
+            {
+              "id": "e8a87eaeaa6fe23dea69d44a",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 111,
+              "score": 0.03009207275993712
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-02",
+          "query": "How does the chapter describe the most common way to traverse all elements of a list?",
+          "filters": {},
+          "embedding_ms": 69.44879999991826,
+          "retrieval_ms": 41.80449999967095,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "1136fed79cfabaa175c1e307",
+                "e8a87eaeaa6fe23dea69d44a",
+                "7396b631dcd13a3ec84a0eff",
+                "97b860ebffb11a91f3597e6d",
+                "da3230c13e796a744352f952",
+                "0e5ec6edd092bccc38693283",
+                "9a5718a1a6c1d4f629645616",
+                "3447d0ab91119646e6eb090c",
+                "8170ad3f17736ea5d34a3338",
+                "fb567a8065b0869972efb038",
+                "9099b45e2f7e26f43bd3aec3",
+                "55d70d82bf9c61565932b05b",
+                "e0a9167ee32971afe1f8ce35",
+                "0550a5ab635bef126301b125",
+                "0faaf1fef31260b5fc516b7d",
+                "d513867d0cffbe765791beb0",
+                "f27f85398ee711bdbfc8bdff",
+                "fd372fa0351784f0e8f1adb3",
+                "79ecff34f1d9537880a3f2b1",
+                "b9ebd72ed0bce842f98a5c63"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "1136fed79cfabaa175c1e307",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 113,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "e8a87eaeaa6fe23dea69d44a",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 111,
+              "score": 0.03149801587301587
+            },
+            {
+              "id": "7396b631dcd13a3ec84a0eff",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 112,
+              "score": 0.030621785881252923
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-03",
+          "query": "What does t[:] produce for a list, and how does it relate to the original list?",
+          "filters": {},
+          "embedding_ms": 66.24689999989641,
+          "retrieval_ms": 19.2722000001595,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "b9ebd72ed0bce842f98a5c63",
+                "b5d918f4ab2650fc81527603",
+                "3bd26d52c8ec471104884e53",
+                "b2b2e5cc569075333e61cdad",
+                "055cbd622a00ccc3ecfc7812",
+                "79ecff34f1d9537880a3f2b1",
+                "3a27643eeff846779b8db402",
+                "9099b45e2f7e26f43bd3aec3",
+                "611fc925745473701fc4b150",
+                "406cf9aecf17d6de9ec883b4",
+                "9a5718a1a6c1d4f629645616",
+                "8d7f0a7d94a4114c395a6a60",
+                "e8a87eaeaa6fe23dea69d44a",
+                "da3230c13e796a744352f952",
+                "7b5016cbf03fdbe4b79d810e",
+                "7396b631dcd13a3ec84a0eff",
+                "f27f85398ee711bdbfc8bdff",
+                "1136fed79cfabaa175c1e307",
+                "6bf3e5226dca8c9f40265e84",
+                "0550a5ab635bef126301b125"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "b9ebd72ed0bce842f98a5c63",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 120,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "b5d918f4ab2650fc81527603",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 120,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "3bd26d52c8ec471104884e53",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 119,
+              "score": 0.03125763125763126
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-04",
+          "query": "What makes an operation a filter when processing a list?",
+          "filters": {},
+          "embedding_ms": 63.69350000022678,
+          "retrieval_ms": 37.71419999975478,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "97b860ebffb11a91f3597e6d",
+                "fd372fa0351784f0e8f1adb3",
+                "cf9867b54536d9da0ea867a8",
+                "0e5ec6edd092bccc38693283",
+                "3bd26d52c8ec471104884e53",
+                "3a27643eeff846779b8db402",
+                "406cf9aecf17d6de9ec883b4",
+                "d513867d0cffbe765791beb0",
+                "e8a87eaeaa6fe23dea69d44a",
+                "0faaf1fef31260b5fc516b7d",
+                "8415a23d91863125c4966f94",
+                "debda678d3050400f02f19c5",
+                "f27f85398ee711bdbfc8bdff",
+                "6bf3e5226dca8c9f40265e84",
+                "deb9616475487e7239e4f7f8",
+                "9099b45e2f7e26f43bd3aec3",
+                "bc02d9e46833e8ceab68ee58",
+                "b5d918f4ab2650fc81527603",
+                "cfac32c57e24fd06f89a5927",
+                "9a5718a1a6c1d4f629645616"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "97b860ebffb11a91f3597e6d",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 116,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "fd372fa0351784f0e8f1adb3",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 115,
+              "score": 0.031754032258064516
+            },
+            {
+              "id": "cf9867b54536d9da0ea867a8",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 115,
+              "score": 0.030798389007344232
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-01",
+          "query": "Unlike a list, what kinds of index can a dictionary use?",
+          "filters": {},
+          "embedding_ms": 65.8077999996749,
+          "retrieval_ms": 26.626199999554956,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "cfac32c57e24fd06f89a5927",
+                "df2f75dff3538e1fc4d7ea22",
+                "754749a1bc3b5d8481456d51",
+                "8d7f0a7d94a4114c395a6a60",
+                "4f898847739ee4bd49ec570c",
+                "ff9ae89b32b1001dbb17c8bd",
+                "a4d7d2bac172cab9bddc0d4d",
+                "3203ce903ea969769ba53088",
+                "60f50bf6dc5cdfd857d72fbc",
+                "80c21b02f1af9ede049d5e47",
+                "9099b45e2f7e26f43bd3aec3",
+                "e8a87eaeaa6fe23dea69d44a",
+                "f44df4f7b62aca135c848989",
+                "03ff112311e23ce87798326c",
+                "271704fc65eed718d259bc01",
+                "b83a574fa239a171afeafe44",
+                "ef2084023b45960add09f64f",
+                "0faaf1fef31260b5fc516b7d",
+                "d513867d0cffbe765791beb0",
+                "1a7bb003f9cb4a69226f6f74"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "cfac32c57e24fd06f89a5927",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 125,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "df2f75dff3538e1fc4d7ea22",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 126,
+              "score": 0.028949545078577336
+            },
+            {
+              "id": "754749a1bc3b5d8481456d51",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 129,
+              "score": 0.028594771241830064
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-02",
+          "query": "When looping directly over a dictionary, what does the loop traverse?",
+          "filters": {},
+          "embedding_ms": 65.22860000040964,
+          "retrieval_ms": 32.760099999904924,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "da3230c13e796a744352f952",
+                "b6e7809d3f8fd5fb8e869d78",
+                "cfac32c57e24fd06f89a5927",
+                "b5be7e24341b5a5b1861ba77",
+                "611fc925745473701fc4b150",
+                "0550a5ab635bef126301b125",
+                "c3d357405f48fd864e867fc4",
+                "d513867d0cffbe765791beb0",
+                "80c21b02f1af9ede049d5e47",
+                "754749a1bc3b5d8481456d51",
+                "1136fed79cfabaa175c1e307",
+                "088821c4da5141c2cfc30197",
+                "03ff112311e23ce87798326c",
+                "e4e3d3ccbc7919908ad39b0f",
+                "df2f75dff3538e1fc4d7ea22",
+                "dc3a1c318efb4bade5f974c2",
+                "3ebf67114eab9c1ba0bb967c",
+                "271704fc65eed718d259bc01",
+                "0e4d4054206a2e24b5eccb1b",
+                "e8a87eaeaa6fe23dea69d44a"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "da3230c13e796a744352f952",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 113,
+              "score": 0.029957522915269395
+            },
+            {
+              "id": "b6e7809d3f8fd5fb8e869d78",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 128,
+              "score": 0.02921395544346364
+            },
+            {
+              "id": "cfac32c57e24fd06f89a5927",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 125,
+              "score": 0.029211087420042643
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-03",
+          "query": "How can get avoid a missing-key error when looking up a key that may not exist?",
+          "filters": {},
+          "embedding_ms": 65.7271000000037,
+          "retrieval_ms": 60.936900000342575,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "46a2945a2121871e563aea75",
+                "44ac3a20fe89a87e5d5c277b",
+                "8fe84c71a337711b0d54c6fe",
+                "df2f75dff3538e1fc4d7ea22",
+                "da8ec762feccec4b24cecf89",
+                "088821c4da5141c2cfc30197",
+                "60f50bf6dc5cdfd857d72fbc",
+                "cfac32c57e24fd06f89a5927",
+                "c82425bb596e87fea82690d1",
+                "3f59477932a8d50c7f79f300",
+                "f44df4f7b62aca135c848989",
+                "c94aad40a0b58b458c2b9838",
+                "78035bb2c9ebb26641ad60fb",
+                "27704b09156a093f7ba26714",
+                "e4e3d3ccbc7919908ad39b0f",
+                "611fc925745473701fc4b150",
+                "6acdb1ac9a021f3eb19ce537",
+                "deb9616475487e7239e4f7f8",
+                "ff9ae89b32b1001dbb17c8bd",
+                "ef2084023b45960add09f64f"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "46a2945a2121871e563aea75",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 130,
+              "score": 0.030886196246139225
+            },
+            {
+              "id": "44ac3a20fe89a87e5d5c277b",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 129,
+              "score": 0.030776515151515152
+            },
+            {
+              "id": "8fe84c71a337711b0d54c6fe",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 126,
+              "score": 0.02964426877470356
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-04",
+          "query": "In Chapter 11 Dictionaries, what is one advantage of using get with a default when incrementing a counter?",
+          "filters": {},
+          "embedding_ms": 65.48930000008113,
+          "retrieval_ms": 31.433600000127626,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "b5be7e24341b5a5b1861ba77",
+                "da8ec762feccec4b24cecf89",
+                "d4f49d1070b12762d144f6e2",
+                "1da5764870428c5393c83469",
+                "9ed4a1e8ee0899956c949afc",
+                "e091dae524baee73df60ffe1",
+                "9d8fe9d8f820ec8ee0100c89",
+                "16a5268efb6434275901a086",
+                "2452b953d03efe3a530f7bd9",
+                "0b52403c4376c09af6b27a2c",
+                "e9c083ae3929c9bf31e09cdf",
+                "38d24809151400da7538df94",
+                "e8a87eaeaa6fe23dea69d44a",
+                "55d70d82bf9c61565932b05b",
+                "d0312ced1cd4ef865d449cb0",
+                "c3d357405f48fd864e867fc4",
+                "1a7bb003f9cb4a69226f6f74",
+                "271704fc65eed718d259bc01",
+                "611fc925745473701fc4b150",
+                "cfac32c57e24fd06f89a5927"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "b5be7e24341b5a5b1861ba77",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 128,
+              "score": 0.032266458495966696
+            },
+            {
+              "id": "da8ec762feccec4b24cecf89",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 127,
+              "score": 0.03225806451612903
+            },
+            {
+              "id": "d4f49d1070b12762d144f6e2",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 127,
+              "score": 0.031009615384615385
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-01",
+          "query": "What happens when tuple() receives a sequence such as a string, list, or tuple?",
+          "filters": {},
+          "embedding_ms": 65.90719999985595,
+          "retrieval_ms": 18.068399999719986,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "55d70d82bf9c61565932b05b",
+                "8d7f0a7d94a4114c395a6a60",
+                "b7c6c8a5edc62d6aa21929d5",
+                "69556335b9879d129b053dc0",
+                "e8a87eaeaa6fe23dea69d44a",
+                "8415a23d91863125c4966f94",
+                "79ecff34f1d9537880a3f2b1",
+                "0550a5ab635bef126301b125",
+                "05a048375707add244069f25",
+                "e9c083ae3929c9bf31e09cdf",
+                "7c955b513dbf0952dd3a2c18",
+                "9099b45e2f7e26f43bd3aec3",
+                "8170ad3f17736ea5d34a3338",
+                "988a39abb61b05d84a64f525",
+                "0b52403c4376c09af6b27a2c",
+                "b4c239675b5a7688f18318a8",
+                "0e4d4054206a2e24b5eccb1b",
+                "2f6ea20b8b72aade51c93c92",
+                "80c21b02f1af9ede049d5e47",
+                "088821c4da5141c2cfc30197"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "55d70d82bf9c61565932b05b",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 138,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "8d7f0a7d94a4114c395a6a60",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 143,
+              "score": 0.03149801587301587
+            },
+            {
+              "id": "b7c6c8a5edc62d6aa21929d5",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 137,
+              "score": 0.03131881575727918
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-02",
+          "query": "In Chapter 12 Tuples, how does Python associate values on the right side with names on the left in a tuple assignment?",
+          "filters": {},
+          "embedding_ms": 73.83089999984804,
+          "retrieval_ms": 18.69859999987966,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "a25a5ac627a9e93863a6d648",
+                "0b52403c4376c09af6b27a2c",
+                "55d70d82bf9c61565932b05b",
+                "e9c083ae3929c9bf31e09cdf",
+                "b4c239675b5a7688f18318a8",
+                "7c955b513dbf0952dd3a2c18",
+                "69556335b9879d129b053dc0",
+                "0550a5ab635bef126301b125",
+                "0e4d4054206a2e24b5eccb1b",
+                "b7c6c8a5edc62d6aa21929d5",
+                "79ecff34f1d9537880a3f2b1",
+                "ef8f1b384b07da4636d5642b",
+                "03ff112311e23ce87798326c",
+                "e8a87eaeaa6fe23dea69d44a",
+                "84623db97b77dc4a30eecc29",
+                "5f63b07981ab6016764e4dd1",
+                "8415a23d91863125c4966f94",
+                "8170ad3f17736ea5d34a3338",
+                "988a39abb61b05d84a64f525",
+                "8d7f0a7d94a4114c395a6a60"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "a25a5ac627a9e93863a6d648",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 139,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "0b52403c4376c09af6b27a2c",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 142,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "55d70d82bf9c61565932b05b",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 138,
+              "score": 0.03149801587301587
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-03",
+          "query": "What does a function parameter beginning with * do to the arguments it receives?",
+          "filters": {},
+          "embedding_ms": 65.223500000684,
+          "retrieval_ms": 18.969900000229245,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "079b9522f62937dff57359ad",
+                "2f6ea20b8b72aade51c93c92",
+                "3542ff1bde5022ebdf79c765",
+                "3bd26d52c8ec471104884e53",
+                "db043a77c5eb0038adad2871",
+                "db73790f1e7415ac0e73caa1",
+                "b9ebd72ed0bce842f98a5c63",
+                "be58543977e1cd20ca72a49e",
+                "a4d7d2bac172cab9bddc0d4d",
+                "088821c4da5141c2cfc30197",
+                "e3bdf6a76bbb1faca17118a3",
+                "06af86ada72b1d9199f51185",
+                "1400a6c50a22a12c186fa7b9",
+                "611fc925745473701fc4b150",
+                "e4c546792c2fa3617803f6a9",
+                "a51d086cee4bb0ca494efdcc",
+                "8cd4b681c8169ac016fdff22",
+                "d513867d0cffbe765791beb0",
+                "e9c083ae3929c9bf31e09cdf",
+                "adafe554fa7735889708bf8f"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "079b9522f62937dff57359ad",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "2f6ea20b8b72aade51c93c92",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.03225806451612903
+            },
+            {
+              "id": "3542ff1bde5022ebdf79c765",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.03125
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-04",
+          "query": "What limitation distinguishes a zip iterator from a list when accessing an element?",
+          "filters": {},
+          "embedding_ms": 64.43570000010368,
+          "retrieval_ms": 18.303899999409623,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "3203ce903ea969769ba53088",
+                "d83143d751253a0ffb2909c3",
+                "79ecff34f1d9537880a3f2b1",
+                "5f63b07981ab6016764e4dd1",
+                "da3230c13e796a744352f952",
+                "0550a5ab635bef126301b125",
+                "a6387f1980173b28a04c03b8",
+                "e8a87eaeaa6fe23dea69d44a",
+                "7b5016cbf03fdbe4b79d810e",
+                "05a048375707add244069f25",
+                "1136fed79cfabaa175c1e307",
+                "4f898847739ee4bd49ec570c",
+                "8d7f0a7d94a4114c395a6a60",
+                "9099b45e2f7e26f43bd3aec3",
+                "0faaf1fef31260b5fc516b7d",
+                "a93baaf72d20449f58ff5381",
+                "cfac32c57e24fd06f89a5927",
+                "3bd26d52c8ec471104884e53",
+                "f44df4f7b62aca135c848989",
+                "e4e3d3ccbc7919908ad39b0f"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "3203ce903ea969769ba53088",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 141,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "d83143d751253a0ffb2909c3",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.03225806451612903
+            },
+            {
+              "id": "79ecff34f1d9537880a3f2b1",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 141,
+              "score": 0.03036576949620428
+            }
+          ],
+          "contexts": []
+        }
+      ]
+    },
+    "H2": {
+      "retrieval_id_exact": {
+        "answerable_n": 16,
+        "hit_at_1": {
+          "n": 10,
+          "N": 16,
+          "rate": 0.625
+        },
+        "evidence_hit_at_3": {
+          "n": 13,
+          "N": 16,
+          "rate": 0.8125
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 16,
+          "rate": 0.0
+        }
+      },
+      "retrieval_source_quote": {
+        "version": "source_quote_v1",
+        "answerable_n": 16,
+        "hit_at_1": {
+          "n": 10,
+          "N": 16,
+          "rate": 0.625
+        },
+        "evidence_hit_at_3": {
+          "n": 13,
+          "N": 16,
+          "rate": 0.8125
+        },
+        "context_evidence_rate": {
+          "n": 0,
+          "N": 16,
+          "rate": 0.0
+        },
+        "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+      },
+      "traces": [
+        {
+          "query_id": "core-dev-str-01",
+          "query": "How does the chapter define a string in relation to its characters?",
+          "filters": {},
+          "embedding_ms": 132.96919999993406,
+          "retrieval_ms": 31.601499999851512,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "bd2c44687d9138ac33a600d9",
+                "b83a574fa239a171afeafe44",
+                "9099b45e2f7e26f43bd3aec3",
+                "e8a87eaeaa6fe23dea69d44a",
+                "e9462aa7f3f6ad894908d8ef",
+                "d01dfb0ae06c83318834950c",
+                "2b38f47599d5bf33e0a01064",
+                "1a7bb003f9cb4a69226f6f74",
+                "ef8f1b384b07da4636d5642b",
+                "b9646e3644803f61e315e24f",
+                "79ecff34f1d9537880a3f2b1",
+                "c3d357405f48fd864e867fc4",
+                "d0312ced1cd4ef865d449cb0",
+                "d7debd9f06e5cb992add123d",
+                "e9c083ae3929c9bf31e09cdf",
+                "db73790f1e7415ac0e73caa1",
+                "611fc925745473701fc4b150",
+                "332edbb9411ad73c5dd75481",
+                "a25a5ac627a9e93863a6d648",
+                "6633b277060b65939cab5bcc"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "bd2c44687d9138ac33a600d9",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 93,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "b83a574fa239a171afeafe44",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 143,
+              "score": 0.03177805800756621
+            },
+            {
+              "id": "9099b45e2f7e26f43bd3aec3",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 116,
+              "score": 0.031746031746031744
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-str-02",
+          "query": "In Chapter 8 Strings, what kind of value must be used inside the brackets to select a character?",
+          "filters": {},
+          "embedding_ms": 131.55249999999796,
+          "retrieval_ms": 18.85390000006737,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "bd2c44687d9138ac33a600d9",
+                "1a7bb003f9cb4a69226f6f74",
+                "2b38f47599d5bf33e0a01064",
+                "d7debd9f06e5cb992add123d",
+                "dc3a1c318efb4bade5f974c2",
+                "5f63b07981ab6016764e4dd1",
+                "d01dfb0ae06c83318834950c",
+                "e9462aa7f3f6ad894908d8ef",
+                "b83a574fa239a171afeafe44",
+                "332edbb9411ad73c5dd75481",
+                "79ecff34f1d9537880a3f2b1",
+                "80c21b02f1af9ede049d5e47",
+                "ef8f1b384b07da4636d5642b",
+                "9099b45e2f7e26f43bd3aec3",
+                "f3d5ffb3154812e6aef1c515",
+                "e8a87eaeaa6fe23dea69d44a",
+                "e3bdf6a76bbb1faca17118a3",
+                "fd372fa0351784f0e8f1adb3",
+                "cfac32c57e24fd06f89a5927",
+                "db73790f1e7415ac0e73caa1"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "bd2c44687d9138ac33a600d9",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 93,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "1a7bb003f9cb4a69226f6f74",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 93,
+              "score": 0.03177805800756621
+            },
+            {
+              "id": "2b38f47599d5bf33e0a01064",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 94,
+              "score": 0.030886196246139225
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-str-03",
+          "query": "What does find return when the requested character does not occur in the word?",
+          "filters": {},
+          "embedding_ms": 117.33809999986988,
+          "retrieval_ms": 18.538100000114355,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "be58543977e1cd20ca72a49e",
+                "a4d7d2bac172cab9bddc0d4d",
+                "dc3a1c318efb4bade5f974c2",
+                "088821c4da5141c2cfc30197",
+                "db043a77c5eb0038adad2871",
+                "1a7bb003f9cb4a69226f6f74",
+                "c3d357405f48fd864e867fc4",
+                "e091dae524baee73df60ffe1",
+                "b3b6ef17fb00700a2bb5d31f",
+                "79ecff34f1d9537880a3f2b1",
+                "71ff34529d3a76ec268cb807",
+                "611fc925745473701fc4b150",
+                "db73790f1e7415ac0e73caa1",
+                "4fc27fe805fc806f5afe6f3b",
+                "78035bb2c9ebb26641ad60fb",
+                "ef8f1b384b07da4636d5642b",
+                "b5d918f4ab2650fc81527603",
+                "c88d26af2a7711bc9acad373",
+                "f44df4f7b62aca135c848989",
+                "2229e73f9a8b322d52d5c1a3"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "be58543977e1cd20ca72a49e",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 98,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "a4d7d2bac172cab9bddc0d4d",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 96,
+              "score": 0.032018442622950824
+            },
+            {
+              "id": "dc3a1c318efb4bade5f974c2",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 97,
+              "score": 0.031754032258064516
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-str-04",
+          "query": "How can a caller specify a starting position when searching a string with find?",
+          "filters": {},
+          "embedding_ms": 79.20070000000123,
+          "retrieval_ms": 30.556699999578996,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "db043a77c5eb0038adad2871",
+                "be58543977e1cd20ca72a49e",
+                "088821c4da5141c2cfc30197",
+                "6633b277060b65939cab5bcc",
+                "db73790f1e7415ac0e73caa1",
+                "c3d357405f48fd864e867fc4",
+                "e8a87eaeaa6fe23dea69d44a",
+                "3bd26d52c8ec471104884e53",
+                "a4d7d2bac172cab9bddc0d4d",
+                "d0312ced1cd4ef865d449cb0",
+                "dc3a1c318efb4bade5f974c2",
+                "9099b45e2f7e26f43bd3aec3",
+                "b9646e3644803f61e315e24f",
+                "e3bdf6a76bbb1faca17118a3",
+                "219f7d3d9fa91b807764d6d1",
+                "cfac32c57e24fd06f89a5927",
+                "731b07b74054015bd885af3c",
+                "c88d26af2a7711bc9acad373",
+                "1a7bb003f9cb4a69226f6f74",
+                "bd2c44687d9138ac33a600d9"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "db043a77c5eb0038adad2871",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 98,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "be58543977e1cd20ca72a49e",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 98,
+              "score": 0.03225806451612903
+            },
+            {
+              "id": "088821c4da5141c2cfc30197",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 97,
+              "score": 0.03057889822595705
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-01",
+          "query": "What assignment operation in the chapter demonstrates that a list element can be changed?",
+          "filters": {},
+          "embedding_ms": 68.20549999974901,
+          "retrieval_ms": 22.85479999954987,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "5f63b07981ab6016764e4dd1",
+                "da3230c13e796a744352f952",
+                "e8a87eaeaa6fe23dea69d44a",
+                "f27f85398ee711bdbfc8bdff",
+                "debda678d3050400f02f19c5",
+                "406cf9aecf17d6de9ec883b4",
+                "fd372fa0351784f0e8f1adb3",
+                "79ecff34f1d9537880a3f2b1",
+                "b5d918f4ab2650fc81527603",
+                "3a27643eeff846779b8db402",
+                "97b860ebffb11a91f3597e6d",
+                "0e5ec6edd092bccc38693283",
+                "3bd26d52c8ec471104884e53",
+                "e0a9167ee32971afe1f8ce35",
+                "7396b631dcd13a3ec84a0eff",
+                "a93baaf72d20449f58ff5381",
+                "cfac32c57e24fd06f89a5927",
+                "ef8f1b384b07da4636d5642b",
+                "0550a5ab635bef126301b125",
+                "bc02d9e46833e8ceab68ee58"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "5f63b07981ab6016764e4dd1",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 112,
+              "score": 0.030834914611005692
+            },
+            {
+              "id": "da3230c13e796a744352f952",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 113,
+              "score": 0.030621785881252923
+            },
+            {
+              "id": "e8a87eaeaa6fe23dea69d44a",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 111,
+              "score": 0.03009207275993712
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-02",
+          "query": "How does the chapter describe the most common way to traverse all elements of a list?",
+          "filters": {},
+          "embedding_ms": 69.44879999991826,
+          "retrieval_ms": 33.19080000073882,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "1136fed79cfabaa175c1e307",
+                "e8a87eaeaa6fe23dea69d44a",
+                "7396b631dcd13a3ec84a0eff",
+                "97b860ebffb11a91f3597e6d",
+                "da3230c13e796a744352f952",
+                "0e5ec6edd092bccc38693283",
+                "9a5718a1a6c1d4f629645616",
+                "3447d0ab91119646e6eb090c",
+                "8170ad3f17736ea5d34a3338",
+                "fb567a8065b0869972efb038",
+                "9099b45e2f7e26f43bd3aec3",
+                "55d70d82bf9c61565932b05b",
+                "e0a9167ee32971afe1f8ce35",
+                "0550a5ab635bef126301b125",
+                "0faaf1fef31260b5fc516b7d",
+                "d513867d0cffbe765791beb0",
+                "f27f85398ee711bdbfc8bdff",
+                "fd372fa0351784f0e8f1adb3",
+                "79ecff34f1d9537880a3f2b1",
+                "b9ebd72ed0bce842f98a5c63"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "1136fed79cfabaa175c1e307",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 113,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "e8a87eaeaa6fe23dea69d44a",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 111,
+              "score": 0.03149801587301587
+            },
+            {
+              "id": "7396b631dcd13a3ec84a0eff",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 112,
+              "score": 0.030621785881252923
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-03",
+          "query": "What does t[:] produce for a list, and how does it relate to the original list?",
+          "filters": {},
+          "embedding_ms": 66.24689999989641,
+          "retrieval_ms": 31.566700000439596,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "b9ebd72ed0bce842f98a5c63",
+                "b5d918f4ab2650fc81527603",
+                "3bd26d52c8ec471104884e53",
+                "b2b2e5cc569075333e61cdad",
+                "055cbd622a00ccc3ecfc7812",
+                "79ecff34f1d9537880a3f2b1",
+                "3a27643eeff846779b8db402",
+                "9099b45e2f7e26f43bd3aec3",
+                "611fc925745473701fc4b150",
+                "406cf9aecf17d6de9ec883b4",
+                "9a5718a1a6c1d4f629645616",
+                "8d7f0a7d94a4114c395a6a60",
+                "e8a87eaeaa6fe23dea69d44a",
+                "da3230c13e796a744352f952",
+                "7b5016cbf03fdbe4b79d810e",
+                "7396b631dcd13a3ec84a0eff",
+                "f27f85398ee711bdbfc8bdff",
+                "1136fed79cfabaa175c1e307",
+                "6bf3e5226dca8c9f40265e84",
+                "0550a5ab635bef126301b125"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "b9ebd72ed0bce842f98a5c63",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 120,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "b5d918f4ab2650fc81527603",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 120,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "3bd26d52c8ec471104884e53",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 119,
+              "score": 0.03125763125763126
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-list-04",
+          "query": "What makes an operation a filter when processing a list?",
+          "filters": {},
+          "embedding_ms": 63.69350000022678,
+          "retrieval_ms": 19.625599999926635,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "97b860ebffb11a91f3597e6d",
+                "fd372fa0351784f0e8f1adb3",
+                "cf9867b54536d9da0ea867a8",
+                "0e5ec6edd092bccc38693283",
+                "3bd26d52c8ec471104884e53",
+                "3a27643eeff846779b8db402",
+                "406cf9aecf17d6de9ec883b4",
+                "d513867d0cffbe765791beb0",
+                "e8a87eaeaa6fe23dea69d44a",
+                "0faaf1fef31260b5fc516b7d",
+                "8415a23d91863125c4966f94",
+                "debda678d3050400f02f19c5",
+                "f27f85398ee711bdbfc8bdff",
+                "6bf3e5226dca8c9f40265e84",
+                "deb9616475487e7239e4f7f8",
+                "9099b45e2f7e26f43bd3aec3",
+                "bc02d9e46833e8ceab68ee58",
+                "b5d918f4ab2650fc81527603",
+                "cfac32c57e24fd06f89a5927",
+                "9a5718a1a6c1d4f629645616"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "97b860ebffb11a91f3597e6d",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 116,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "fd372fa0351784f0e8f1adb3",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 115,
+              "score": 0.031754032258064516
+            },
+            {
+              "id": "cf9867b54536d9da0ea867a8",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 115,
+              "score": 0.030798389007344232
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-01",
+          "query": "Unlike a list, what kinds of index can a dictionary use?",
+          "filters": {},
+          "embedding_ms": 65.8077999996749,
+          "retrieval_ms": 37.23989999980404,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "cfac32c57e24fd06f89a5927",
+                "df2f75dff3538e1fc4d7ea22",
+                "754749a1bc3b5d8481456d51",
+                "8d7f0a7d94a4114c395a6a60",
+                "4f898847739ee4bd49ec570c",
+                "ff9ae89b32b1001dbb17c8bd",
+                "a4d7d2bac172cab9bddc0d4d",
+                "3203ce903ea969769ba53088",
+                "60f50bf6dc5cdfd857d72fbc",
+                "80c21b02f1af9ede049d5e47",
+                "9099b45e2f7e26f43bd3aec3",
+                "e8a87eaeaa6fe23dea69d44a",
+                "f44df4f7b62aca135c848989",
+                "03ff112311e23ce87798326c",
+                "271704fc65eed718d259bc01",
+                "b83a574fa239a171afeafe44",
+                "ef2084023b45960add09f64f",
+                "0faaf1fef31260b5fc516b7d",
+                "d513867d0cffbe765791beb0",
+                "1a7bb003f9cb4a69226f6f74"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "cfac32c57e24fd06f89a5927",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 125,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "df2f75dff3538e1fc4d7ea22",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 126,
+              "score": 0.028949545078577336
+            },
+            {
+              "id": "754749a1bc3b5d8481456d51",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 129,
+              "score": 0.028594771241830064
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-02",
+          "query": "When looping directly over a dictionary, what does the loop traverse?",
+          "filters": {},
+          "embedding_ms": 65.22860000040964,
+          "retrieval_ms": 82.49770000020362,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "da3230c13e796a744352f952",
+                "b6e7809d3f8fd5fb8e869d78",
+                "cfac32c57e24fd06f89a5927",
+                "b5be7e24341b5a5b1861ba77",
+                "611fc925745473701fc4b150",
+                "0550a5ab635bef126301b125",
+                "c3d357405f48fd864e867fc4",
+                "d513867d0cffbe765791beb0",
+                "80c21b02f1af9ede049d5e47",
+                "754749a1bc3b5d8481456d51",
+                "1136fed79cfabaa175c1e307",
+                "088821c4da5141c2cfc30197",
+                "03ff112311e23ce87798326c",
+                "e4e3d3ccbc7919908ad39b0f",
+                "df2f75dff3538e1fc4d7ea22",
+                "dc3a1c318efb4bade5f974c2",
+                "3ebf67114eab9c1ba0bb967c",
+                "271704fc65eed718d259bc01",
+                "0e4d4054206a2e24b5eccb1b",
+                "e8a87eaeaa6fe23dea69d44a"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "da3230c13e796a744352f952",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 113,
+              "score": 0.029957522915269395
+            },
+            {
+              "id": "b6e7809d3f8fd5fb8e869d78",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 128,
+              "score": 0.02921395544346364
+            },
+            {
+              "id": "cfac32c57e24fd06f89a5927",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 125,
+              "score": 0.029211087420042643
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-03",
+          "query": "How can get avoid a missing-key error when looking up a key that may not exist?",
+          "filters": {},
+          "embedding_ms": 65.7271000000037,
+          "retrieval_ms": 48.872100000153296,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "46a2945a2121871e563aea75",
+                "44ac3a20fe89a87e5d5c277b",
+                "8fe84c71a337711b0d54c6fe",
+                "df2f75dff3538e1fc4d7ea22",
+                "da8ec762feccec4b24cecf89",
+                "088821c4da5141c2cfc30197",
+                "60f50bf6dc5cdfd857d72fbc",
+                "cfac32c57e24fd06f89a5927",
+                "c82425bb596e87fea82690d1",
+                "3f59477932a8d50c7f79f300",
+                "f44df4f7b62aca135c848989",
+                "c94aad40a0b58b458c2b9838",
+                "78035bb2c9ebb26641ad60fb",
+                "27704b09156a093f7ba26714",
+                "e4e3d3ccbc7919908ad39b0f",
+                "611fc925745473701fc4b150",
+                "6acdb1ac9a021f3eb19ce537",
+                "deb9616475487e7239e4f7f8",
+                "ff9ae89b32b1001dbb17c8bd",
+                "ef2084023b45960add09f64f"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "46a2945a2121871e563aea75",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 130,
+              "score": 0.030886196246139225
+            },
+            {
+              "id": "44ac3a20fe89a87e5d5c277b",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 129,
+              "score": 0.030776515151515152
+            },
+            {
+              "id": "8fe84c71a337711b0d54c6fe",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 126,
+              "score": 0.02964426877470356
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-dict-04",
+          "query": "In Chapter 11 Dictionaries, what is one advantage of using get with a default when incrementing a counter?",
+          "filters": {},
+          "embedding_ms": 65.48930000008113,
+          "retrieval_ms": 30.578099999729602,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "b5be7e24341b5a5b1861ba77",
+                "da8ec762feccec4b24cecf89",
+                "d4f49d1070b12762d144f6e2",
+                "1da5764870428c5393c83469",
+                "9ed4a1e8ee0899956c949afc",
+                "e091dae524baee73df60ffe1",
+                "9d8fe9d8f820ec8ee0100c89",
+                "16a5268efb6434275901a086",
+                "2452b953d03efe3a530f7bd9",
+                "0b52403c4376c09af6b27a2c",
+                "e9c083ae3929c9bf31e09cdf",
+                "38d24809151400da7538df94",
+                "e8a87eaeaa6fe23dea69d44a",
+                "55d70d82bf9c61565932b05b",
+                "d0312ced1cd4ef865d449cb0",
+                "c3d357405f48fd864e867fc4",
+                "1a7bb003f9cb4a69226f6f74",
+                "271704fc65eed718d259bc01",
+                "611fc925745473701fc4b150",
+                "cfac32c57e24fd06f89a5927"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "b5be7e24341b5a5b1861ba77",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 128,
+              "score": 0.032266458495966696
+            },
+            {
+              "id": "da8ec762feccec4b24cecf89",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 127,
+              "score": 0.03225806451612903
+            },
+            {
+              "id": "d4f49d1070b12762d144f6e2",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 127,
+              "score": 0.031009615384615385
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-01",
+          "query": "What happens when tuple() receives a sequence such as a string, list, or tuple?",
+          "filters": {},
+          "embedding_ms": 65.90719999985595,
+          "retrieval_ms": 21.216999999523978,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "55d70d82bf9c61565932b05b",
+                "8d7f0a7d94a4114c395a6a60",
+                "b7c6c8a5edc62d6aa21929d5",
+                "69556335b9879d129b053dc0",
+                "e8a87eaeaa6fe23dea69d44a",
+                "8415a23d91863125c4966f94",
+                "79ecff34f1d9537880a3f2b1",
+                "0550a5ab635bef126301b125",
+                "05a048375707add244069f25",
+                "e9c083ae3929c9bf31e09cdf",
+                "7c955b513dbf0952dd3a2c18",
+                "9099b45e2f7e26f43bd3aec3",
+                "8170ad3f17736ea5d34a3338",
+                "988a39abb61b05d84a64f525",
+                "0b52403c4376c09af6b27a2c",
+                "b4c239675b5a7688f18318a8",
+                "0e4d4054206a2e24b5eccb1b",
+                "2f6ea20b8b72aade51c93c92",
+                "80c21b02f1af9ede049d5e47",
+                "088821c4da5141c2cfc30197"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "55d70d82bf9c61565932b05b",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 138,
+              "score": 0.03252247488101534
+            },
+            {
+              "id": "8d7f0a7d94a4114c395a6a60",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 143,
+              "score": 0.03149801587301587
+            },
+            {
+              "id": "b7c6c8a5edc62d6aa21929d5",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 137,
+              "score": 0.03131881575727918
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-02",
+          "query": "In Chapter 12 Tuples, how does Python associate values on the right side with names on the left in a tuple assignment?",
+          "filters": {},
+          "embedding_ms": 73.83089999984804,
+          "retrieval_ms": 34.34149999975489,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "a25a5ac627a9e93863a6d648",
+                "0b52403c4376c09af6b27a2c",
+                "55d70d82bf9c61565932b05b",
+                "e9c083ae3929c9bf31e09cdf",
+                "b4c239675b5a7688f18318a8",
+                "7c955b513dbf0952dd3a2c18",
+                "69556335b9879d129b053dc0",
+                "0550a5ab635bef126301b125",
+                "0e4d4054206a2e24b5eccb1b",
+                "b7c6c8a5edc62d6aa21929d5",
+                "79ecff34f1d9537880a3f2b1",
+                "ef8f1b384b07da4636d5642b",
+                "03ff112311e23ce87798326c",
+                "e8a87eaeaa6fe23dea69d44a",
+                "84623db97b77dc4a30eecc29",
+                "5f63b07981ab6016764e4dd1",
+                "8415a23d91863125c4966f94",
+                "8170ad3f17736ea5d34a3338",
+                "988a39abb61b05d84a64f525",
+                "8d7f0a7d94a4114c395a6a60"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "a25a5ac627a9e93863a6d648",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 139,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "0b52403c4376c09af6b27a2c",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 142,
+              "score": 0.03200204813108039
+            },
+            {
+              "id": "55d70d82bf9c61565932b05b",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 138,
+              "score": 0.03149801587301587
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-03",
+          "query": "What does a function parameter beginning with * do to the arguments it receives?",
+          "filters": {},
+          "embedding_ms": 65.223500000684,
+          "retrieval_ms": 20.5748999997013,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "079b9522f62937dff57359ad",
+                "2f6ea20b8b72aade51c93c92",
+                "3542ff1bde5022ebdf79c765",
+                "3bd26d52c8ec471104884e53",
+                "db043a77c5eb0038adad2871",
+                "db73790f1e7415ac0e73caa1",
+                "b9ebd72ed0bce842f98a5c63",
+                "be58543977e1cd20ca72a49e",
+                "a4d7d2bac172cab9bddc0d4d",
+                "088821c4da5141c2cfc30197",
+                "e3bdf6a76bbb1faca17118a3",
+                "06af86ada72b1d9199f51185",
+                "1400a6c50a22a12c186fa7b9",
+                "611fc925745473701fc4b150",
+                "e4c546792c2fa3617803f6a9",
+                "a51d086cee4bb0ca494efdcc",
+                "8cd4b681c8169ac016fdff22",
+                "d513867d0cffbe765791beb0",
+                "e9c083ae3929c9bf31e09cdf",
+                "adafe554fa7735889708bf8f"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "079b9522f62937dff57359ad",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "2f6ea20b8b72aade51c93c92",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.03225806451612903
+            },
+            {
+              "id": "3542ff1bde5022ebdf79c765",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.03125
+            }
+          ],
+          "contexts": []
+        },
+        {
+          "query_id": "core-dev-tuple-04",
+          "query": "What limitation distinguishes a zip iterator from a list when accessing an element?",
+          "filters": {},
+          "embedding_ms": 64.43570000010368,
+          "retrieval_ms": 34.716000000116765,
+          "events": [
+            {
+              "type": "tool",
+              "name": "search",
+              "ranked_ids": [
+                "3203ce903ea969769ba53088",
+                "d83143d751253a0ffb2909c3",
+                "79ecff34f1d9537880a3f2b1",
+                "5f63b07981ab6016764e4dd1",
+                "da3230c13e796a744352f952",
+                "0550a5ab635bef126301b125",
+                "a6387f1980173b28a04c03b8",
+                "e8a87eaeaa6fe23dea69d44a",
+                "7b5016cbf03fdbe4b79d810e",
+                "05a048375707add244069f25",
+                "1136fed79cfabaa175c1e307",
+                "4f898847739ee4bd49ec570c",
+                "8d7f0a7d94a4114c395a6a60",
+                "9099b45e2f7e26f43bd3aec3",
+                "0faaf1fef31260b5fc516b7d",
+                "a93baaf72d20449f58ff5381",
+                "cfac32c57e24fd06f89a5927",
+                "3bd26d52c8ec471104884e53",
+                "f44df4f7b62aca135c848989",
+                "e4e3d3ccbc7919908ad39b0f"
+              ]
+            }
+          ],
+          "top3": [
+            {
+              "id": "3203ce903ea969769ba53088",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 141,
+              "score": 0.03278688524590164
+            },
+            {
+              "id": "d83143d751253a0ffb2909c3",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 140,
+              "score": 0.03225806451612903
+            },
+            {
+              "id": "79ecff34f1d9537880a3f2b1",
+              "source": "day6/data/thinkpython2.pdf",
+              "page": 141,
+              "score": 0.03036576949620428
+            }
+          ],
+          "contexts": []
+        }
+      ]
+    }
+  }
+}

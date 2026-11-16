@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "method": "AI-assisted visual inspection of all 13 rendered physical pages in a contact sheet; all rendered blank.",
+  "source_sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+  "pages": [
+    {
+      "physical_page": 2,
+      "classification": "blank",
+      "excluded_from_index": true,
+      "impact": "No visible text/table/chart/image information to retrieve."
+    },
+    {
+      "physical_page": 4,
+      "classification": "blank",
+      "excluded_from_index": true,
+      "impact": "No visible text/table/chart/image information to retrieve."
+    },
+    {
+      "physical_page": 16,
+      "classification": "blank",
+      "excluded_from_index": true,
+      "impact": "No visible text/table/chart/image information to retrieve."
+    },
+    {
+      "physical_page": 26,
+      "classification": "blank",
+      "excluded_from_index": true,
+      "impact": "No visible text/table/chart/image information to retrieve."
+    },
+    {
+      "physical_page": 30,
+      "classification": "blank",
+      "excluded_from_index": true,
+      "impact": "No visible text/table/chart/image information to retrieve."
+    },
+    {
+      "physical_page": 84,
+      "classification": "blank",
+      "excluded_from_index": true,
+      "impact": "No visible text/table/chart/image information to retrieve."
+    },
+    {
+      "physical_page": 112,
+      "classification": "blank",
+      "excluded_from_index": true,
+      "impact": "No visible text/table/chart/image information to retrieve."
+    },
+    {
+      "physical_page": 116,
+      "classification": "blank",
+      "excluded_from_index": true,
+      "impact": "No visible text/table/chart/image information to retrieve."
+    },
+    {
+      "physical_page": 166,
+      "classification": "blank",
+      "excluded_from_index": true,
+      "impact": "No visible text/table/chart/image information to retrieve."
+    },
+    {
+      "physical_page": 220,
+      "classification": "blank",
+      "excluded_from_index": true,
+      "impact": "No visible text/table/chart/image information to retrieve."
+    },
+    {
+      "physical_page": 252,
+      "classification": "blank",
+      "excluded_from_index": true,
+      "impact": "No visible text/table/chart/image information to retrieve."
+    },
+    {
+      "physical_page": 274,
+      "classification": "blank",
+      "excluded_from_index": true,
+      "impact": "No visible text/table/chart/image information to retrieve."
+    },
+    {
+      "physical_page": 275,
+      "classification": "blank",
+      "excluded_from_index": true,
+      "impact": "No visible text/table/chart/image information to retrieve."
+    }
+  ],
+  "no_useful_content_omitted_on_these_pages": true,
+  "local_visual_evidence_not_submitted": ".lab-local/empty-page-contact.png"
+}

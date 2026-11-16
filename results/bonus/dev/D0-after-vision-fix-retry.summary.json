@@ -1,0 +1,31 @@
+{
+  "suite": "bonus",
+  "split": "dev",
+  "config": "D0",
+  "run_id": "9f0531771e7c4c1dadd37e8f9d7dc14f",
+  "n": 24,
+  "status": "complete",
+  "pending_query_ids": [],
+  "errors": 5,
+  "cost_usd": 0.010601308,
+  "latency_ms_median": 5151.344950001658,
+  "retrieval": {
+    "answerable_n": 20,
+    "hit_at_1": {
+      "n": 5,
+      "N": 20,
+      "rate": 0.25
+    },
+    "evidence_hit_at_3": {
+      "n": 6,
+      "N": 20,
+      "rate": 0.3
+    },
+    "context_evidence_rate": {
+      "n": 7,
+      "N": 20,
+      "rate": 0.35
+    }
+  },
+  "trace_path": "results\\bonus\\dev\\D0-after-vision-fix-retry.jsonl"
+}

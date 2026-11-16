@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "source_chunks": 635,
+  "embedded_chunks": 940,
+  "dimensions": 1024,
+  "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+  "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+  "device": "cuda:0",
+  "normalization": "PDF extraction NUL bytes replaced with spaces before embedding/storage",
+  "load_seconds": 6.272885200000019,
+  "encode_seconds": 0.6619689000008293,
+  "db_snapshot": {
+    "postgres_version": "16.16 (Debian 16.16-1.pgdg12+1)",
+    "pgvector_version": "0.8.7",
+    "row_count": 940,
+    "counts_by_strategy": {
+      "WDR": 940
+    },
+    "sha256": "7fd019e7ecb954aa4284a0ef12e0939c45a838339bcfbe77ce492372dd80c908"
+  },
+  "source_sha256": "4d8b3e994112127f286ed52aa5691b7022342b7ed6e589fde788dd03b255156d",
+  "embedded_chunks_path": "data\\bonus\\index\\embedded_chunks.jsonl",
+  "embedded_chunks_sha256": "0253def29e663a9453f200929753feb2b2ed013d517b84d326a3b7eacd46c0c7"
+}

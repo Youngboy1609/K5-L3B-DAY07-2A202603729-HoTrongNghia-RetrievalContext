@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "suite": "core",
+  "split": "test",
+  "config": "D0",
+  "run_id": "9939ef0243064a4e948d030846c592d9",
+  "review_status": "ai_assisted_direct_source_review",
+  "method": "All8 outputs and each citation read against actual source text and retrieved contexts. Scores assigned from source review, not keyword/status tests. Physical/printed page numbering distinguished. Not a claim of student personal signoff.",
+  "reviews": [
+    {
+      "query_id": "core-release-negative-index",
+      "answerable": true,
+      "context_score": 2,
+      "grounded_answer_score": 2,
+      "abstention_correct": null,
+      "false_abstention": false,
+      "pass": true,
+      "rationale": "Original physical94 explicitly says fruit[-2] yields second-to-last letter. The cited chunk quotes that rule and answer adds no unsupported behavior.",
+      "citations": [
+        {
+          "id": "9e2aed6086dcdfc692e78469",
+          "in_context": true,
+          "supports_referenced_claim": true,
+          "physical_page": 94,
+          "source": "day6/data/thinkpython2.pdf",
+          "support_rationale": "Original physical94 explicitly says fruit[-2] yields second-to-last letter. The cited chunk quotes that rule and answer adds no unsupported behavior."
+        }
+      ],
+      "errors": [],
+      "trace_path": "results/core/test/D0-ready.jsonl",
+      "final_answer": "In the string examples, the index -2 selects the second-to-last character — negative indices count backward from the end of the string, with `fruit[-2]` yielding the second to last letter [E:9e2aed6086dcdfc692e78469] (page 94, *Think Python 2e*, Chapter 8 \"Strings\")."
+    },
+    {
+      "query_id": "core-release-singleton",
+      "answerable": true,
+      "context_score": 2,
+      "grounded_answer_score": 2,
+      "abstention_correct": null,
+      "false_abstention": false,
+      "pass": true,
+      "rationale": "Original physical137 states final comma is required and shows parenthesized single string is not tuple. Both claims are supported by cited source.",
+      "citations": [
+        {
+          "id": "b7c6c8a5edc62d6aa21929d5",
+          "in_context": true,
+          "supports_referenced_claim": true,
+          "physical_page": 137,
+          "source": "day6/data/thinkpython2.pdf",
+          "support_rationale": "Original physical137 states final comma is required and shows parenthesized single string is not tuple. Both claims are supported by cited source."
+        }
+      ],
+      "errors": [],
+      "trace_path": "results/core/test/D0-ready.jsonl",
+      "final_answer": "A **trailing comma** is required — e.g., `t1 = 'a',`. Parentheses alone don't suffice, since `('a')` just creates a string [E:b7c6c8a5edc62d6aa21929d5] (Think Python 2e, p. 137)."
+    },
+    {
+      "query_id": "core-release-divmod",
+      "answerable": true,
+      "context_score": 2,
+      "grounded_answer_score": 2,
+      "abstention_correct": null,
+      "false_abstention": false,
+      "pass": true,
+      "rationale": "Original physical139 gives quotient/remainder tuple and divmod(7,3)=(2,1). Answer matches both returned values and container.",
+      "citations": [
+        {
+          "id": "988a39abb61b05d84a64f525",
+          "in_context": true,
+          "supports_referenced_claim": true,
+          "physical_page": 139,
+          "source": "day6/data/thinkpython2.pdf",
+          "support_rationale": "Original physical139 gives quotient/remainder tuple and divmod(7,3)=(2,1). Answer matches both returned values and container."
+        }
+      ],
+      "errors": [],
+      "trace_path": "results/core/test/D0-ready.jsonl",
+      "final_answer": "`divmod` returns two values — the quotient and the remainder — and they are held in a **tuple** (e.g., `divmod(7, 3)` returns `(2, 1)`) [E:988a39abb61b05d84a64f525]."
+    },
+    {
+      "query_id": "core-release-dict-len",
+      "answerable": true,
+      "context_score": 2,
+      "grounded_answer_score": 2,
+      "abstention_correct": null,
+      "false_abstention": false,
+      "pass": true,
+      "rationale": "Original physical126 explicitly defines len(dictionary) as number of key-value pairs and gives len(eng2sp)=3.",
+      "citations": [
+        {
+          "id": "8fe84c71a337711b0d54c6fe",
+          "in_context": true,
+          "supports_referenced_claim": true,
+          "physical_page": 126,
+          "source": "day6/data/thinkpython2.pdf",
+          "support_rationale": "Original physical126 explicitly defines len(dictionary) as number of key-value pairs and gives len(eng2sp)=3."
+        }
+      ],
+      "errors": [],
+      "trace_path": "results/core/test/D0-ready.jsonl",
+      "final_answer": "In the Dictionaries chapter (Chapter 11), `len` applied to a dictionary returns the number of key-value pairs in it (e.g., `len(eng2sp)` returns 3). [E:8fe84c71a337711b0d54c6fe]"
+    },
+    {
+      "query_id": "core-release-sort",
+      "answerable": true,
+      "context_score": 2,
+      "grounded_answer_score": 2,
+      "abstention_correct": null,
+      "false_abstention": false,
+      "pass": true,
+      "rationale": "Original physical114 demonstrates in-place sorted list and states list methods return None. Answer covers mutation and return value.",
+      "citations": [
+        {
+          "id": "055cbd622a00ccc3ecfc7812",
+          "in_context": true,
+          "supports_referenced_claim": true,
+          "physical_page": 114,
+          "source": "day6/data/thinkpython2.pdf",
+          "support_rationale": "Original physical114 demonstrates in-place sorted list and states list methods return None. Answer covers mutation and return value."
+        }
+      ],
+      "errors": [],
+      "trace_path": "results/core/test/D0-ready.jsonl",
+      "final_answer": "Calling a list's `sort` method sorts the list's elements in order (e.g., `['d','c','e','b','a']` becomes `['a','b','c','d','e']`), modifying the list itself. The method returns `None` — most list methods are void — so writing `t = t.sort()` gives a disappointing result [E:055cbd622a00ccc3ecfc7812] (Think Python 2e, p. 114)."
+    },
+    {
+      "query_id": "core-release-empty-loop",
+      "answerable": true,
+      "context_score": 2,
+      "grounded_answer_score": 2,
+      "abstention_correct": null,
+      "false_abstention": false,
+      "pass": true,
+      "rationale": "Original physical113/printed91 states empty-list for body never runs. Printed page91 in final answer is valid; source ID resolves physical113.",
+      "citations": [
+        {
+          "id": "da3230c13e796a744352f952",
+          "in_context": true,
+          "supports_referenced_claim": true,
+          "physical_page": 113,
+          "source": "day6/data/thinkpython2.pdf",
+          "support_rationale": "Original physical113/printed91 states empty-list for body never runs. Printed page91 in final answer is valid; source ID resolves physical113."
+        }
+      ],
+      "errors": [],
+      "trace_path": "results/core/test/D0-ready.jsonl",
+      "final_answer": "Zero times — \"A for loop over an empty list never runs the body\" [E:da3230c13e796a744352f952], as shown in Think Python 2e, Chapter 10 (Lists), page 91."
+    },
+    {
+      "query_id": "core-release-absent-bytes",
+      "answerable": false,
+      "context_score": null,
+      "grounded_answer_score": null,
+      "abstention_correct": true,
+      "false_abstention": null,
+      "pass": true,
+      "rationale": "Full selected source contains no CPython3.11 empty-tuple byte measurement. Final explicitly refuses to invent the number. Citations identify tuple topics, not a proof of global absence; absence judged separately against full selected-source audit.",
+      "citations": [
+        {
+          "id": "0b52403c4376c09af6b27a2c",
+          "in_context": true,
+          "supports_referenced_claim": true,
+          "physical_page": 142,
+          "source": "day6/data/thinkpython2.pdf",
+          "support_rationale": "Full selected source contains no CPython3.11 empty-tuple byte measurement. Final explicitly refuses to invent the number. Citations identify tuple topics, not a proof of global absence; absence judged separately against full selected-source audit."
+        },
+        {
+          "id": "b7c6c8a5edc62d6aa21929d5",
+          "in_context": true,
+          "supports_referenced_claim": true,
+          "physical_page": 137,
+          "source": "day6/data/thinkpython2.pdf",
+          "support_rationale": "Full selected source contains no CPython3.11 empty-tuple byte measurement. Final explicitly refuses to invent the number. Citations identify tuple topics, not a proof of global absence; absence judged separately against full selected-source audit."
+        }
+      ],
+      "errors": [],
+      "trace_path": "results/core/test/D0-ready.jsonl",
+      "final_answer": "The retrieved pages do not answer this. The book's coverage of tuples (Chapter 12) discusses creating tuples, tuple assignment, dictionaries and tuples, and variable-length argument tuples, but contains no information about the memory size of tuples in bytes, `sys.getsizeof`, or CPython 3.11 specifics [E:0b52403c4376c09af6b27a2c, E:b7c6c8a5edc62d6aa21929d5]. Since the question asks \"according to the selected book pages,\" I cannot provide the byte figure without guessing — the evidence is insufficient."
+    },
+    {
+      "query_id": "core-release-absent-nanoseconds",
+      "answerable": false,
+      "context_score": null,
+      "grounded_answer_score": null,
+      "abstention_correct": true,
+      "false_abstention": null,
+      "pass": true,
+      "rationale": "Full selected source gives qualitative constant-time behavior but no ten-million-entry nanosecond timing. Final quotes that distinction and abstains, without guessed timing.",
+      "citations": [
+        {
+          "id": "d0312ced1cd4ef865d449cb0",
+          "in_context": true,
+          "supports_referenced_claim": true,
+          "physical_page": 126,
+          "source": "day6/data/thinkpython2.pdf",
+          "support_rationale": "Full selected source gives qualitative constant-time behavior but no ten-million-entry nanosecond timing. Final quotes that distinction and abstains, without guessed timing."
+        }
+      ],
+      "errors": [],
+      "trace_path": "results/core/test/D0-ready.jsonl",
+      "final_answer": "The retrieved evidence is insufficient to answer. The book's chapter 11 on Dictionaries (e.g., Think Python 2e, page 104) states that the hashtable implementation makes lookups take \"about the same amount of time no matter how many items are in the dictionary\" [E:d0312ced1cd4ef865d449cb0], and defers the explanation to Section B.4 — but none of the retrieved chunks contain a specific nanosecond figure for a ten-million-entry dictionary, so I cannot report that exact timing."
+    }
+  ],
+  "summary": {
+    "n": 8,
+    "answerable_n": 6,
+    "unanswerable_n": 2,
+    "passed": 8,
+    "context_scores": {
+      "0": 0,
+      "1": 0,
+      "2": 6
+    },
+    "grounded_answer_scores": {
+      "0": 0,
+      "1": 0,
+      "2": 6
+    },
+    "grounded_answer_mean_over_2": 2.0,
+    "citation_support": {
+      "n": 9,
+      "N": 9
+    },
+    "responses_with_citation": {
+      "n": 8,
+      "N": 8
+    },
+    "abstention": {
+      "n": 2,
+      "N": 2
+    },
+    "false_abstention": {
+      "n": 0,
+      "N": 6
+    },
+    "retrieval_tool_use": {
+      "n": 8,
+      "N": 8
+    },
+    "tool_call_distribution": {
+      "1": 6,
+      "2": 1,
+      "5": 1
+    },
+    "errors": 0,
+    "baseline_config": "D0",
+    "selected_config": "D0",
+    "baseline_and_selected_share_run": true
+  }
+}

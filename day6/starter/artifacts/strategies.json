@@ -1,0 +1,30 @@
+{
+  "A": {
+    "chunking": "fixed",
+    "size_chars": 500,
+    "overlap": 0
+  },
+  "B": {
+    "chunking": "paragraph",
+    "size_chars": 500,
+    "overlap": 0
+  },
+  "C": {
+    "chunking": "paragraph",
+    "size_chars": 500,
+    "overlap": 0,
+    "filter": "chapter from question only"
+  },
+  "model": "Qwen/Qwen3-Embedding-0.6B",
+  "model_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+  "dimensions": 1024,
+  "device": "cuda",
+  "dtype": "float16",
+  "normalized": true,
+  "query_prompt": "query",
+  "document_prompt": null,
+  "max_seq_length": 512,
+  "batch_size": 8,
+  "metric": "cosine",
+  "search": "exact"
+}

@@ -1,0 +1,153 @@
+{
+  "status": "Lab6 inputs and implementation reused; Lab7 experiments have not been run",
+  "source_repository": "https://github.com/Youngboy1609/K5-L3-Day06-DataIngestionEngineering",
+  "source_commit": "e0865fa4b242bffb116216c0dd7a225d32bbb0d1",
+  "imported_on": "2026-11-16",
+  "assignment_source_commit": "c67ec6292cd6d15e6e6cbaa2c7e7260398bb5a19",
+  "embedding": {
+    "model": "Qwen/Qwen3-Embedding-0.6B",
+    "revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+    "dimensions": 1024,
+    "device": "cuda",
+    "dtype": "float16",
+    "query_prompt": "query",
+    "document_prompt": null,
+    "normalized": true
+  },
+  "historical_index": {
+    "last_verified_date": "2026-11-14",
+    "store": "PostgreSQL 16.16 / pgvector 0.8.7",
+    "table": "lab_chunks",
+    "counts_by_strategy": {
+      "A": 138,
+      "B": 159,
+      "C": 159
+    },
+    "reuse_candidate": "C/B share 159 identical chunk IDs and vectors; this is a candidate, not a Lab7 selection result",
+    "connection_template": "day6/starter/.env.example",
+    "runtime_revalidated_today": false
+  },
+  "benchmark_policy": "All 32 Lab6 questions have previously been inspected. They are historical/dev candidates only, not an independent Lab7 test set. No active Lab7 benchmark has been fixed yet.",
+  "files": [
+    {
+      "source_path": "data/thinkpython2.pdf",
+      "local_path": "day6/data/thinkpython2.pdf",
+      "sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94",
+      "bytes": 907689
+    },
+    {
+      "source_path": "data/manifest.json",
+      "local_path": "day6/data/manifest.json",
+      "sha256": "efce54fd5d414ba9d80d6dc1a1ebd745e6dbd2542b219eff43799942fe895068",
+      "bytes": 3801
+    },
+    {
+      "source_path": "data/ATTRIBUTION.md",
+      "local_path": "day6/data/ATTRIBUTION.md",
+      "sha256": "8dfef6e76f9cc6f9cc5873c35450a081be3df2dfd3128e2e19ad70c5d720665e",
+      "bytes": 816
+    },
+    {
+      "source_path": "benchmark/questions.jsonl",
+      "local_path": "day6/benchmark/questions.jsonl",
+      "sha256": "b19b09f81d7f57a17df0a3c117fc11d9a268882c13c534ce1036a79c6bc3a900",
+      "bytes": 12256
+    },
+    {
+      "source_path": "benchmark/protocol.json",
+      "local_path": "day6/benchmark/protocol.json",
+      "sha256": "c0347946c0e55eaa67b1fe6de6a74017843017774a2860a7d90e1e1116d8fc35",
+      "bytes": 3624
+    },
+    {
+      "source_path": "starter/requirements.txt",
+      "local_path": "day6/starter/requirements.txt",
+      "sha256": "04966641e34e7a71b76a84a37abb7d63ae5ac50b1d6f859246305eeafb33afbf",
+      "bytes": 230
+    },
+    {
+      "source_path": "starter/docker-compose.yml",
+      "local_path": "day6/starter/docker-compose.yml",
+      "sha256": "05887438360acb7394ee7ccc026ae03fb828f102947df4371d886f0d49eecb61",
+      "bytes": 486
+    },
+    {
+      "source_path": "starter/init.sql",
+      "local_path": "day6/starter/init.sql",
+      "sha256": "c9d756f25dee9559d1d66824dc61725939464b70dff2033ee44db98d1b8ad922",
+      "bytes": 86
+    },
+    {
+      "source_path": "starter/.env.example",
+      "local_path": "day6/starter/.env.example",
+      "sha256": "9aad995809015aaa7f2c0f3e786ab773eab4be8605562163bfe69a12b5b76e32",
+      "bytes": 287
+    },
+    {
+      "source_path": "starter/scripts/check_setup.py",
+      "local_path": "day6/starter/scripts/check_setup.py",
+      "sha256": "5efe649a9a21fcf0fddd843b59576ff4765a8e4fab35d868c766ff8f70cb2eed",
+      "bytes": 1028
+    },
+    {
+      "source_path": "starter/artifacts/strategies.json",
+      "local_path": "day6/starter/artifacts/strategies.json",
+      "sha256": "fc9f25cd8d994544c7a2bb690a082ca84149402c33dd108f546fb2e9ea99d049",
+      "bytes": 653
+    },
+    {
+      "source_path": "starter/tests/test_pipeline.py",
+      "local_path": "day6/starter/tests/test_pipeline.py",
+      "sha256": "d880371249fd1ed4205eebdf6e52e964d6e7a1dbc078c3b984ab62be657f42a4",
+      "bytes": 5051
+    },
+    {
+      "source_path": "starter/src/__init__.py",
+      "local_path": "day6/starter/src/__init__.py",
+      "sha256": "9d51e4a4713565f1b69bb8f3a0d8ac2c6c8730961e738a65f7a7a4ebd2a593a8",
+      "bytes": 56
+    },
+    {
+      "source_path": "starter/src/chunking.py",
+      "local_path": "day6/starter/src/chunking.py",
+      "sha256": "da7ae7de4063c207d5e45689a50f612af54b3e36ab5c0048c021ad86ee3119bd",
+      "bytes": 3640
+    },
+    {
+      "source_path": "starter/src/embeddings.py",
+      "local_path": "day6/starter/src/embeddings.py",
+      "sha256": "b1b288b3026ba6daff2a9c015b68bffdd2abff429216dc131f610f40834d8d70",
+      "bytes": 3848
+    },
+    {
+      "source_path": "starter/src/evaluation.py",
+      "local_path": "day6/starter/src/evaluation.py",
+      "sha256": "5212fb22f84bf14553787eaa6b8e4399ccd56d4d0cc3b8360f10a611de3b24a0",
+      "bytes": 1676
+    },
+    {
+      "source_path": "starter/src/ingestion.py",
+      "local_path": "day6/starter/src/ingestion.py",
+      "sha256": "0d16f610da54886bd6e23b6f19be790174de88e34ca964e826b86d387463c6e0",
+      "bytes": 2490
+    },
+    {
+      "source_path": "starter/src/models.py",
+      "local_path": "day6/starter/src/models.py",
+      "sha256": "9d3e4d00e6aa62b766e3ad7f8855ec2c77f5b93e11836f4437c504a8ff6083ad",
+      "bytes": 574
+    },
+    {
+      "source_path": "starter/src/run.py",
+      "local_path": "day6/starter/src/run.py",
+      "sha256": "88cb8cf9ffe9ed0c9d9eafca81066543fdd1ac19249717ae837670b2550839e9",
+      "bytes": 17870
+    },
+    {
+      "source_path": "starter/src/store.py",
+      "local_path": "day6/starter/src/store.py",
+      "sha256": "879185ee2cd4d04b59441376507ccded843498464980b8f2828691f975c01697",
+      "bytes": 4613
+    }
+  ]
+}

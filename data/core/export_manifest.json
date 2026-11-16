@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "exported_at_utc": "2026-11-16T03:32:00.865257+00:00",
+  "database_read_only": true,
+  "strategy": "C",
+  "row_count": 159,
+  "unique_ids": 159,
+  "rows_sha256_before": "c302085913e9a7e86e02c884242f3a073f1fc88aa6e63f933082c7a653589a8e",
+  "rows_sha256_after": "c302085913e9a7e86e02c884242f3a073f1fc88aa6e63f933082c7a653589a8e",
+  "chunks_file_sha256": "edfa594e8f854ee93efc7819069c8bc84fabec982a6ec5ab55df31e9f6df0a62",
+  "postgres_version": "16.16 (Debian 16.16-1.pgdg12+1)",
+  "pgvector_version": "0.8.7",
+  "lab6_commit": "e0865fa4b242bffb116216c0dd7a225d32bbb0d1",
+  "source_path_mapping": "data/thinkpython2.pdf -> day6/data/thinkpython2.pdf"
+}

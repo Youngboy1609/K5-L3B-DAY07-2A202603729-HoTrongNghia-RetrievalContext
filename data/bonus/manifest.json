@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "source_id": "wdr2024",
+  "title": "World Development Report 2024: The Middle-Income Trap",
+  "creator": "World Bank",
+  "isbn": "978-1-4648-2078-6",
+  "doi": "10.1596/978-1-4648-2078-6",
+  "catalog_url": "https://digitallibrary.un.org/record/4060754",
+  "download_url": "https://digitallibrary.un.org/record/4060754/files/World_Development_Report_2024.pdf",
+  "downloaded_file_local_only": ".lab-local/research/wdr2024-full-candidate.pdf",
+  "included_in_git": false,
+  "sha256": "dc69d858e364a1534a57c49fbb72237f69d88165a63933a98f01f3c20262aded",
+  "bytes": 9209931,
+  "physical_pages": 276,
+  "rights": {
+    "license": "Creative Commons Attribution 3.0 IGO (CC BY 3.0 IGO)",
+    "rights_page_physical": 6,
+    "third_party_components": "The report states that the World Bank may not own every component; determine rights for each reused component and obtain permission when required.",
+    "attribution": "World Bank. 2024. World Development Report 2024: The Middle-Income Trap. Washington, DC: World Bank. https://doi.org/10.1596/978-1-4648-2078-6. License: CC BY 3.0 IGO.",
+    "redistribute_source_pdf": false,
+    "reuse_policy": "Keep the source PDF and crops local. The user authorized only transient coursework evaluation of the listed visual regions via OpenRouter; this is not independent third-party rights clearance. Do not commit or redistribute the PDF/crops.",
+    "visually_reviewed": {
+      "additional_benchmark_pages_checked": [
+        44,
+        46,
+        63,
+        81,
+        82,
+        88,
+        119,
+        120,
+        121,
+        171,
+        172,
+        173,
+        177,
+        182,
+        186,
+        196,
+        197,
+        257
+      ]
+    },
+    "per_region_redistribution_review": "Not cleared for public redistribution. User authorized transient OpenRouter processing of the listed regions solely for this Lab7 test; source PDF/crops remain local and are not included in Git.",
+    "coursework_processing_authorization": {
+      "authorized_by_user": true,
+      "authorization_date": "2026-11-16",
+      "scope": "User authorized continuing corpus visual processing for this Lab7 coursework implementation/evaluation, including final dev and fresh test. No public image/PDF redistribution.",
+      "public_redistribution_authorized": false,
+      "source_pdf_or_crops_in_git": false,
+      "legal_clearance_claimed": false,
+      "regions": [
+        {
+          "physical_page": 44,
+          "region_id": "wdr-p044-caption-01",
+          "credit": "WDR 2024 team based on Schumpeter (1942); Aghion and Howitt (1992); Akcigit and Kerr (2018)."
+        },
+        {
+          "physical_page": 46,
+          "region_id": "wdr-p046-caption-01",
+          "credit": "No Source/Credit line found in extracted page text; no independent rights clearance inferred."
+        },
+        {
+          "physical_page": 88,
+          "region_id": "wdr-p088-caption-01",
+          "credit": "WDR 2024 team."
+        },
+        {
+          "physical_page": 119,
+          "region_id": "wdr-p119-caption-01",
+          "credit": "WDR 2024 team based on Schumpeter (1942); Aghion and Howitt (1992); Akcigit and Kerr (2018)."
+        },
+        {
+          "physical_page": 120,
+          "region_id": "wdr-p120-caption-01",
+          "credit": "WDR 2024 team."
+        },
+        {
+          "physical_page": 121,
+          "region_id": "wdr-p121-caption-01",
+          "credit": "Akcigit and Kerr 2018."
+        },
+        {
+          "physical_page": 171,
+          "region_id": "wdr-p171-caption-01",
+          "credit": "Source line attributes to WDR 2024 team elaboration from Arkolakis; text extraction is incomplete."
+        },
+        {
+          "physical_page": 172,
+          "region_id": "wdr-p172-caption-01",
+          "credit": "Bastos et al. 2023."
+        },
+        {
+          "physical_page": 177,
+          "region_id": "wdr-p177-caption-01",
+          "credit": "WDR 2024 team analysis using Statistics Data and International Renewable Energy Agency data; source line continues."
+        },
+        {
+          "physical_page": 257,
+          "region_id": "wdr-p257-caption-01",
+          "credit": "IEA 2023a."
+        }
+      ],
+      "note": "User approval authorizes this evaluation workflow; it does not independently clear third-party copyright. Keep the source PDF and all crops out of the repository and do not redistribute them.",
+      "additional_user_authorization": "Conversation: Cho phép, chạy tiếp đi; subsequent instructions to fix and finish submission."
+    }
+  },
+  "preliminary_content_inventory": {
+    "method": "PyPDF text extraction over the complete PDF; visual review remains pending.",
+    "pages_with_extractable_text": 263,
+    "figure_caption_mentions": 84,
+    "box_caption_mentions": 44,
+    "unique_table_labels_seen": [
+      "O.1",
+      "O.2",
+      "O.3",
+      "P1.1",
+      "S.1",
+      "2.1",
+      "4.1"
+    ],
+    "visually_reviewed": {
+      "tables": [
+        36,
+        86
+      ],
+      "charts": [
+        67,
+        68
+      ],
+      "diagrams": [
+        49,
+        195
+      ],
+      "additional_figure_checked_but_excluded_due_to_external_source_credit": [
+        38
+      ]
+    },
+    "status": "Full report extracted and representative visuals available. User authorized transient processing of listed test regions for this coursework run; this authorization is not independent third-party rights clearance. Do not commit or redistribute source PDF/crops."
+  },
+  "benchmark_visual_regions": {
+    "regions": [
+      "wdr-p044-caption-01",
+      "wdr-p046-caption-01",
+      "wdr-p088-caption-01",
+      "wdr-p119-caption-01",
+      "wdr-p120-caption-01",
+      "wdr-p121-caption-01",
+      "wdr-p171-caption-01",
+      "wdr-p172-caption-01",
+      "wdr-p177-caption-01",
+      "wdr-p257-caption-01"
+    ],
+    "crop_files_local_only": true
+  }
+}

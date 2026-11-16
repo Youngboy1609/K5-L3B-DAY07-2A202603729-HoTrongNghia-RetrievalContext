@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "suite": "bonus",
+  "split": "dev",
+  "config": "H2",
+  "run_id": "05289be3c33144ec96c74763e54e5a35",
+  "review_status": "ai_assisted_targeted_source_review",
+  "scope": "All four multihop outputs and two previously problematic chart items; this is not a complete 24-row semantic grade or a student attestation.",
+  "source_checks": "Original PDF text pages 36,39,135; visual original pages 67,68,195; page49 visually checked previously.",
+  "multihop": {
+    "before_complete": 0,
+    "after_complete": 4,
+    "total": 4
+  },
+  "reviews": [
+    {
+      "query_id": "bonus-dev-chart-02",
+      "pass": true,
+      "rationale": "Visual page 67 inspected: KOR vertical point is about US$36,000. Agent successfully opened page 67 and cites its caption ID.",
+      "citations": [
+        "wdr-p067-caption-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-context-v3.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-chart-04",
+      "pass": false,
+      "rationale": "Page 68 legend visually confirms orange excludes China, but the final answer has no citation. Correct content does not satisfy the full citation requirement.",
+      "citations": [],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-context-v3.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-multi-01",
+      "pass": true,
+      "rationale": "Page 36 Table O.1 gives 30.3% global GDP; page 39 Table O.2 lists investment, infusion, innovation all higher priority for upper-middle-income. Both cited contexts support the two parts.",
+      "citations": [
+        "wdr-p036-text-01",
+        "wdr-p039-table-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-context-v3.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-multi-02",
+      "pass": true,
+      "rationale": "Page 36 gives lower-middle-income population 40.3%; page 39 marks innovation Lower priority. Both cited contexts support the two parts.",
+      "citations": [
+        "wdr-p036-text-01",
+        "wdr-p039-table-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-context-v3.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-multi-03",
+      "pass": true,
+      "rationale": "Page 36 gives upper-middle-income CO2 share 48.6%; page 135 Consumer welfare cons says cartels form more easily with fewer players. Both source tables and returned citations support the answer.",
+      "citations": [
+        "wdr-p036-table-01",
+        "wdr-p135-table-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-context-v3.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-multi-04",
+      "pass": true,
+      "rationale": "Page 39 marks innovation Lower priority for lower-middle-income; page 135 Innovation cons lists fewer incentives and low firm entry. Both cited contexts support the answer.",
+      "citations": [
+        "wdr-p039-table-01",
+        "wdr-p135-table-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-context-v3.jsonl"
+    }
+  ],
+  "remaining": "Complete semantic/citation review of the other dev rows and current core evaluation remain pending. No fresh bonus test was run."
+}

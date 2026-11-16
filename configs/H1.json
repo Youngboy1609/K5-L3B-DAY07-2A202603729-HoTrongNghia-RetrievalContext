@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "config": "H1",
+  "retrieval_method": "hybrid_rrf_k60",
+  "context_text_budget_tokens": 1800,
+  "candidate_limit": 20,
+  "max_search_calls": 4,
+  "max_regions": 2,
+  "image_token_reserve": 20000,
+  "max_model_turns": 8,
+  "hypothesis": "Dense and lexical rankings may cover different evidence, improving retrieval without changing context size."
+}

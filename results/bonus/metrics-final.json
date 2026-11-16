@@ -1,0 +1,35 @@
+{
+  "n": 30,
+  "passed": 23,
+  "failed": 7,
+  "rate": 0.7666666666666667,
+  "bonus_threshold_met": false,
+  "system_errors": 0,
+  "group_metrics": {
+    "table": {
+      "passed": 5,
+      "total": 6
+    },
+    "image_diagram": {
+      "passed": 4,
+      "total": 5
+    },
+    "chart": {
+      "passed": 4,
+      "total": 5
+    },
+    "multihop": {
+      "passed": 2,
+      "total": 4
+    },
+    "text": {
+      "passed": 2,
+      "total": 4
+    },
+    "unanswerable": {
+      "passed": 6,
+      "total": 6
+    }
+  },
+  "borderline_note": "chart05 has correct value and source ID but reverses physical/printed page labels. Strict fail; accepting its ID as sufficient would yield24/30, still below90%. chart03 question omits women but Figure5.7 context and answer explicitly provide the source population; this ambiguity is disclosed, not edited after run."
+}

@@ -1,0 +1,8 @@
+# Local lab pipeline dependencies.
+psycopg[binary]==3.3.8
+python-dotenv>=1,<2
+pdfplumber==0.11.9
+sentence-transformers==5.2.3
+transformers==5.2.0
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch==2.5.1+cu121

@@ -1,0 +1,41 @@
+{
+  "source": "day6/data/thinkpython2.pdf",
+  "sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94",
+  "extraction_note": "Default PDF extraction merges words; comparison removes whitespace. Actual source passages were read for meaning, not graded from string membership.",
+  "test_source_checks": [
+    {
+      "query_id": "core-release-negative-index",
+      "physical_page": 94,
+      "quote_matches_original_after_removing_extraction_whitespace": true
+    },
+    {
+      "query_id": "core-release-singleton",
+      "physical_page": 137,
+      "quote_matches_original_after_removing_extraction_whitespace": true
+    },
+    {
+      "query_id": "core-release-divmod",
+      "physical_page": 139,
+      "quote_matches_original_after_removing_extraction_whitespace": true
+    },
+    {
+      "query_id": "core-release-dict-len",
+      "physical_page": 126,
+      "quote_matches_original_after_removing_extraction_whitespace": true
+    },
+    {
+      "query_id": "core-release-sort",
+      "physical_page": 114,
+      "quote_matches_original_after_removing_extraction_whitespace": true
+    },
+    {
+      "query_id": "core-release-empty-loop",
+      "physical_page": 113,
+      "quote_matches_original_after_removing_extraction_whitespace": true
+    }
+  ],
+  "absence_search": {
+    "nanosecond": 0,
+    "CPython3.11": 0
+  }
+}

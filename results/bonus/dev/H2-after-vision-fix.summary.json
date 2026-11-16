@@ -1,0 +1,31 @@
+{
+  "suite": "bonus",
+  "split": "dev",
+  "config": "H2",
+  "run_id": "859e952525f44d9b9ca1cae143c15c2d",
+  "n": 24,
+  "status": "complete",
+  "pending_query_ids": [],
+  "errors": 2,
+  "cost_usd": 0.012057590000000003,
+  "latency_ms_median": 4401.764999998704,
+  "retrieval": {
+    "answerable_n": 20,
+    "hit_at_1": {
+      "n": 6,
+      "N": 20,
+      "rate": 0.3
+    },
+    "evidence_hit_at_3": {
+      "n": 8,
+      "N": 20,
+      "rate": 0.4
+    },
+    "context_evidence_rate": {
+      "n": 12,
+      "N": 20,
+      "rate": 0.6
+    }
+  },
+  "trace_path": "results\\bonus\\dev\\H2-after-vision-fix.jsonl"
+}

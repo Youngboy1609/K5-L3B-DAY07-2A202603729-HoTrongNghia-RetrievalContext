@@ -1,0 +1,197 @@
+{
+  "source_id": "think-python-2e-v2.4.1",
+  "title": "Think Python: How to Think Like a Computer Scientist, 2nd edition",
+  "author": "Allen B. Downey",
+  "publisher": "Green Tea Press",
+  "source_path_or_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+  "license_or_permission": "Creative Commons Attribution-NonCommercial 3.0 Unported (CC BY-NC 3.0)",
+  "license_url": "https://creativecommons.org/licenses/by-nc/3.0/",
+  "accessed_at": "2026-11-14",
+  "snapshot": "2nd edition, version 2.4.1, copyright 2015",
+  "sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94",
+  "physical_pages_counted": [
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143
+  ],
+  "counted_content_pages": 35,
+  "page_numbering": "1-based physical PDF pages; printed book page is physical page minus 22",
+  "extraction": "pdfplumber 0.11.9 extract_text(layout=True, x_tolerance=1); remove each page common left margin; NFC normalization; join line-break hyphenation; preserve layout paragraph breaks and relative code indentation; collapse layout padding; retain physical page provenance",
+  "selection": "Chapters 8, 10, 11, 12; exclude glossary/exercise pages from ingestion; physical whitelist above",
+  "characters_after_extraction_before_final_cleanup": 59899,
+  "document_id": "think-python-2e",
+  "characters_by_physical_page": [
+    {
+      "page": 93,
+      "characters": 1208
+    },
+    {
+      "page": 94,
+      "characters": 1871
+    },
+    {
+      "page": 95,
+      "characters": 1581
+    },
+    {
+      "page": 96,
+      "characters": 1492
+    },
+    {
+      "page": 97,
+      "characters": 1946
+    },
+    {
+      "page": 98,
+      "characters": 1604
+    },
+    {
+      "page": 99,
+      "characters": 1661
+    },
+    {
+      "page": 100,
+      "characters": 2077
+    },
+    {
+      "page": 111,
+      "characters": 1206
+    },
+    {
+      "page": 112,
+      "characters": 1755
+    },
+    {
+      "page": 113,
+      "characters": 1545
+    },
+    {
+      "page": 114,
+      "characters": 1326
+    },
+    {
+      "page": 115,
+      "characters": 1718
+    },
+    {
+      "page": 116,
+      "characters": 1476
+    },
+    {
+      "page": 117,
+      "characters": 1765
+    },
+    {
+      "page": 118,
+      "characters": 1667
+    },
+    {
+      "page": 119,
+      "characters": 1497
+    },
+    {
+      "page": 120,
+      "characters": 1533
+    },
+    {
+      "page": 121,
+      "characters": 1502
+    },
+    {
+      "page": 125,
+      "characters": 1507
+    },
+    {
+      "page": 126,
+      "characters": 2000
+    },
+    {
+      "page": 127,
+      "characters": 2237
+    },
+    {
+      "page": 128,
+      "characters": 1365
+    },
+    {
+      "page": 129,
+      "characters": 1929
+    },
+    {
+      "page": 130,
+      "characters": 2355
+    },
+    {
+      "page": 131,
+      "characters": 1690
+    },
+    {
+      "page": 132,
+      "characters": 1952
+    },
+    {
+      "page": 133,
+      "characters": 2293
+    },
+    {
+      "page": 137,
+      "characters": 1215
+    },
+    {
+      "page": 138,
+      "characters": 1525
+    },
+    {
+      "page": 139,
+      "characters": 1700
+    },
+    {
+      "page": 140,
+      "characters": 1569
+    },
+    {
+      "page": 141,
+      "characters": 1822
+    },
+    {
+      "page": 142,
+      "characters": 2155
+    },
+    {
+      "page": 143,
+      "characters": 2155
+    }
+  ]
+}

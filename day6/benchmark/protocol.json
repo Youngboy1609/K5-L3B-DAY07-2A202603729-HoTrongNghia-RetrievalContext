@@ -1,0 +1,99 @@
+{
+  "benchmark_sha256": "b19b09f81d7f57a17df0a3c117fc11d9a268882c13c534ce1036a79c6bc3a900",
+  "corpus_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94",
+  "model": "Qwen/Qwen3-Embedding-0.6B",
+  "model_revision": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+  "split": {
+    "dev": 16,
+    "historical_test": 8,
+    "test": 8,
+    "filter_total": 10,
+    "filter_dev": 4,
+    "filter_test": 4
+  },
+  "retrieval": {
+    "metric": "cosine exact search",
+    "top_k": 3,
+    "hit_requirement": "matching document_id and physical PDF page plus normalized evidence quote contained in retrieved chunk",
+    "tie_break": "chunk_id ascending",
+    "selection_order": [
+      "dev_evidence_hit_at_3",
+      "dev_hit_at_1",
+      "dev_C_filter_compliance"
+    ],
+    "test_policy": "The previously inspected test set is retained as historical_test and excluded from current scores. The active test-v2 questions and evidence were fixed before corrected retrieval runs. Do not change code/config/gold after test-v2 is viewed; if changes follow, disclose and prepare another fresh holdout."
+  },
+  "filter_policy": "Only strategy C applies the chapter filter, and only where the question explicitly names the chapter. A and B never filter.",
+  "coherence_anchors": [
+    {
+      "id": "a01",
+      "page": 93,
+      "offset": 322,
+      "quote": "A string is a sequence of characters."
+    },
+    {
+      "id": "a02",
+      "page": 96,
+      "offset": 107,
+      "quote": "the result is an empty string"
+    },
+    {
+      "id": "a03",
+      "page": 112,
+      "offset": 662,
+      "quote": "Unlike strings, lists are mutable."
+    },
+    {
+      "id": "a04",
+      "page": 114,
+      "offset": 276,
+      "quote": "the slice is a copy of the whole list."
+    },
+    {
+      "id": "a05",
+      "page": 118,
+      "offset": 393,
+      "quote": "both a and b refer to it."
+    },
+    {
+      "id": "a06",
+      "page": 126,
+      "offset": 369,
+      "quote": "dictionary is unpredictable."
+    },
+    {
+      "id": "a07",
+      "page": 128,
+      "offset": 240,
+      "quote": "traverses the keys of the dictionary."
+    },
+    {
+      "id": "a08",
+      "page": 132,
+      "offset": 77,
+      "quote": "If the result is already there"
+    },
+    {
+      "id": "a09",
+      "page": 138,
+      "offset": 641,
+      "quote": "Because tuples are immutable"
+    },
+    {
+      "id": "a10",
+      "page": 142,
+      "offset": 99,
+      "quote": "returns a sequence of tuples"
+    }
+  ],
+  "protocol_note": "An exploratory dev aggregate and the original eight-question test were inspected before this protocol revision. The original test is retained as historical_test, never combined with current scores. This eight-question active test-v2 was authored from source pages not used by the original test and its gold quotes were checked against extracted source before corrected retrieval; the student must still verify every gold fully supports its expected answer. Five-question manual audit sample was set here before current retrieval.",
+  "human_review": "Coherence and grounding ratings must be recorded with reasons; do not present AI-assisted ratings as independent student ratings.",
+  "manual_audit_sample": [
+    "str-07",
+    "list-07",
+    "list-08",
+    "dict-07",
+    "tuple-08"
+  ],
+  "manual_review": "The student must inspect the fixed coherence anchors, metadata rows, and grounding sample, enter a 0-2 score with a reason, and record evaluator and date. Current labels are blank until this is done."
+}
