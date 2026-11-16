@@ -3,7 +3,7 @@
   "selected_config": "H2",
   "dev_only": true,
   "test_used_for_selection": false,
-  "reason": "Final H2 dev23/24 under conservative source grading,4/4 multihop,4/4 absent,0 system errors. Earlier fair four-config comparisons favored H2 context coverage; final policy fixes were validated on H2, not claimed to establish global optimality.",
+  "reason": "H2 selected by prior dev-only multi-config comparison; the current-code H2-v4-A 24-case dev run was source-reviewed at 24/24, absent 4/4, multi-hop 4/4, zero system errors. No same-code D0 comparison or B variant; no claim of global optimality.",
   "comparison_path": "results/bonus/dev/comparison-final.json",
-  "review_path": "results/bonus/dev/reviews-final.json"
+  "review_path": "results/bonus/dev/reviews-v4-A.json"
 }

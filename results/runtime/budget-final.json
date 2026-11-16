@@ -1,9 +1,9 @@
 {
   "approved_total_ceiling_usd": "1.50",
-  "spent_or_conservative_upper_bound_usd": "0.9687035301",
+  "spent_or_conservative_upper_bound_usd": "0.9923434941",
   "reserved_usd": "0",
   "budget_blocked": false,
-  "calls": 2748,
-  "basis": "Provider usage.cost when available; unknown/orphan reservations reconciled at their full upper bound. Includes historical dev/test/failed attempts, not just final traces.",
+  "calls": 2906,
+  "basis": "Live local usage ledger at v4 closeout; provider usage.cost when available; unknown/orphan reservations reconciled at full upper bound. Includes historical dev/test/failed attempts and the v4 test run. Local embedding API cost is zero.",
   "local_embedding_api_cost_usd": 0
 }

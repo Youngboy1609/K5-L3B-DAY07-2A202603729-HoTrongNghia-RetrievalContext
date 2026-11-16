@@ -1,60 +1,62 @@
 {
   "suite": "bonus",
   "selection": "H2",
-  "final_trace": "results/bonus/dev/H2-release-complete.jsonl",
+  "final_trace": "results/bonus/dev/H2-v4-A.jsonl",
   "final_summary": {
     "suite": "bonus",
     "split": "dev",
     "config": "H2",
+    "run_id": "3ecacb04aecc449d8d02ccb8459a5286",
     "n": 24,
     "status": "complete",
+    "pending_query_ids": [],
     "errors": 0,
-    "cost_usd": 0.009210425999999999,
-    "latency_ms_median": 4918.128799999749,
+    "cost_usd": 0.008584884,
+    "latency_ms_median": 3770.89290000049,
     "retrieval": {
       "answerable_n": 20,
       "hit_at_1": {
-        "n": 7,
+        "n": 15,
         "N": 20,
-        "rate": 0.35
+        "rate": 0.75
       },
       "evidence_hit_at_3": {
-        "n": 8,
+        "n": 13,
         "N": 20,
-        "rate": 0.4
+        "rate": 0.65
       },
       "context_evidence_rate": {
-        "n": 14,
+        "n": 17,
         "N": 20,
-        "rate": 0.7
+        "rate": 0.85
       }
     },
     "retrieval_source_quote": {
       "version": "source_quote_v1",
       "answerable_n": 20,
       "hit_at_1": {
-        "n": 8,
+        "n": 16,
         "N": 20,
-        "rate": 0.4
+        "rate": 0.8
       },
       "evidence_hit_at_3": {
-        "n": 9,
+        "n": 14,
         "N": 20,
-        "rate": 0.45
+        "rate": 0.7
       },
       "context_evidence_rate": {
-        "n": 15,
+        "n": 18,
         "N": 20,
-        "rate": 0.75
+        "rate": 0.9
       },
       "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
     },
-    "components": [
-      "results/bonus/dev/H2-release-ready.jsonl",
-      "results/bonus/dev/H2-release-resume.jsonl"
-    ],
-    "interruption_note": "Original process was externally interrupted with8 completed rows. One orphan API reservation counted fully as spent. Remaining16 dev questions resumed without overwriting completed traces."
+    "trace_path": "results\\bonus\\dev\\H2-v4-A.jsonl"
   },
-  "earlier_four_config_comparison": "results/bonus/dev/comparison-after-vision-fix.json",
-  "limitation": "Final citation/refusal policy tested on H2 only. Same-code four-method final comparison is supplied for core; do not treat older bonus variants as final-code ablations."
+  "semantic_review": "results/bonus/dev/reviews-v4-A.json",
+  "same_code_dev_reviewed": true,
+  "test_used_for_selection": false,
+  "source_commit": "c663eb5db370e6833604de706e780ec4fbba690c",
+  "selection_basis": "H2 was selected in the prior dev-only multi-config comparison and its current-code H2 run passed 24/24 on direct source review, including absent 4/4 and multi-hop 4/4, with zero system errors.",
+  "limitations": "No same-code D0 control or B finalizer variant was run. This is not a claim H2 is globally optimal; the test has not been run yet."
 }

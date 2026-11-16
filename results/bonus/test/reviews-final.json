@@ -3,16 +3,20 @@
   "suite": "bonus",
   "split": "test",
   "config": "H2",
-  "run_id": "85c0dbfad1784f3a9aae7f0d8fa8ed68",
-  "review_method": "AI-assisted direct source adjudication of every final answer and citation against original PDF/table/chart evidence; not keyword or citation-ID-only grading; not student personal signoff.",
-  "grading_rule": "ADVANCED.md all-or-nothing, including full conditions/units and locatable correct citation; errors kept in denominator.",
+  "run_id": "d2a31948fe514c4193793233ae6dd289",
+  "reviewed_at": "2026-11-16",
+  "review_status": "complete_source_adjudication",
+  "review_method": "Assistant manual case-by-case adjudication of all 30 answer texts and citations against v4 gold and original PDF evidence; visual cases were checked against rendered source pages and trace physical-page metadata. AI-assisted, not student personal signoff.",
+  "grading_rule": "ADVANCED.md all-or-nothing: answerable cases require complete correct content and locatable supporting citation; unanswerable cases require abstention without unsupported claims; system errors remain failures in denominator.",
   "n": 30,
-  "passed": 23,
-  "failed": 7,
-  "rate": 0.7666666666666667,
+  "passed": 26,
+  "failed": 4,
+  "rate": 0.8666666666666667,
   "required_passes": 27,
   "bonus_threshold_met": false,
-  "system_errors": 0,
+  "system_errors": 2,
+  "latency_ms_median": 5842.348299999685,
+  "api_cost_usd": 0.013582700000000001,
   "group_metrics": {
     "table": {
       "passed": 5,
@@ -23,7 +27,7 @@
       "total": 5
     },
     "chart": {
-      "passed": 4,
+      "passed": 5,
       "total": 5
     },
     "multihop": {
@@ -31,7 +35,7 @@
       "total": 4
     },
     "text": {
-      "passed": 2,
+      "passed": 4,
       "total": 4
     },
     "unanswerable": {
@@ -39,478 +43,459 @@
       "total": 6
     }
   },
+  "borderline_note": "bonus-v4-image-01 is failed strictly because the legal entity name is misspelled, despite the abbreviation NEC making the intended entity inferable. A permissive typo-only interpretation would add one point (27/30), but the all-or-nothing rubric does not support claiming bonus qualification on that interpretation. No score rounding.",
+  "trace_path": "results/bonus/test/H2-v4-A.jsonl",
+  "benchmark_path": "benchmark/bonus/questions.jsonl",
   "reviews": [
     {
-      "query_id": "bonus-release-table-01",
+      "query_id": "bonus-v4-table-01",
       "primary_group": "table",
       "answerable": true,
       "pass": true,
-      "rationale": "Original TableS.1 physical82 UnitedKingdom Researchers column4491.3 per million. Child part02 contains row; units and citation correct.",
-      "final_answer": "According to Table S.1 (page 82 of the World Development Report 2024), the United Kingdom has **4,491.3 researchers per million inhabitants** [E:wdr-p082-table-01-part-02].",
-      "citations": [
-        "wdr-p082-table-01-part-02"
-      ],
-      "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        82
-      ]
-    },
-    {
-      "query_id": "bonus-release-table-02",
-      "primary_group": "table",
-      "answerable": true,
-      "pass": true,
-      "rationale": "Original physical82 France Carbon-intensity column0.04 GtCO2/exajoule. Correct condition, unit and citation.",
-      "final_answer": "In Table S.1, France's carbon intensity of energy consumption is listed as 0.04 Gt per exajoule (CO₂ emissions per energy consumption, in gigatons per exajoule) [E:wdr-p082-table-01-part-01, p. 82 of the World Development Report 2024].",
-      "citations": [
-        "wdr-p082-table-01-part-01"
-      ],
-      "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        82
-      ]
-    },
-    {
-      "query_id": "bonus-release-table-03",
-      "primary_group": "table",
-      "answerable": true,
-      "pass": true,
-      "rationale": "Original physical81 India Technology index1.0; correct column and citation.",
-      "final_answer": "India's technology-index value in Table S.1 is **1.0** [E:wdr-p081-table-01-part-01].",
+      "rationale": "Page 81, Table S.1 Pakistan row: GNI per capita, Atlas method, current US$, 2023 is 1,500.",
       "citations": [
         "wdr-p081-table-01-part-01"
       ],
-      "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
       "source_pages": [
         81
-      ]
-    },
-    {
-      "query_id": "bonus-release-table-04",
-      "primary_group": "table",
-      "answerable": true,
-      "pass": false,
-      "rationale": "Answerable false refusal. Original physical81 Malaysia Social mobility0.69. Agent retrieved a different table on257 and did not obtain the required row.",
-      "final_answer": "The retrieved evidence is insufficient to answer this question. The only retrieved chunk mentioning Malaysia is a fragmented table extract that lists the country name without any legible social-mobility value [E:wdr-p257-table-03], and no retrieved chunk identifies or contains \"Table S.1\" with a Malaysia row. I therefore abstain rather than guess the value.",
-      "citations": [
-        "wdr-p257-table-03"
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        81
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-table-05",
+      "query_id": "bonus-v4-table-02",
       "primary_group": "table",
       "answerable": true,
       "pass": true,
-      "rationale": "Original physical81 Brazil upper-secondary completion69.00 percent of relevant age group; cited part supports it.",
-      "final_answer": "Table S.1 reports Brazil's upper-secondary completion rate as 69.00 percent of the relevant age group [E:wdr-p081-table-01-part-01].",
+      "rationale": "Page 81, Table S.1 India row: Economic Complexity Index is 0.5.",
       "citations": [
         "wdr-p081-table-01-part-01"
       ],
-      "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
       "source_pages": [
         81
-      ]
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-table-06",
+      "query_id": "bonus-v4-table-03",
       "primary_group": "table",
       "answerable": true,
       "pass": true,
-      "rationale": "Original physical82 Japan GNI per capita Atlas method currentUS$2023 is39030; correct year/unit/column.",
-      "final_answer": "In Table S.1 of the World Development Report 2024 (page 82), Japan's 2023 GNI per capita (Atlas method, current US$) is listed as US$39,030 [E:wdr-p082-table-01-part-01].",
+      "rationale": "Page 81, Table S.1 China row: technology index is 13.1; cited table region resolves to that source page.",
       "citations": [
-        "wdr-p082-table-01-part-01"
+        "wdr-p081-table-01-part-02"
+      ],
+      "source_pages": [
+        82,
+        81
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        82
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-image-01",
-      "primary_group": "image_diagram",
+      "query_id": "bonus-v4-table-04",
+      "primary_group": "table",
       "answerable": true,
       "pass": true,
-      "rationale": "Original physical119 panelb explicitly names Aghion and Howitt. Image opened; citation resolves physical119/printed87.",
-      "final_answer": "Panel b of Figure 4.2 names **Aghion and Howitt's view** — \"Entrants create value and displace incumbents\" (World Development Report 2024, page 87, figure on p. 119 caption; source: WDR 2024 team based on Aghion and Howitt 1992) [E:wdr-p119-caption-01].",
+      "rationale": "Page 81, Table S.1 Brazil row: upper-secondary completion is 69.00% of the relevant age group; answer states both figure and basis.",
       "citations": [
-        "wdr-p119-caption-01"
+        "wdr-p081-table-01-part-02"
+      ],
+      "source_pages": [
+        81
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        119
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-image-02",
-      "primary_group": "image_diagram",
+      "query_id": "bonus-v4-table-05",
+      "primary_group": "table",
       "answerable": true,
       "pass": true,
-      "rationale": "Original physical121 legend: darker blue-teal marker is Firm2; lighter is Firm1. Image opened and cited.",
-      "final_answer": "In Figure 4.4 (page 89/121 of the World Development Report 2024), the darker blue-teal circle in the legend represents **Firm 2**, while the lighter teal circle represents Firm 1 [E:wdr-p121-caption-01].",
+      "rationale": "Page 81, Table S.1 Türkiye row: 1,736.7 researchers per million inhabitants.",
       "citations": [
-        "wdr-p121-caption-01"
+        "wdr-p081-table-01-part-02"
+      ],
+      "source_pages": [
+        81
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        121
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-image-03",
-      "primary_group": "image_diagram",
+      "query_id": "bonus-v4-table-06",
+      "primary_group": "table",
       "answerable": true,
-      "pass": true,
-      "rationale": "Original physical121 bottom curved arrows across product lines label External R&D; top of lastbar is Internal R&D. Image opened via cited text ID.",
-      "final_answer": "The curved arrows spanning across the product lines below the bars in Figure 4.4 are labeled **\"External R&D\"** (page 121, WDR 2024). This contrasts with the curved arrows at the top of the last bar, which are labeled \"Internal R&D\" [E:wdr-p121-text-00-part-02].",
-      "citations": [
-        "wdr-p121-text-00-part-02"
+      "pass": false,
+      "rationale": "System HTTP 429 left no answer; system failures stay in the denominator.",
+      "citations": [],
+      "source_pages": [],
+      "errors": [
+        "RuntimeError"
       ],
-      "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        121
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-image-04",
+      "query_id": "bonus-v4-image-01",
       "primary_group": "image_diagram",
       "answerable": true,
       "pass": false,
-      "rationale": "Original physical256 legend requires Type1. Answer gives the box/category Mass-produced products but never identifies the requested legend technology type. Incomplete answer under all-or-nothing rule.",
-      "final_answer": "The technology type is **\"Mass-produced products\"** — the figure's typology (page 256 of the World Development Report 2024) lists \"Mass-produced products (for example, solar PV modules, LEDs)\" as one category [E:wdr-p256-table-01].",
+      "rationale": "Company is identifiable from NEC, but the legal name is misspelled as “Electroic” instead of “Electric”; strict all-or-nothing entity spelling fails.",
       "citations": [
-        "wdr-p256-table-01"
+        "wdr-p041-caption-01"
+      ],
+      "source_pages": [
+        41
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        256
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-image-05",
+      "query_id": "bonus-v4-image-02",
       "primary_group": "image_diagram",
       "answerable": true,
       "pass": true,
-      "rationale": "Original physical256 customized complex systems including nuclear/BECCS are orange Type3. Source text plus opened figure supports customization/complexity and cost-overrun limits.",
-      "final_answer": "In Figure 9.2, customized complex product systems (for example, nuclear power plants, BECCS) correspond to **Type 3 technologies**, which require extensive customization and a high degree of complexity, making them susceptible to cost overruns and limiting rapid learning-by-doing [E:wdr-p256-text-00-part-01].",
+      "rationale": "Page 115 Figure P2.1: Creation is at the top of both initial and rebalanced circles.",
       "citations": [
-        "wdr-p256-text-00-part-01"
+        "wdr-p115-caption-01"
+      ],
+      "source_pages": [
+        115
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        256
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-chart-01",
+      "query_id": "bonus-v4-image-03",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 173 Map 6.1 legend: teal/blue-green denotes lower-middle-income; answer cites the figure and names the class correctly.",
+      "citations": [
+        "wdr-p173-caption-01"
+      ],
+      "source_pages": [
+        173
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-image-04",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 182 Map 6.2: two inset maps are visible and named; caption note also refers to two insets.",
+      "citations": [
+        "wdr-p182-caption-01"
+      ],
+      "source_pages": [
+        182
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-image-05",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 186 Map 6.3 panel b: red callout labels Shanxi province.",
+      "citations": [
+        "wdr-p186-caption-01"
+      ],
+      "source_pages": [
+        186
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-chart-01",
       "primary_group": "chart",
       "answerable": true,
       "pass": true,
-      "rationale": "Original physical91 Figure2.4 labels43.8 UMIC vs30.2 LMIC;13.6 percentage-point subtraction correct. Source chart opened/cited.",
-      "final_answer": "In Figure 2.4 (WDR 2024, page 91), upper-middle-income countries account for 43.8 percent of global STEM graduates versus 30.2 percent for lower-middle-income countries, so the upper-middle-income share exceeds it by **13.6 percentage points** [E:wdr-p091-caption-01].",
+      "rationale": "Page 47 Figure O.9 panel b: HIC has the highest skilled-worker intergenerational mobility coefficient.",
       "citations": [
-        "wdr-p091-caption-01"
+        "wdr-p047-caption-01"
+      ],
+      "source_pages": [
+        47
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        91
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-chart-02",
+      "query_id": "bonus-v4-chart-02",
       "primary_group": "chart",
       "answerable": true,
       "pass": true,
-      "rationale": "Original physical107 orange projected2028 series is9.7 percent general-government revenues, not2.6 percentGDP. Correct series/unit/year.",
-      "final_answer": "In Figure 3.4 (page 107 of WDR 2024), the projected 2028 interest expense as a percentage of general government revenues is **9.7 percent**, the final point on the rising projected series for emerging markets and middle-income countries [E:wdr-p107-caption-01].",
+      "rationale": "Page 76 Figure 1.6 panel b: at about 50% frontier proximity, the less-free curve is above the more-free curve.",
       "citations": [
-        "wdr-p107-caption-01"
+        "wdr-p076-caption-02"
+      ],
+      "source_pages": [
+        76
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        107
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-chart-03",
+      "query_id": "bonus-v4-chart-03",
       "primary_group": "chart",
       "answerable": true,
       "pass": true,
-      "rationale": "Original physical156 Figure5.7 LMIC bar27.0 percent for WOMEN aged25+. Model explicitly preserves women condition. Question said people; figure-reference scope disambiguates, but wording should name women in future benchmark. Current question/gold unchanged after run.",
-      "final_answer": "In Figure 5.7, the bar for lower-middle-income countries (LMICs) shows 27.0% — the share of women aged 25 and over with at least upper-secondary education [E:wdr-p156-text-00-part-01] (World Development Report 2024, page 124 of the PDF, page 156 of the source). Note the figure specifically measures women's educational attainment.",
+      "rationale": "Page 96 Figure 2.7: low-income group is plotted at 48 researchers per million inhabitants.",
       "citations": [
-        "wdr-p156-text-00-part-01"
+        "wdr-p096-caption-02"
+      ],
+      "source_pages": [
+        96
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        156
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-chart-04",
+      "query_id": "bonus-v4-chart-04",
       "primary_group": "chart",
       "answerable": true,
       "pass": true,
-      "rationale": "Original physical175 Figure6.3c investment2021=853 and2022=1110 US$billion; difference257 correct. Source opened/cited.",
-      "final_answer": "In Figure 6.3 panel c, clean energy financing/investment rose from US$853 billion in 2021 to US$1,110 billion in 2022 — an increase of US$257 billion [E:wdr-p175-text-00-part-01].",
+      "rationale": "Page 109 Figure 3.6: low-income group average WACC is the highest; visual line comparison supports the answer.",
       "citations": [
-        "wdr-p175-text-00-part-01"
+        "wdr-p109-caption-01"
+      ],
+      "source_pages": [
+        109
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        175
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-chart-05",
+      "query_id": "bonus-v4-chart-05",
       "primary_group": "chart",
       "answerable": true,
-      "pass": false,
-      "rationale": "Main plotted country/value correct: SaudiArabia1.0 in unitsUS$0.01/kWh. However final prose reverses physical/printed pages (claims page211/print243; actual physical243/printed211). Strict full-citation grading fails this contradictory locator despite correct source ID. Borderline: accepting source-ID locator alone would add1 pass, still below27/30.",
-      "final_answer": "In Figure 8.7 (WDR 2024, page 211/print page 243), the labeled country with the lowest plotted auction price is **Saudi Arabia**, at **1.0** (US$0.01 per kWh). The next-lowest labels are Abu Dhabi at 1.4 and Qatar at 1.6, so Saudi Arabia's 1.0 is the minimum shown [E:wdr-p243-text-00-part-02].",
+      "pass": true,
+      "rationale": "Page 180 Figure 6.6: Costa Rica has the tallest country bar for low-carbon technology job-posting share.",
       "citations": [
-        "wdr-p243-text-00-part-02"
+        "wdr-p180-text-00-part-01"
+      ],
+      "source_pages": [
+        180
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        243
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-multi-01",
+      "query_id": "bonus-v4-multi-01",
       "primary_group": "multihop",
       "answerable": true,
       "pass": true,
-      "rationale": "Original physical81 Kazakhstan energy14.15 exajoules/trillionUS$ and physical107 GDP interest2023 projected2.2%; both sources opened/cited, conditions correct.",
-      "final_answer": "Combining both sources: Table S.1 shows Kazakhstan's energy intensity is **14.15 exajoules per trillion US$** (energy consumption/GDP) [E:wdr-p081-table-01-part-01], and Figure 3.4 shows that projected interest expense as a share of GDP for 2023 is **2.2 percent** (rising to 2.6 percent by 2028 in the projected zone) [E:wdr-p107-caption-01].",
+      "rationale": "Pages 81 and 97: Colombia GNI is US$6,870 in Table S.1; Box 2.3 says its 2001 reform package increased central bank independence.",
       "citations": [
         "wdr-p081-table-01-part-01",
-        "wdr-p107-caption-01"
+        "wdr-p097-text-00-part-01"
       ],
-      "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
       "source_pages": [
         81,
-        107
-      ]
+        97
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-multi-02",
+      "query_id": "bonus-v4-multi-02",
       "primary_group": "multihop",
       "answerable": true,
       "pass": false,
-      "rationale": "Hungary completion85.6% is correct, but original physical175 chart2019 is524 US$billion, not627 (627 belongs2020). One wrong hop makes whole item fail.",
-      "final_answer": "Hungary's upper-secondary completion rate in Table S.1 is 85.6% of the relevant age group [E:wdr-p081-table-01-part-04], and Figure 6.3 panel c shows clean energy financing (investment) of US$627 billion in 2019 [E:wdr-p175-text-00-part-01].",
+      "rationale": "Timeout left no answer; system failures stay in the denominator.",
+      "citations": [],
+      "source_pages": [],
+      "errors": [
+        "RuntimeError"
+      ],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-multi-03",
+      "primary_group": "multihop",
+      "answerable": true,
+      "pass": false,
+      "rationale": "GNI value is correct, but the answer explicitly cannot confirm the requested primary-surplus target; incomplete multi-hop answer fails.",
+      "citations": [
+        "wdr-p081-table-01-part-02"
+      ],
+      "source_pages": [
+        81
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-multi-04",
+      "primary_group": "multihop",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Pages 81 and 232: Portugal GNI is US$26,270; PRT is plotted just above the US$20,000 gridline, consistent with the approximate US$22,000–23,000 answer.",
       "citations": [
         "wdr-p081-table-01-part-04",
-        "wdr-p175-text-00-part-01"
+        "wdr-p081-text-00-part-03",
+        "wdr-p232-text-00-part-02",
+        "wdr-p232-caption-01"
+      ],
+      "source_pages": [
+        232,
+        81
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        81,
-        175
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-multi-03",
-      "primary_group": "multihop",
-      "answerable": true,
-      "pass": false,
-      "rationale": "Only chart hop69.3% women in high-income countries answered. Missing TableS.1 India productivity-constraining-distortions0.36; incomplete multi-hop.",
-      "final_answer": "I can answer only one part of this from the retrieved evidence.\n\n- **Figure 5.7:** The high-income countries (HICs) bar shows **69.3 percent** of women aged 25+ attaining at least upper-secondary education (WDR 2024, page 156) [E:wdr-p156-text-00-part-01].\n- **Table S.1:** The retrieved evidence does not include Table S.1 or any India-specific \"productivity-constraining distortions\" value from it, so I cannot supply that number without guessing.",
-      "citations": [
-        "wdr-p156-text-00-part-01"
-      ],
-      "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        81,
-        156
-      ]
-    },
-    {
-      "query_id": "bonus-release-multi-04",
-      "primary_group": "multihop",
-      "answerable": true,
-      "pass": true,
-      "rationale": "Original physical81 Portugal researchers5177.3/million; physical243 Colombia2023 price1.8 in scaleUS$0.01/kWh equalsUS$0.018/kWh. Correct scaled units and both citations.",
-      "final_answer": "Portugal's researchers per million inhabitants in Table S.1 is 5,177.3 [E:wdr-p081-table-01-part-04], and in Figure 8.7 Colombia's 2023 plotted renewable-energy auction PPA tariff is 1.8 (US$0.01 per kWh) [E:wdr-p243-text-00-part-01].",
-      "citations": [
-        "wdr-p081-table-01-part-04",
-        "wdr-p243-text-00-part-01"
-      ],
-      "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        81,
-        243
-      ]
-    },
-    {
-      "query_id": "bonus-release-text-01",
+      "query_id": "bonus-v4-text-01",
       "primary_group": "text",
       "answerable": true,
       "pass": true,
-      "rationale": "Original physical89 says Promotion of Investment Act in1986; cited part supports year.",
-      "final_answer": "Malaysia's Promotion of Investment Act, which offered a spectrum of tax incentives to attract FDI, was introduced in **1986** [E:wdr-p089-text-00-part-01], as noted in the World Development Report 2024 (page 89).",
+      "rationale": "Page 74 Box 1.3: slowdown includes at least a 2 percentage-point decline in the seven-year average GDP-per-capita growth rate; extra preceding-growth condition is also correct.",
       "citations": [
-        "wdr-p089-text-00-part-01"
+        "wdr-p074-caption-01"
+      ],
+      "source_pages": [
+        74
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        89
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-text-02",
-      "primary_group": "text",
-      "answerable": true,
-      "pass": false,
-      "rationale": "Answerable false refusal. Original physical149 states poor managerial delegation could account for11% India-US per-capita-income difference. Different retrieved TFP gap does not answer.",
-      "final_answer": "The retrieved evidence is insufficient to answer this question. The closest relevant finding is that managerial quality accounts on average for \"about one-third of the gap in TFP between the country at the lead of the technology frontier, the United States, and other countries\" — but that refers to total factor productivity gaps in general, not specifically the India-US income-per-capita difference, and the passage does not discuss poor delegation of managerial responsibilities or quantify its share of an income gap [E:wdr-p234-text-00]. I therefore cannot provide the specific share requested without guessing.",
-      "citations": [
-        "wdr-p234-text-00"
-      ],
-      "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        149
-      ]
-    },
-    {
-      "query_id": "bonus-release-text-03",
+      "query_id": "bonus-v4-text-02",
       "primary_group": "text",
       "answerable": true,
       "pass": true,
-      "rationale": "Original physical202 explicitly says SpringBudProject initiated1989. Correct year and citation.",
-      "final_answer": "China's Spring Bud Project was initiated in 1989, according to the World Development Report 2024, which notes it \"promotes equitable\" access in the gender-equality discussion on page 202 [E:wdr-p202-text-01].",
+      "rationale": "Page 95 Box 2.2 policy insight 3 identifies skilled labor as essential for moving from infusion to innovation.",
       "citations": [
-        "wdr-p202-text-01"
+        "wdr-p095-caption-01"
+      ],
+      "source_pages": [
+        95,
+        94
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        202
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-text-04",
+      "query_id": "bonus-v4-text-03",
       "primary_group": "text",
       "answerable": true,
-      "pass": false,
-      "rationale": "Answerable false refusal. Original physical258 Figure9.4 note explicitly uses revealed-comparative-advantage greater than1; agent retrieved caption but not note.",
-      "final_answer": "The retrieved evidence is insufficient. I found only the caption for Figure 9.4 (\"Many middle-income countries have untapped potential to manufacture…\", page 258, [E:wdr-p258-caption-01]), but the note text containing the revealed-comparative-advantage threshold was not retrieved, so I cannot state the threshold without guessing.",
+      "pass": true,
+      "rationale": "Page 97 Box 2.3 states technology is embodied in capital and advancing technologically is challenging without scaling investment.",
       "citations": [
-        "wdr-p258-caption-01"
+        "wdr-p097-text-00-part-01"
+      ],
+      "source_pages": [
+        97
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": [
-        258
-      ]
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-absent-01",
+      "query_id": "bonus-v4-text-04",
+      "primary_group": "text",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 181: well-structured PPAs lock in electricity prices for decades, provide buyer/seller certainty, and support steady seller revenue and low-cost financing.",
+      "citations": [
+        "wdr-p181-text-01"
+      ],
+      "source_pages": [
+        181
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-absent-01",
       "primary_group": "unanswerable",
       "answerable": false,
       "pass": true,
-      "rationale": "No Hanoi2023 residential median bill in report; final abstains without guessing and distinguishes unrelated electricity material.",
-      "final_answer": "The retrieved evidence does not contain any data on median monthly residential electricity bills in Hanoi or Vietnam for 2023, nor any figures expressed in Vietnamese dong. The closest related content concerns electricity market dominance cases in Bulgaria, Germany, Mexico, and Colombia [E:wdr-p244-text-00-part-01] and renewable energy auction prices in middle-income countries [E:wdr-p243-text-00-part-01], neither of which provides household electricity billing data for Vietnam. I therefore abstain from answering.",
+      "rationale": "The corpus contains no Hanoi 2025 hotel-occupancy statistic; answer explicitly abstains without guessing.",
       "citations": [
-        "wdr-p244-text-00-part-01",
-        "wdr-p243-text-00-part-01"
+        "wdr-p232-text-00-part-02",
+        "wdr-p262-text-00-part-02",
+        "wdr-p177-caption-01"
+      ],
+      "source_pages": [
+        232,
+        262,
+        177
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": []
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-absent-02",
+      "query_id": "bonus-v4-absent-02",
       "primary_group": "unanswerable",
       "answerable": false,
       "pass": true,
-      "rationale": "No Vietnam RegionI2023 exact monthly minimum wage in report; final refuses exact value without guessing.",
-      "final_answer": "The retrieved evidence is insufficient to answer this question. I searched the report corpus for Vietnam's minimum wage in multiple ways, but the retrieved documents (from the World Development Report 2024) contain no figures for Vietnam's statutory minimum wage or its regional wage tiers. I cannot provide the exact Region I monthly minimum wage in Vietnamese dong without guessing, so I must decline to give a specific value.",
+      "rationale": "The corpus does not provide Viet Nam passenger-EV registrations for 2025; answer states evidence is insufficient rather than inventing a count.",
+      "citations": [
+        "wdr-p177-text-00-part-01",
+        "wdr-p058-text-01"
+      ],
+      "source_pages": [
+        177,
+        58
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-absent-03",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "pass": true,
+      "rationale": "The corpus lacks Jakarta one-bedroom monthly rent data for 2024; answer explicitly declines to supply a figure.",
       "citations": [],
+      "source_pages": [],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": []
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-absent-03",
+      "query_id": "bonus-v4-absent-04",
       "primary_group": "unanswerable",
       "answerable": false,
       "pass": true,
-      "rationale": "No Thailand-electricity-sector2023 foreign-debt repayment amount; final refuses exact amount.",
-      "final_answer": "The retrieved evidence does not contain any information about Thailand's electricity sector repaying foreign debt in 2023, so I cannot provide an exact US-dollar amount. The search results cover general debt service trends and electricity sector topics from the World Development Report 2024, but nothing specific to Thailand's electricity sector debt repayments.",
+      "rationale": "The corpus contains no Malaysia 2025 semiconductor-wafer export count; answer abstains without a guessed value.",
       "citations": [],
+      "source_pages": [],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": []
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     },
     {
-      "query_id": "bonus-release-absent-04",
+      "query_id": "bonus-v4-absent-05",
       "primary_group": "unanswerable",
       "answerable": false,
       "pass": true,
-      "rationale": "No Peru2023 battery-electric passenger-car sales count; aggregate EV discussion does not establish it; final abstains.",
-      "final_answer": "The retrieved evidence is insufficient to answer this question. The corpus searched (World Development Report 2024) mentions battery electric vehicles only in aggregate comparisons of middle- versus high-income countries [E:wdr-p177-text-00-part-01] and includes Peru in some tables, but none of the retrieved chunks report the number of battery electric passenger cars sold in Peru in 2023. I cannot provide that figure from the available evidence.",
+      "rationale": "The static WDR corpus has no Brent closing-price observation for 16 November 2026; answer abstains.",
+      "citations": [],
+      "source_pages": [],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-absent-06",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "pass": true,
+      "rationale": "No Brazilian employees’ average weekly working-hours statistic for 2024 appears in the corpus; despite status=complete, text explicitly says evidence is insufficient and does not guess.",
       "citations": [
-        "wdr-p177-text-00-part-01"
+        "wdr-p239-text-01",
+        "wdr-p130-text-01"
+      ],
+      "source_pages": [
+        239,
+        130
       ],
       "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": []
-    },
-    {
-      "query_id": "bonus-release-absent-05",
-      "primary_group": "unanswerable",
-      "answerable": false,
-      "pass": true,
-      "rationale": "No occupation/gender/country2023 engineer-salary statistic requested; final refuses figure rather than infer from labor charts.",
-      "final_answer": "The retrieved evidence is insufficient to answer this question. The corpus searched (the World Development Report 2024) mentions Ethiopia only in unrelated contexts—such as female labor force participation and firm employment gender gaps [E:wdr-p157-text-00-part-01], [E:wdr-p243-table-02]—and contains no data on the average 2023 annual salary of female electrical engineers in Ethiopia, in Ethiopian birr or any other currency. I therefore cannot provide that figure from the retrieved documents.",
-      "citations": [
-        "wdr-p157-text-00-part-01",
-        "wdr-p243-table-02"
-      ],
-      "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": []
-    },
-    {
-      "query_id": "bonus-release-absent-06",
-      "primary_group": "unanswerable",
-      "answerable": false,
-      "pass": true,
-      "rationale": "No Malaysia household2023 rooftop-PV adoption count; final abstains without converting global technology discussion into a local statistic.",
-      "final_answer": "The retrieved evidence does not contain this figure. The searches only surfaced general discussions of solar PV technology and clean-energy adoption (e.g., World Development Report 2024 pages 176–177, 255, 268), with no statistic on the number of Malaysian households that installed rooftop solar PV in 2023. I therefore cannot answer this question from the available evidence.",
-      "citations": [],
-      "errors": [],
-      "trace_path": "results/bonus/test/H2-release.jsonl",
-      "source_pages": []
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
     }
-  ],
-  "borderline_note": "chart05 has correct value and source ID but reverses physical/printed page labels. Strict fail; accepting its ID as sufficient would yield24/30, still below90%. chart03 question omits women but Figure5.7 context and answer explicitly provide the source population; this ambiguity is disclosed, not edited after run."
+  ]
 }

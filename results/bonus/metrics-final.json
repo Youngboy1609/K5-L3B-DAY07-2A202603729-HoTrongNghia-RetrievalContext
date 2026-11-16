@@ -1,10 +1,17 @@
 {
+  "suite": "bonus",
+  "split": "test",
+  "config": "H2",
+  "run_id": "d2a31948fe514c4193793233ae6dd289",
   "n": 30,
-  "passed": 23,
-  "failed": 7,
-  "rate": 0.7666666666666667,
+  "passed": 26,
+  "failed": 4,
+  "rate": 0.8666666666666667,
+  "required_passes": 27,
   "bonus_threshold_met": false,
-  "system_errors": 0,
+  "system_errors": 2,
+  "latency_ms_median": 5842.348299999685,
+  "api_cost_usd": 0.013582700000000001,
   "group_metrics": {
     "table": {
       "passed": 5,
@@ -15,7 +22,7 @@
       "total": 5
     },
     "chart": {
-      "passed": 4,
+      "passed": 5,
       "total": 5
     },
     "multihop": {
@@ -23,7 +30,7 @@
       "total": 4
     },
     "text": {
-      "passed": 2,
+      "passed": 4,
       "total": 4
     },
     "unanswerable": {
@@ -31,5 +38,6 @@
       "total": 6
     }
   },
-  "borderline_note": "chart05 has correct value and source ID but reverses physical/printed page labels. Strict fail; accepting its ID as sufficient would yield24/30, still below90%. chart03 question omits women but Figure5.7 context and answer explicitly provide the source population; this ambiguity is disclosed, not edited after run."
+  "borderline_note": "bonus-v4-image-01 is failed strictly because the legal entity name is misspelled, despite the abbreviation NEC making the intended entity inferable. A permissive typo-only interpretation would add one point (27/30), but the all-or-nothing rubric does not support claiming bonus qualification on that interpretation. No score rounding.",
+  "trace_path": "results/bonus/test/H2-v4-A.jsonl"
 }

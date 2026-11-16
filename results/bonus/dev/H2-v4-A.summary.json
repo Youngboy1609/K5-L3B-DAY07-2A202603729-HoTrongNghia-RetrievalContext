@@ -1,0 +1,51 @@
+{
+  "suite": "bonus",
+  "split": "dev",
+  "config": "H2",
+  "run_id": "3ecacb04aecc449d8d02ccb8459a5286",
+  "n": 24,
+  "status": "complete",
+  "pending_query_ids": [],
+  "errors": 0,
+  "cost_usd": 0.008584884,
+  "latency_ms_median": 3770.89290000049,
+  "retrieval": {
+    "answerable_n": 20,
+    "hit_at_1": {
+      "n": 15,
+      "N": 20,
+      "rate": 0.75
+    },
+    "evidence_hit_at_3": {
+      "n": 13,
+      "N": 20,
+      "rate": 0.65
+    },
+    "context_evidence_rate": {
+      "n": 17,
+      "N": 20,
+      "rate": 0.85
+    }
+  },
+  "retrieval_source_quote": {
+    "version": "source_quote_v1",
+    "answerable_n": 20,
+    "hit_at_1": {
+      "n": 16,
+      "N": 20,
+      "rate": 0.8
+    },
+    "evidence_hit_at_3": {
+      "n": 14,
+      "N": 20,
+      "rate": 0.7
+    },
+    "context_evidence_rate": {
+      "n": 18,
+      "N": 20,
+      "rate": 0.9
+    },
+    "limitation": "Exact source/page/parent and quote required; visual facts and semantic equivalents need review."
+  },
+  "trace_path": "results\\bonus\\dev\\H2-v4-A.jsonl"
+}

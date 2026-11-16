@@ -1,0 +1,501 @@
+{
+  "schema_version": 1,
+  "suite": "bonus",
+  "split": "test",
+  "config": "H2",
+  "run_id": "d2a31948fe514c4193793233ae6dd289",
+  "reviewed_at": "2026-11-16",
+  "review_status": "complete_source_adjudication",
+  "review_method": "Assistant manual case-by-case adjudication of all 30 answer texts and citations against v4 gold and original PDF evidence; visual cases were checked against rendered source pages and trace physical-page metadata. AI-assisted, not student personal signoff.",
+  "grading_rule": "ADVANCED.md all-or-nothing: answerable cases require complete correct content and locatable supporting citation; unanswerable cases require abstention without unsupported claims; system errors remain failures in denominator.",
+  "n": 30,
+  "passed": 26,
+  "failed": 4,
+  "rate": 0.8666666666666667,
+  "required_passes": 27,
+  "bonus_threshold_met": false,
+  "system_errors": 2,
+  "latency_ms_median": 5842.348299999685,
+  "api_cost_usd": 0.013582700000000001,
+  "group_metrics": {
+    "table": {
+      "passed": 5,
+      "total": 6
+    },
+    "image_diagram": {
+      "passed": 4,
+      "total": 5
+    },
+    "chart": {
+      "passed": 5,
+      "total": 5
+    },
+    "multihop": {
+      "passed": 2,
+      "total": 4
+    },
+    "text": {
+      "passed": 4,
+      "total": 4
+    },
+    "unanswerable": {
+      "passed": 6,
+      "total": 6
+    }
+  },
+  "borderline_note": "bonus-v4-image-01 is failed strictly because the legal entity name is misspelled, despite the abbreviation NEC making the intended entity inferable. A permissive typo-only interpretation would add one point (27/30), but the all-or-nothing rubric does not support claiming bonus qualification on that interpretation. No score rounding.",
+  "trace_path": "results/bonus/test/H2-v4-A.jsonl",
+  "benchmark_path": "benchmark/bonus/questions.jsonl",
+  "reviews": [
+    {
+      "query_id": "bonus-v4-table-01",
+      "primary_group": "table",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 81, Table S.1 Pakistan row: GNI per capita, Atlas method, current US$, 2023 is 1,500.",
+      "citations": [
+        "wdr-p081-table-01-part-01"
+      ],
+      "source_pages": [
+        81
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-table-02",
+      "primary_group": "table",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 81, Table S.1 India row: Economic Complexity Index is 0.5.",
+      "citations": [
+        "wdr-p081-table-01-part-01"
+      ],
+      "source_pages": [
+        81
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-table-03",
+      "primary_group": "table",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 81, Table S.1 China row: technology index is 13.1; cited table region resolves to that source page.",
+      "citations": [
+        "wdr-p081-table-01-part-02"
+      ],
+      "source_pages": [
+        82,
+        81
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-table-04",
+      "primary_group": "table",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 81, Table S.1 Brazil row: upper-secondary completion is 69.00% of the relevant age group; answer states both figure and basis.",
+      "citations": [
+        "wdr-p081-table-01-part-02"
+      ],
+      "source_pages": [
+        81
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-table-05",
+      "primary_group": "table",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 81, Table S.1 Türkiye row: 1,736.7 researchers per million inhabitants.",
+      "citations": [
+        "wdr-p081-table-01-part-02"
+      ],
+      "source_pages": [
+        81
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-table-06",
+      "primary_group": "table",
+      "answerable": true,
+      "pass": false,
+      "rationale": "System HTTP 429 left no answer; system failures stay in the denominator.",
+      "citations": [],
+      "source_pages": [],
+      "errors": [
+        "RuntimeError"
+      ],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-image-01",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "pass": false,
+      "rationale": "Company is identifiable from NEC, but the legal name is misspelled as “Electroic” instead of “Electric”; strict all-or-nothing entity spelling fails.",
+      "citations": [
+        "wdr-p041-caption-01"
+      ],
+      "source_pages": [
+        41
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-image-02",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 115 Figure P2.1: Creation is at the top of both initial and rebalanced circles.",
+      "citations": [
+        "wdr-p115-caption-01"
+      ],
+      "source_pages": [
+        115
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-image-03",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 173 Map 6.1 legend: teal/blue-green denotes lower-middle-income; answer cites the figure and names the class correctly.",
+      "citations": [
+        "wdr-p173-caption-01"
+      ],
+      "source_pages": [
+        173
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-image-04",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 182 Map 6.2: two inset maps are visible and named; caption note also refers to two insets.",
+      "citations": [
+        "wdr-p182-caption-01"
+      ],
+      "source_pages": [
+        182
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-image-05",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 186 Map 6.3 panel b: red callout labels Shanxi province.",
+      "citations": [
+        "wdr-p186-caption-01"
+      ],
+      "source_pages": [
+        186
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-chart-01",
+      "primary_group": "chart",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 47 Figure O.9 panel b: HIC has the highest skilled-worker intergenerational mobility coefficient.",
+      "citations": [
+        "wdr-p047-caption-01"
+      ],
+      "source_pages": [
+        47
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-chart-02",
+      "primary_group": "chart",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 76 Figure 1.6 panel b: at about 50% frontier proximity, the less-free curve is above the more-free curve.",
+      "citations": [
+        "wdr-p076-caption-02"
+      ],
+      "source_pages": [
+        76
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-chart-03",
+      "primary_group": "chart",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 96 Figure 2.7: low-income group is plotted at 48 researchers per million inhabitants.",
+      "citations": [
+        "wdr-p096-caption-02"
+      ],
+      "source_pages": [
+        96
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-chart-04",
+      "primary_group": "chart",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 109 Figure 3.6: low-income group average WACC is the highest; visual line comparison supports the answer.",
+      "citations": [
+        "wdr-p109-caption-01"
+      ],
+      "source_pages": [
+        109
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-chart-05",
+      "primary_group": "chart",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 180 Figure 6.6: Costa Rica has the tallest country bar for low-carbon technology job-posting share.",
+      "citations": [
+        "wdr-p180-text-00-part-01"
+      ],
+      "source_pages": [
+        180
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-multi-01",
+      "primary_group": "multihop",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Pages 81 and 97: Colombia GNI is US$6,870 in Table S.1; Box 2.3 says its 2001 reform package increased central bank independence.",
+      "citations": [
+        "wdr-p081-table-01-part-01",
+        "wdr-p097-text-00-part-01"
+      ],
+      "source_pages": [
+        81,
+        97
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-multi-02",
+      "primary_group": "multihop",
+      "answerable": true,
+      "pass": false,
+      "rationale": "Timeout left no answer; system failures stay in the denominator.",
+      "citations": [],
+      "source_pages": [],
+      "errors": [
+        "RuntimeError"
+      ],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-multi-03",
+      "primary_group": "multihop",
+      "answerable": true,
+      "pass": false,
+      "rationale": "GNI value is correct, but the answer explicitly cannot confirm the requested primary-surplus target; incomplete multi-hop answer fails.",
+      "citations": [
+        "wdr-p081-table-01-part-02"
+      ],
+      "source_pages": [
+        81
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-multi-04",
+      "primary_group": "multihop",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Pages 81 and 232: Portugal GNI is US$26,270; PRT is plotted just above the US$20,000 gridline, consistent with the approximate US$22,000–23,000 answer.",
+      "citations": [
+        "wdr-p081-table-01-part-04",
+        "wdr-p081-text-00-part-03",
+        "wdr-p232-text-00-part-02",
+        "wdr-p232-caption-01"
+      ],
+      "source_pages": [
+        232,
+        81
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-text-01",
+      "primary_group": "text",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 74 Box 1.3: slowdown includes at least a 2 percentage-point decline in the seven-year average GDP-per-capita growth rate; extra preceding-growth condition is also correct.",
+      "citations": [
+        "wdr-p074-caption-01"
+      ],
+      "source_pages": [
+        74
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-text-02",
+      "primary_group": "text",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 95 Box 2.2 policy insight 3 identifies skilled labor as essential for moving from infusion to innovation.",
+      "citations": [
+        "wdr-p095-caption-01"
+      ],
+      "source_pages": [
+        95,
+        94
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-text-03",
+      "primary_group": "text",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 97 Box 2.3 states technology is embodied in capital and advancing technologically is challenging without scaling investment.",
+      "citations": [
+        "wdr-p097-text-00-part-01"
+      ],
+      "source_pages": [
+        97
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-text-04",
+      "primary_group": "text",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Page 181: well-structured PPAs lock in electricity prices for decades, provide buyer/seller certainty, and support steady seller revenue and low-cost financing.",
+      "citations": [
+        "wdr-p181-text-01"
+      ],
+      "source_pages": [
+        181
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-absent-01",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "pass": true,
+      "rationale": "The corpus contains no Hanoi 2025 hotel-occupancy statistic; answer explicitly abstains without guessing.",
+      "citations": [
+        "wdr-p232-text-00-part-02",
+        "wdr-p262-text-00-part-02",
+        "wdr-p177-caption-01"
+      ],
+      "source_pages": [
+        232,
+        262,
+        177
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-absent-02",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "pass": true,
+      "rationale": "The corpus does not provide Viet Nam passenger-EV registrations for 2025; answer states evidence is insufficient rather than inventing a count.",
+      "citations": [
+        "wdr-p177-text-00-part-01",
+        "wdr-p058-text-01"
+      ],
+      "source_pages": [
+        177,
+        58
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-absent-03",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "pass": true,
+      "rationale": "The corpus lacks Jakarta one-bedroom monthly rent data for 2024; answer explicitly declines to supply a figure.",
+      "citations": [],
+      "source_pages": [],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-absent-04",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "pass": true,
+      "rationale": "The corpus contains no Malaysia 2025 semiconductor-wafer export count; answer abstains without a guessed value.",
+      "citations": [],
+      "source_pages": [],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-absent-05",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "pass": true,
+      "rationale": "The static WDR corpus has no Brent closing-price observation for 16 November 2026; answer abstains.",
+      "citations": [],
+      "source_pages": [],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-v4-absent-06",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "pass": true,
+      "rationale": "No Brazilian employees’ average weekly working-hours statistic for 2024 appears in the corpus; despite status=complete, text explicitly says evidence is insufficient and does not guess.",
+      "citations": [
+        "wdr-p239-text-01",
+        "wdr-p130-text-01"
+      ],
+      "source_pages": [
+        239,
+        130
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/test/H2-v4-A.jsonl"
+    }
+  ]
+}

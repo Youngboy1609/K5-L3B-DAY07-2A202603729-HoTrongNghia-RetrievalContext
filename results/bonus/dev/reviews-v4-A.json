@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "suite": "bonus",
+  "split": "dev",
+  "config": "H2",
+  "review_method": "AI-assisted direct source adjudication of all24 final answers against the source-reviewed dev labels; changed evidence/citations rechecked. Full original PDF pages49,67,68,195 rendered and visually inspected. This is dev evidence, not bonus qualification.",
+  "n": 24,
+  "passed": 24,
+  "unanswerable_passed": 4,
+  "unanswerable_total": 4,
+  "multihop_passed": 4,
+  "multihop_total": 4,
+  "system_errors": 0,
+  "dev_gate_met": true,
+  "reviews": [
+    {
+      "query_id": "bonus-dev-table-01",
+      "primary_group": "table",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Table O.1 physical36: lower-middle-income population40.3%, correct row/column.",
+      "citations": [
+        "wdr-p036-table-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-table-02",
+      "primary_group": "table",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Table O.1 physical36 (repeated63): upper-middle-income GDP30.3%.",
+      "citations": [
+        "wdr-p036-table-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-table-03",
+      "primary_group": "table",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Table O.1 physical36: low-income CO2 emissions0.5%; additional population8.9/extreme-poverty36.5 values also match.",
+      "citations": [
+        "wdr-p036-table-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-table-04",
+      "primary_group": "table",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Table O.2 physical39: innovation Lower priority; investment/infusion Higher priority for lower-middle-income.",
+      "citations": [
+        "wdr-p039-table-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-table-05",
+      "primary_group": "table",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Table4.1 physical135 productivity Pros: mergers/acquisitions lead to more efficiency.",
+      "citations": [
+        "wdr-p135-table-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-image-01",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Original physical49 figure circles label creation/preservation/destruction; trace opened49.",
+      "citations": [
+        "wdr-p049-caption-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-image-02",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Original physical49 initial cycle has largest orange Preservation circle; trace opened49.",
+      "citations": [
+        "wdr-p049-caption-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-image-03",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Pass. Figure 7.2 on physical page 195 (printed page 163) shows institutions, incentives, and interventions feeding into Contestability; the cited full page was opened and visually checked.",
+      "citations": [
+        "wdr-p195-caption-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-image-04",
+      "primary_group": "image_diagram",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Pass. Figure 7.2 on physical page 195 shows Disciplining incumbency above Contestability. The cited chunk resolves to that figure and correct physical page.",
+      "citations": [
+        "wdr-p195-caption-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-chart-01",
+      "primary_group": "chart",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Original physical67 chart: MAC about45000 highest; KOR about36000 and MLT about33500 lower.",
+      "citations": [
+        "wdr-p067-caption-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-chart-02",
+      "primary_group": "chart",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Pass. Correctly reads KOR at about US$35,500-36,000 on the 2022 GNI axis. The full original physical page 67 was opened; the rendered original chart places KOR just above the US$35,000 gridline. The citation resolves to that same physical page. The prior 1990 estimate is omitted.",
+      "citations": [
+        "wdr-p067-text-00-part-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-chart-03",
+      "primary_group": "chart",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Original physical68/printed36: all-middle-income dark line higher in2022 than orange ex-China. Printed page36 is valid source pagination.",
+      "citations": [
+        "wdr-p068-caption-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-chart-04",
+      "primary_group": "chart",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Original physical68 legend: orange excludes China. Final output now explicitly cites wdr-p068-caption-01, and source image was opened.",
+      "citations": [
+        "wdr-p068-text-00-part-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-multi-01",
+      "primary_group": "multihop",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Original Tables O.1 physical36 and O.2 physical39 support30.3% GDP and all3 policy areas higher priority. Both cited.",
+      "citations": [
+        "wdr-p036-table-01",
+        "wdr-p039-table-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-multi-02",
+      "primary_group": "multihop",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Original physical36/39 supports40.3% population plus innovation Lower priority. Both cited.",
+      "citations": [
+        "wdr-p036-table-01",
+        "wdr-p039-table-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-multi-03",
+      "primary_group": "multihop",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Original physical36/135 supports48.6% CO2 and easier cartel formation with fewer players. Both cited.",
+      "citations": [
+        "wdr-p036-table-01",
+        "wdr-p135-table-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-multi-04",
+      "primary_group": "multihop",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Original physical39/135 supports innovation Lower priority, fewer innovation incentives/low entry, and additional cross-subsidization/crowding-out statement.",
+      "citations": [
+        "wdr-p039-table-01",
+        "wdr-p135-table-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-text-01",
+      "primary_group": "text",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Original physical36/63 states108 middle-income countries; cited63 text supports count.",
+      "citations": [
+        "wdr-p063-text-00-part-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-text-02",
+      "primary_group": "text",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Original physical36 states growth deceleration/plateau around11% of US GDP per capita and about8000 dollars.",
+      "citations": [
+        "wdr-p036-text-00-part-02"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-text-03",
+      "primary_group": "text",
+      "answerable": true,
+      "pass": true,
+      "rationale": "Original Foreword physical17 and physical65 say2007; cited17 names An East Asian Renaissance.",
+      "citations": [
+        "wdr-p017-text-00-part-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-absent-01",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "pass": true,
+      "rationale": "No Vietnam population on2025-01-01 in source. Final refuses exact figure and describes only irrelevant retrieved demographic passages.",
+      "citations": [
+        "wdr-p067-text-00-part-02",
+        "wdr-p102-text-00-part-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-absent-02",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "pass": true,
+      "rationale": "Economics corpus contains no PEP complexity guarantee. Final abstains without inventing PEP number.",
+      "citations": [],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-absent-03",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "pass": true,
+      "rationale": "No current NVIDIA price in static2024 report. Refusal gives no invented market price.",
+      "citations": [
+        "wdr-p206-caption-01",
+        "wdr-p241-text-00-part-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    },
+    {
+      "query_id": "bonus-dev-absent-04",
+      "primary_group": "unanswerable",
+      "answerable": false,
+      "pass": true,
+      "rationale": "Pass. Explicitly abstains because retrieved Chapter 9 references/captions do not establish chapter authorship; makes no unsupported author claim.",
+      "citations": [
+        "wdr-p256-caption-01",
+        "wdr-p259-caption-01",
+        "wdr-p263-caption-01",
+        "wdr-p264-caption-01"
+      ],
+      "errors": [],
+      "trace_path": "results/bonus/dev/H2-v4-A.jsonl"
+    }
+  ],
+  "run_id": "3ecacb04aecc449d8d02ccb8459a5286"
+}

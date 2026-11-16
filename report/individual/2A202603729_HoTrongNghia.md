@@ -10,7 +10,7 @@
 
 Phần core đã chọn **D0** trên dev và chạy test release mới: **8/8 câu đạt**, gồm6 câu có đáp án và2 câu thiếu bằng chứng, không có lỗi. D0 đồng thời là baseline và cấu hình được chọn, nên hai vai trò dùng chung một run, không nhân đôi mẫu. Nhãn context/answer/citation được đối chiếu trực tiếp với nguồn tại `results/core/reviews-final.json`.
 
-Bonus chạy một lần trên bộ test release mới: **23/30 (76,7%)** theo cách chấm đầy đủ, dưới ngưỡng27/30. Trường hợp citation phân trang sát ranh giới nếu được chấp nhận thì24/30, vẫn không đạt90%; **không đề nghị cộng15 điểm bonus**. Kết quả này không được dùng để sửa pipeline rồi chạy lại cùng test. V2 cũ20/30 được giữ làm lịch sử; hai bộ test khác nhau nên không diễn giải chênh lệch điểm thành một phép đo cải thiện có kiểm soát.
+Bản nộp gốc đạt **23/30 (76,7%)** trên test release cũ. Sau đó đã tạo benchmark v4 mới, chốt pipeline bằng dev rồi chạy một lượt test độc lập: **26/30 (86,7%)**, vẫn dưới ngưỡng27/30; không đề nghị cộng15 điểm bonus. Chi tiết từng câu và lý do ở `results/bonus/test/reviews-v4-A.json`; trace và metrics ở cùng thư mục. Câu tên công ty bị sai chính tả được chấm fail theo quy tắc all-or-nothing; nếu bỏ qua lỗi chính tả thì đạt27/30, nhưng không dùng cách hiểu dễ dãi đó để tuyên bố đạt bonus. Không chạy lại test v4 sau khi xem kết quả. Test cũ được giữ lịch sử; giữa các phiên bản khác nhau không diễn giải chênh lệch điểm thành phép đo cải thiện có kiểm soát.
 
 ## Dữ liệu, embedding và benchmark
 
@@ -92,11 +92,29 @@ Pipeline/index/model/benchmark/live DB đã freeze trước một lượt test r
 | unanswerable | 6/6 | 100.0% |
 | **Toàn bộ** | **23/30** | **76,7%** |
 
-0 lỗi kỹ thuật; median 6.21s; API $0.018659. Trace/nhãn từng câu tại `results/bonus/test/H2-release.jsonl` và `results/bonus/test/reviews-final.json`.
+0 lỗi kỹ thuật; median 6.21s; API $0.018659. Trace/nhãn v3 từng câu tại `results/bonus/test/H2-release.jsonl` và `results/bonus/test/reviews-v3-historical.json`.
 
 Các lỗi còn lại: bỏ lỡ row Malaysia/đoạn managerial delegation/ghi chú RCA; trả category thay cho Type1 trong diagram; đọc nhầm bar2019 sang2020 ở multi-hop; không đủ hop India; một câu đổi nhãn trang vật lý/in thành mâu thuẫn dù ID nguồn và giá trị đúng. Câu cuối được chấm fail theo cách chặt; nếu chấp nhận ID nguồn là đủ thì24/30, vẫn dưới27/30. Câu chart-03 dùng từ people trong câu hỏi nhưng hình đo women; model giữ đúng điều kiện women, được ghi chú như giới hạn wording của benchmark và không sửa câu hỏi sau run.
 
 Không cộng một phần15 điểm bonus. Giữ nguyên test v2 lịch sử20/30 và test release23/30; không tiếp tục chỉnh theo test rồi chạy lại để săn ngưỡng.
+
+### Chạy test v4 đã đóng băng
+
+Sau khi chốt H2 trên dev và đóng băng benchmark/config/index, chạy đủ30 câu với cùng run ID `d2a31948fe514c4193793233ae6dd289`. Kết quả chấm theo ADVANCED.md là **26/30 (86,7%)**, cần27/30; do đó vẫn **không đạt điều kiện bonus**. Có2 lỗi hệ thống (HTTP429 và timeout), đều được giữ trong mẫu số. Median latency5,842ms; API cost theo trace$0.013583. Chi phí ledger toàn chiến dịch **$0.9923434941 / $1.50**, reserved $0; gồm cả reservation upper-bound cho request không rõ chi phí. Record tại `results/runtime/budget-final.json`.
+
+| Nhóm | Đạt/tổng |
+|---|---:|
+| table | 5/6 |
+| image_diagram | 4/5 |
+| chart | 5/5 |
+| multihop | 2/4 |
+| text | 4/4 |
+| unanswerable | 6/6 |
+| **Toàn bộ** | **26/30 (86,7%)** |
+
+Hai lỗi kỹ thuật là Mexico energy-intensity (HTTP429) và multi-hop Korea (timeout). Multi-hop Türkiye có đúng GNI nhưng không trả lời được fiscal target, nên fail. Câu Figure O.6 có typo tên pháp nhân (“Electroic” thay cho “Electric”); chấm fail nghiêm theo all-or-nothing. Nếu người chấm bỏ qua lỗi này như typo thì thành27/30, nhưng không tuyên bố đạt bonus theo cách chấm dễ dãi. Nhãn/lý do từng câu và source page ở `results/bonus/test/reviews-v4-A.json`; bảng metrics ở `results/bonus/test/metrics-v4-A.json`; benchmark và overlap audit ở `benchmark/bonus/questions-v4-review.md`.
+
+Không dùng test v4 để sửa pipeline và không chạy thêm lượt test. V3 test 23/30 được giữ làm kết quả lịch sử; vì câu hỏi test đã thay đổi, không xem chênh lệch 23 lên26 là phép đo cải thiện có kiểm soát.
 
 ## Tái lập, chi phí và kiểm tra nộp
 
@@ -104,7 +122,7 @@ Code/dependencies được ghim trong requirements; regression **61 tests đạt
 
 Đã gặp Windows native exception c10.dll0xc0000005 lúc nạp model và một lượt bị treo do Docker tắt. Chạy một model/process, CPU thread1, allocator0.8 và DB connect timeout10 giây giúp giới hạn tài nguyên/chờ; các lượt cuối đã hoàn tất, không diễn giải đó là chứng minh đã chữa mọi nguyên nhân native crash.
 
-Tổng ledger cuối **$0.9687035301 / $1.50**, reserved $0; có tính các lượt dev/test lịch sử, lỗi HTTP và orphan reservation theo upper-bound. Chi phí embedding local không phải API cost, nhưng vẫn tốn thời gian/tài nguyên máy. Số liệu billing cuối trên tài khoản có thể thấp hơn phần upper-bound đã dự phòng. Record: `results/runtime/budget-final.json`.
+Tổng ledger cuối **$0.9923434941 / $1.50**, reserved $0; có tính các lượt dev/test lịch sử, lỗi HTTP và orphan reservation theo upper-bound. Chi phí embedding local không phải API cost, nhưng vẫn tốn thời gian/tài nguyên máy. Số liệu billing cuối trên tài khoản có thể thấp hơn phần upper-bound đã dự phòng. Record: `results/runtime/budget-final.json`.
 
 Báo cáo và nhãn là AI-assisted, đã đối chiếu nguồn; không giả xác nhận người học đã tự đọc mọi output. Tôi chịu trách nhiệm hiểu/kiểm tra nội dung nộp theo RULES.md. Tài liệu đề README/RULES/RUBRIC/SUBMISSION được giữ nguyên; implementation guide nằm riêng. Không đưa plans/local logs/venv/weights/.env/PDF-crop bonus vào bộ nộp.
 

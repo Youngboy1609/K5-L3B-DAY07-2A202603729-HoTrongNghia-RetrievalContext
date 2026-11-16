@@ -13,7 +13,7 @@ Phạm vi: code, dữ liệu được phép chia sẻ hoặc cách tái tạo, b
 | Hai lỗi dev, trước/sau | Báo cáo; results/bonus/dev/H2-after-vision-fix.jsonl; H2-context-v3.jsonl và targeted-review; H2-release-complete.jsonl và reviews-final |
 | Freeze source/config/DB trước test | results/run_manifest.json; results/core/run_manifest.json; src/freeze.py; tests/test_freeze_guard.py |
 | Bonus nguồn276 trang, index/coverage/region | data/bonus/manifest.json; data/bonus/index/; guide rebuild PDF local, không phát hành ảnh |
-| Bonus toàn bộ30 test và nhóm | results/bonus/test/H2-release.jsonl; reviews-final.json; results/bonus/metrics-final.json:23/30, không đạt27/30, không nhận15 điểm |
+| Bonus toàn bộ30 test và nhóm | results/bonus/test/H2-v4-A.jsonl; reviews-final.json; results/bonus/metrics-final.json:26/30, chưa đạt27/30; hai lỗi hệ thống được tính trong mẫu số |
 | Lịch sử và giới hạn | results/history/; historical benchmarks; bonus H2-v2-final/semantic_grades; không dùng nhãn core keyword đã rút |
 | Báo cáo cá nhân | report/individual/2A202603729_HoTrongNghia.md |
 
