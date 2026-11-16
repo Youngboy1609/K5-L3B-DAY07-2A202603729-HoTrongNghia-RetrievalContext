@@ -16,8 +16,9 @@ TOOLS = [
       "parameters": {"type": "object", "properties": {
         "query": {"type": "string"},
         "chapter": {"type": "integer", "minimum": 0}}, "required": ["query"], "additionalProperties": False}}},
-    {"type": "function", "function": {"name": "open_region", "description": "Inspect the visual source linked to a retrieved chunk ID.",
-      "parameters": {"type": "object", "properties": {"id": {"type": "string"}},
+    {"type": "function", "function": {"name": "open_region", "description": "Inspect the visual source linked to a retrieved chunk ID. Use page scope for a full legend or panel.",
+      "parameters": {"type": "object", "properties": {"id": {"type": "string"},
+        "scope": {"type": "string", "enum": ["region", "page"]}},
                      "required": ["id"], "additionalProperties": False}}},
 ]
 
@@ -232,8 +233,11 @@ class Agent:
             return {"results": public_rows, "ranked_ids": ranked_ids,
                     "evidence_ids": packed["ids"]}
         if name == "open_region":
-            if set(args) != {"id"}:
-                raise ValueError("open_region accepts only a retrieved ID")
+            if set(args) - {"id", "scope"} or "id" not in args:
+                raise ValueError("open_region accepts a retrieved ID and optional scope")
+            scope = args.get("scope", "region")
+            if scope not in {"region", "page"}:
+                raise ValueError("invalid source view scope")
             chunk_id = args.get("id")
             if not isinstance(chunk_id, str) or chunk_id not in retrieved or self.open_region_fn is None:
                 raise ValueError("region must belong to a retrieved result")
@@ -243,7 +247,12 @@ class Agent:
             total_limit = self.context_budget + self.max_regions * self.image_token_reserve + 500
             if used_text + (len(opened_regions) + (chunk_id not in opened_regions)) * self.image_token_reserve + 500 > total_limit:
                 raise ValueError("source image would exceed the context budget")
-            region = self.open_region_fn(chunk_id)
+            try:
+                region = self.open_region_fn(chunk_id, scope=scope)
+            except TypeError:
+                if scope != "region":
+                    raise ValueError("full-page view is unavailable for this source")
+                region = self.open_region_fn(chunk_id)
             if region is None:
                 return {"error": "no_visual_region_for_retrieved_id"}
             opened_regions.add(chunk_id)

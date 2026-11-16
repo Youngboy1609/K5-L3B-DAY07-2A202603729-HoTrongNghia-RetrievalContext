@@ -52,11 +52,12 @@ def create_agent(suite: str, *, config: str = "D0", pilot: bool = False) -> Agen
         if not chunks_path.exists():
             raise RuntimeError("Bonus index is missing; run ingest-bonus and index-bonus first")
         chunks = [json.loads(line) for line in chunks_path.read_text(encoding="utf-8").splitlines() if line.strip()]
+        source_chunks = [json.loads(line) for line in Path("data/bonus/index/chunks.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
         index_manifest = json.loads(Path("data/bonus/index/vector_index.json").read_text(encoding="utf-8"))
         if hashlib.sha256(chunks_path.read_bytes()).hexdigest() != index_manifest["embedded_chunks_sha256"]:
             raise RuntimeError("Bonus embedding rows changed; rebuild the index before evaluation")
         store = PgVectorStore(database_url, dimensions=1024)
-        retrieval = BonusRetrieval(chunks, store)
+        retrieval = BonusRetrieval(chunks, store, source_chunks=source_chunks)
         region_opener = make_region_opener(
             ".lab-local/research/wdr2024-full-candidate.pdf", "data/bonus/index/regions.jsonl",
             page_by_id={row["id"]: row["page"] for row in chunks if isinstance(row.get("page"), int)})

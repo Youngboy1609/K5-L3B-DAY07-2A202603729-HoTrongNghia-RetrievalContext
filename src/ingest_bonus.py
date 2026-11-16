@@ -143,7 +143,9 @@ def make_region_opener(pdf_path: str | Path, regions_path: str | Path,
     page_visuals = {row["page"]: row for row in regions.values() if row.get("modality") == "page_visual"}
     page_by_id = page_by_id or {}
 
-    def open_region(chunk_id: str) -> dict[str, Any] | None:
+    def open_region(chunk_id: str, *, scope: str = "region") -> dict[str, Any] | None:
+        if scope not in {"region", "page"}:
+            raise ValueError("scope must be region or page")
         import re
         parent_id = re.sub(r"-part-\d+$", "", chunk_id)
         region = regions.get(chunk_id) or regions.get(parent_id)
@@ -152,7 +154,7 @@ def make_region_opener(pdf_path: str | Path, regions_path: str | Path,
             region = page_visuals.get(page)
         if region is None:
             return None
-        local_path = Path(region["crop"]).resolve() if region.get("crop") else None
+        local_path = Path(region["crop"]).resolve() if scope == "region" and region.get("crop") else None
         if local_path and local_path.exists():
             if not local_path.is_relative_to(crop_root):
                 raise ValueError("cached crop escapes the approved local crop directory")
@@ -163,7 +165,8 @@ def make_region_opener(pdf_path: str | Path, regions_path: str | Path,
                 if not isinstance(page_no, int) or not 1 <= page_no <= len(pdf.pages):
                     raise ValueError("invalid page reference")
                 page = pdf.pages[page_no - 1]
-                bbox = region.get("bbox") or [0, 0, page.width, page.height]
+                bbox = ([0, 0, page.width, page.height] if scope == "page"
+                        else region.get("bbox") or [0, 0, page.width, page.height])
                 if len(bbox) != 4 or not all(isinstance(v, (int, float)) for v in bbox):
                     raise ValueError("invalid region bbox")
                 x0, top, x1, bottom = bbox
@@ -178,7 +181,8 @@ def make_region_opener(pdf_path: str | Path, regions_path: str | Path,
                 raw = buffer.getvalue()
         if len(raw) > 5_000_000:
             raise ValueError("rendered region exceeds the 5 MB image request limit")
-        return {"id": chunk_id, "page": region["page"], "bbox": region.get("bbox"),
-                "modality": region["modality"], "rights_status": region["rights_status"],
+        bbox = region.get("bbox") if scope == "region" else [0, 0, float(page.width), float(page.height)]
+        return {"id": chunk_id, "page": region["page"], "physical_page": region["page"], "bbox": bbox,
+                "scope": scope, "modality": region["modality"], "rights_status": region["rights_status"],
                 "image_url": "data:image/png;base64," + base64.b64encode(raw).decode("ascii")}
     return open_region
